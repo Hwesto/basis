@@ -1,0 +1,553 @@
+{
+  "domain": "taxation",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "extraction_source": "manifesto-taxation-complete.md",
+  "verified": false,
+  "sources": [
+    {
+      "id": "SRC-TAX-001",
+      "title": "IFS, General Election 2024 Manifesto Analysis",
+      "url": null,
+      "tier": 3,
+      "author": "Institute for Fiscal Studies",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-TAX-002",
+      "title": "IFS, Options for Tax Increases",
+      "url": null,
+      "tier": 3,
+      "author": "IFS",
+      "date": "2025-11"
+    },
+    {
+      "id": "SRC-TAX-003",
+      "title": "OBR, Fiscal Drag Estimates and Economic Outlook",
+      "url": null,
+      "tier": 3,
+      "author": "OBR",
+      "date": "2024-03"
+    },
+    {
+      "id": "SRC-TAX-004",
+      "title": "HMRC, Tax Gap Estimates",
+      "url": null,
+      "tier": 2,
+      "author": "HMRC",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-TAX-005",
+      "title": "Wealth Tax Commission (LSE/Warwick), Final Report",
+      "url": null,
+      "tier": 1,
+      "author": "Wealth Tax Commission",
+      "date": "2020"
+    },
+    {
+      "id": "SRC-TAX-006",
+      "title": "YouGov, Public Support for Tax Reforms",
+      "url": null,
+      "tier": 6,
+      "author": "YouGov",
+      "date": "2025-10"
+    },
+    {
+      "id": "SRC-TAX-008",
+      "title": "Conservative Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Conservative Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-TAX-009",
+      "title": "Labour Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Labour Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-TAX-010",
+      "title": "Liberal Democrats 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Liberal Democrats",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-TAX-011",
+      "title": "Green Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Green Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-TAX-012",
+      "title": "Reform UK 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Reform UK",
+      "date": "2024-06"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "TAX-F01",
+      "type": "FACT",
+      "statement": "The UK tax burden is at its highest sustained level since the late 1940s, yet public services are visibly failing across NHS, social care, housing, and local government",
+      "source_id": "SRC-TAX-003",
+      "source_loc": "Fiscal overview",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-F02",
+      "type": "FACT",
+      "statement": "UK government debt interest costs approximately \u00a350 billion per year more than originally forecast, at the highest debt level in over 60 years",
+      "source_id": "SRC-TAX-003",
+      "source_loc": "Debt servicing",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 50,
+        "amount_high": 50,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "TAX-F03",
+      "type": "FACT",
+      "statement": "Income tax, National Insurance, and VAT together account for two-thirds of all UK tax revenue, and both Conservative and Labour pledged not to raise any of them",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Revenue analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-F04",
+      "type": "FACT",
+      "statement": "Frozen income tax and NI thresholds will raise approximately \u00a341 billion per year by 2028-29 through fiscal drag, roughly four times the value of the 2p NI cut the Conservatives campaigned on",
+      "source_id": "SRC-TAX-003",
+      "source_loc": "Fiscal drag estimates",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 41,
+        "amount_high": 41,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "revenue",
+        "category": "tax_reform_revenue"
+      }
+    },
+    {
+      "id": "TAX-F05",
+      "type": "FACT",
+      "statement": "The total UK tax gap is approximately \u00a336 billion according to HMRC estimates, with the largest component from small businesses not large corporations",
+      "source_id": "SRC-TAX-004",
+      "source_loc": "Tax gap analysis",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 36,
+        "amount_high": 36,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "revenue",
+        "category": "tax_reform_revenue"
+      }
+    },
+    {
+      "id": "TAX-F06",
+      "type": "FACT",
+      "statement": "Current CGT rates of 10-20% are well below income tax rates of 20-45%, creating incentives to reclassify income as capital gains, with full equalisation estimated to raise \u00a310-15 billion per year",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "CGT analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 10,
+        "amount_high": 15,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "revenue",
+        "category": "tax_reform_revenue"
+      }
+    },
+    {
+      "id": "TAX-F07",
+      "type": "FACT",
+      "statement": "Council tax bands are based on 1991 property values, with a \u00a310 million London townhouse paying roughly 4x the council tax of a \u00a3100,000 terraced house despite a 100:1 value difference",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Council tax section",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-F08",
+      "type": "FACT",
+      "statement": "Every \u00a31 invested in HMRC compliance capacity returns between \u00a35 and \u00a318 in additional tax revenue according to HMRC's own data",
+      "source_id": "SRC-TAX-004",
+      "source_loc": "Compliance ROI",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-F09",
+      "type": "FACT",
+      "statement": "75% of the public support a wealth tax on assets above \u00a310 million according to YouGov polling in 2025, and 56% support proportional council tax reform",
+      "source_id": "SRC-TAX-006",
+      "source_loc": "Tax reform polling",
+      "confidence": "LOW",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-F10",
+      "type": "FACT",
+      "statement": "The Truss-Kwarteng mini-budget of September 2022 demonstrated the market consequences of unfunded tax cuts when bond yields spiked and the pound fell sharply",
+      "source_id": "SRC-TAX-003",
+      "source_loc": "Historical reference",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-F11",
+      "type": "FACT",
+      "statement": "Total estimated new revenue from proposed reforms ranges from \u00a317-40 billion per year including CGT equalisation, HMRC investment, IHT reform, and environmental taxes",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Revenue synthesis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 17,
+        "amount_high": 40,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "revenue",
+        "category": "tax_reform_revenue"
+      }
+    },
+    {
+      "id": "TAX-A01",
+      "type": "ASSUMPTION",
+      "statement": "Tax cuts can pay for themselves through increased economic growth at current UK tax levels",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Assumption 1",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "NO CREDIBLE EVIDENCE. The Laffer curve has never been demonstrated at UK tax levels. IFS consistently finds tax cuts reduce revenue. The Truss mini-budget demonstrated what happens when markets don't believe unfunded cuts generate growth."
+    },
+    {
+      "id": "TAX-A02",
+      "type": "ASSUMPTION",
+      "statement": "Closing the tax gap can generate enough revenue to fund manifesto spending commitments",
+      "source_id": "SRC-TAX-004",
+      "source_loc": "Assumption 2",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "verdict": "PARTIALLY. Total gap is \u00a336bn but every party overstates what's recoverable. Requires HMRC capacity investment. Every government promises to close it; none has closed more than a fraction. Can raise some revenue but not at the scale claimed."
+    },
+    {
+      "id": "TAX-A03",
+      "type": "ASSUMPTION",
+      "statement": "An annual wealth tax on high-value assets is feasible and administrable in the UK",
+      "source_id": "SRC-TAX-005",
+      "source_loc": "Assumption 3",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "verdict": "ECONOMICALLY SOUND but ADMINISTRATIVELY CHALLENGING. Wealth Tax Commission found one-off tax feasible but annual tax faces evasion and valuation challenges. IFS argues reforming existing wealth-related taxes (council tax, CGT, IHT) is more effective than a new annual tax."
+    },
+    {
+      "id": "TAX-A04",
+      "type": "ASSUMPTION",
+      "statement": "Capital Gains Tax should be equalised with income tax rates to remove the incentive to reclassify income as capital gains",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Assumption 4",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "STRONG ECONOMIC CASE. IFS has long argued for equalisation. Labour raised CGT in Oct 2024 but not to parity. Estimated \u00a310-15bn/yr revenue. Can protect genuine entrepreneurs via targeted Business Asset Disposal Relief."
+    },
+    {
+      "id": "TAX-A05",
+      "type": "ASSUMPTION",
+      "statement": "Council tax reform replacing 1991-based bands with a proportional property tax is overdue and justified",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Assumption 5",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "OVERDUE AND JUSTIFIED. Every serious tax analyst recommends it. \u00a310m home pays 4:1 vs \u00a3100k home on 100:1 value. IFS recommends proportional property tax. Politically toxic because losers are more vocal than winners."
+    },
+    {
+      "id": "TAX-A06",
+      "type": "ASSUMPTION",
+      "statement": "The UK can fund its public services at the level the evidence requires without raising income tax, National Insurance, or VAT",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Assumption 6",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "NOT SUSTAINABLY. Other reforms might raise \u00a320-30bn but NHS alone needs \u00a320-25bn, plus social care (\u00a35bn), housing (\u00a35-10bn), defence. The honest answer: either raise the big three, accept lower services, or borrow. Tax locks make option one politically impossible."
+    },
+    {
+      "id": "TAX-C01",
+      "type": "CLAIM",
+      "statement": "Every manifesto implies either spending cuts the party won't name or tax rises they've promised not to make, because tax locks on the big three revenues create a fundamental dishonesty at the heart of UK fiscal politics",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Central finding",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-C02",
+      "type": "CLAIM",
+      "statement": "Tax locks \u2014 pledges not to raise the taxes that generate two-thirds of revenue \u2014 are the single most damaging innovation in recent UK politics because they force dishonesty, constrain governance, and guarantee the trilemma is resolved through the least transparent option",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "IFS diagnosis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-C03",
+      "type": "CLAIM",
+      "statement": "Both major parties are raising taxes on working people through the back door via fiscal drag while promising not to raise them through the front door, with threshold freezes generating \u00a341bn more than the NI cuts they campaigned on",
+      "source_id": "SRC-TAX-003",
+      "source_loc": "Fiscal drag analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-C04",
+      "type": "CLAIM",
+      "statement": "The dependency chain from failing public services to fiscal dishonesty \u2014 NHS needs \u00a320-25bn, funded by tax revenue, constrained by tax locks, chosen by every major party \u2014 is the most important cross-domain finding in the entire manifesto",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Cross-domain synthesis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-P01",
+      "type": "POLICY",
+      "statement": "Equalise Capital Gains Tax with income tax rates while protecting genuine entrepreneurs through targeted Business Asset Disposal Relief, generating an estimated \u00a310-15 billion per year in additional revenue",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 10,
+        "amount_high": 15,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "revenue",
+        "category": "tax_reform_revenue"
+      }
+    },
+    {
+      "id": "TAX-P02",
+      "type": "POLICY",
+      "statement": "End the income tax and NI threshold freeze and index thresholds to inflation from 2027/28, honestly acknowledging the stealth tax that fiscal drag represents",
+      "source_id": "SRC-TAX-003",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-P03",
+      "type": "POLICY",
+      "statement": "Increase HMRC compliance funding by \u00a31 billion, generating \u00a35-18 billion in additional revenue as every \u00a31 invested in HMRC returns \u00a35-18 in collected tax",
+      "source_id": "SRC-TAX-004",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 4,
+        "amount_high": 17,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "revenue",
+        "category": "tax_reform_revenue"
+      }
+    },
+    {
+      "id": "TAX-P04",
+      "type": "POLICY",
+      "statement": "Replace council tax bands with a proportional property tax at 0.5-1% of current value, with deferral for asset-rich cash-poor households, redistributive in effect but revenue-neutral in aggregate",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "TAX-P05",
+      "type": "POLICY",
+      "statement": "Close agricultural and business property relief loopholes in Inheritance Tax that allow the wealthiest estates to pay near-zero IHT, generating \u00a31-3 billion per year",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 1,
+        "amount_high": 3,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "revenue",
+        "category": "tax_reform_revenue"
+      }
+    },
+    {
+      "id": "TAX-P06",
+      "type": "POLICY",
+      "statement": "Abolish tax lock pledges and instead commit to fiscal rules where debt falls as a share of GDP and the current budget is balanced, allowing tax decisions to follow evidence of spending needs",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Innovation 1",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "TAX-P07",
+      "type": "POLICY",
+      "statement": "Pilot a Land Value Tax in one region, taxing the unimproved value of land as the most economically efficient tax base, with potential to replace council tax, stamp duty, and business rates",
+      "source_id": "SRC-TAX-001",
+      "source_loc": "Innovation 2",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "TAX-P08",
+      "type": "POLICY",
+      "statement": "Introduce a carbon tax with per-capita dividend replacing the patchwork of green levies and ETS, where revenue is recycled equally to every household making it progressive",
+      "source_id": "SRC-TAX-002",
+      "source_loc": "Innovation 4",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 2,
+        "amount_high": 5,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "revenue",
+        "category": "tax_reform_revenue"
+      },
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "TAX-POS-CON-01",
+      "type": "POSITION",
+      "statement": "Cut employee NI by a further 2p to 6% by 2027, abolish self-employed NI entirely, cap corporation tax at 25%, fund through \u00a312 billion in welfare savings, and pledge no rises to income tax, NI, VAT, or corporation tax",
+      "source_id": "SRC-TAX-008",
+      "source_loc": "Tax section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Conservative",
+        "stance": "contests",
+        "maps_to": [
+          "TAX-P01",
+          "TAX-P02",
+          "TAX-P06"
+        ]
+      }
+    },
+    {
+      "id": "TAX-POS-LAB-01",
+      "type": "POSITION",
+      "statement": "Pledge no rises to income tax rates, NI, VAT, or corporation tax, raise \u00a31.7 billion from VAT on private schools, abolish non-dom status, target \u00a35 billion from closing tax avoidance, and fund spending through economic growth",
+      "source_id": "SRC-TAX-009",
+      "source_loc": "Tax section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Labour",
+        "stance": "contests",
+        "maps_to": [
+          "TAX-P06"
+        ]
+      }
+    },
+    {
+      "id": "TAX-POS-LIB-01",
+      "type": "POSITION",
+      "statement": "Reverse bank levy and surcharge cuts to raise \u00a38.7 billion by 2028-29, increase Digital Services Tax to 6%, introduce a sewage tax on water company profits, and target \u00a37.2 billion from the tax gap",
+      "source_id": "SRC-TAX-010",
+      "source_loc": "Tax section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Liberal Democrat",
+        "stance": "endorses",
+        "maps_to": [
+          "TAX-P03"
+        ]
+      }
+    },
+    {
+      "id": "TAX-POS-GRN-01",
+      "type": "POSITION",
+      "statement": "Introduce a wealth tax of 1% above \u00a310 million and 2% above \u00a31 billion, equalise CGT with income tax, restrict pension tax relief to basic rate, introduce a carbon tax, and fund \u00a340 billion per year in green investment",
+      "source_id": "SRC-TAX-011",
+      "source_loc": "Tax section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Green",
+        "stance": "endorses",
+        "maps_to": [
+          "TAX-P01",
+          "TAX-P08"
+        ]
+      }
+    },
+    {
+      "id": "TAX-POS-REF-01",
+      "type": "POSITION",
+      "statement": "Cut \u00a350 billion per year in government spending, abolish IHT on estates under \u00a32 million, raise income tax threshold to \u00a320,000, cut corporation tax and fuel duty, scrap VAT on energy, and fund through spending cuts and scrapping net zero",
+      "source_id": "SRC-TAX-012",
+      "source_loc": "Tax section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Reform UK",
+        "stance": "contests",
+        "maps_to": [
+          "TAX-P01",
+          "TAX-P06"
+        ]
+      },
+      "fiscal": {
+        "amount_low": 50,
+        "amount_high": 50,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "saving",
+        "category": "efficiency_saving"
+      }
+    }
+  ]
+}

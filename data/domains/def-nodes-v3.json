@@ -1,0 +1,442 @@
+{
+  "domain": "defence",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "extraction_source": "manifesto-defence-complete.md",
+  "verified": false,
+  "sources": [
+    {
+      "id": "SRC-DEF-001",
+      "title": "House of Commons Library, UK Defence Spending (CBP-8175)",
+      "url": null,
+      "tier": 3,
+      "author": "House of Commons Library",
+      "date": null
+    },
+    {
+      "id": "SRC-DEF-002",
+      "title": "IFS, UK Defence Spending: Composition, Commitments and Challenges",
+      "url": null,
+      "tier": 3,
+      "author": "IFS",
+      "date": null
+    },
+    {
+      "id": "SRC-DEF-003",
+      "title": "NATO, Defence Expenditure of NATO Countries 2014-2025",
+      "url": null,
+      "tier": 3,
+      "author": "NATO",
+      "date": "2025"
+    },
+    {
+      "id": "SRC-DEF-004",
+      "title": "Defence Select Committee, Warfighting Readiness Evidence",
+      "url": null,
+      "tier": 3,
+      "author": "Defence Select Committee",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-DEF-005",
+      "title": "OBR, Defence Spending Projections",
+      "url": null,
+      "tier": 3,
+      "author": "OBR",
+      "date": "2025-03"
+    },
+    {
+      "id": "SRC-DEF-006",
+      "title": "MOD, Finance and Economics Annual Statistical Bulletin 2025",
+      "url": null,
+      "tier": 2,
+      "author": "MOD",
+      "date": "2025"
+    },
+    {
+      "id": "SRC-DEF-007",
+      "title": "S&P Global, European NATO Debt Projections from Defence Targets",
+      "url": null,
+      "tier": 4,
+      "author": "S&P Global",
+      "date": "2025"
+    },
+    {
+      "id": "SRC-DEF-008",
+      "title": "SIPRI, World Military Expenditure Data 2024",
+      "url": null,
+      "tier": 2,
+      "author": "SIPRI",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-DEF-009",
+      "title": "Conservative Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Conservative Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-DEF-010",
+      "title": "Labour Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Labour Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-DEF-011",
+      "title": "Liberal Democrats 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Liberal Democrats",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-DEF-012",
+      "title": "Green Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Green Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-DEF-013",
+      "title": "Reform UK 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Reform UK",
+      "date": "2024-06"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "DEF-F01",
+      "type": "FACT",
+      "statement": "UK defence spending was \u00a360.2 billion in 2024/25 at 2.3% of GDP, with the 2025 NATO Hague Summit agreeing a 5% target by 2035 comprising 3.5% core military plus 1.5% resilience",
+      "source_id": "SRC-DEF-001",
+      "source_loc": "Spending data",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 60.2,
+        "amount_high": 60.2,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "DEF-F02",
+      "type": "FACT",
+      "statement": "5% of UK GDP would be approximately \u00a3130 billion per year in defence spending, more than double current levels, with S&P Global estimating the 3.5% core target alone could add approximately $2 trillion to European NATO collective debt by 2035",
+      "source_id": "SRC-DEF-007",
+      "source_loc": "Fiscal impact",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 130,
+        "amount_high": 130,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "DEF-F03",
+      "type": "FACT",
+      "statement": "UK armed forces personnel have fallen from approximately 190,000 to approximately 140,000 since 2010, with the armed forces roughly 15% below target strength",
+      "source_id": "SRC-DEF-006",
+      "source_loc": "Personnel data",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "DEF-F04",
+      "type": "FACT",
+      "statement": "Day-to-day defence spending fell 2.4% in real terms since 2015/16 while capital spending rose 95.5%, meaning the military has new equipment but fewer people to operate it",
+      "source_id": "SRC-DEF-001",
+      "source_loc": "Spending composition",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "DEF-F05",
+      "type": "FACT",
+      "statement": "Germany overtook the UK as NATO's second-highest spender in 2024 for the first time, spending $93.7 billion with a 24% increase, while European NATO spending increased 16% in a single year",
+      "source_id": "SRC-DEF-008",
+      "source_loc": "Comparative data",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "DEF-F06",
+      "type": "FACT",
+      "statement": "The OBR estimates reaching 3% of GDP for defence would cost an additional \u00a317.3 billion per year by 2029/30, with the IFS noting non-defence spending is planned to be almost flat due to rapid defence growth",
+      "source_id": "SRC-DEF-005",
+      "source_loc": "Projections",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 17.3,
+        "amount_high": 17.3,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "DEF-F07",
+      "type": "FACT",
+      "statement": "Spain's Prime Minister refused the 5% NATO target, capping at 2.1% and arguing it was disproportionate and incompatible with a welfare state \u2014 the most honest statement any ally has made about the trade-off",
+      "source_id": "SRC-DEF-003",
+      "source_loc": "NATO summit reporting",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "DEF-F08",
+      "type": "FACT",
+      "statement": "Labour plans to cut overseas development aid from 0.5% to 0.3% of GNI to fund defence, providing approximately \u00a36.1 billion, despite the military establishment arguing aid spending is itself a security investment",
+      "source_id": "SRC-DEF-010",
+      "source_loc": "Funding mechanism",
+      "confidence": "LOW",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 6.1,
+        "amount_high": 6.1,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "revenue",
+        "category": "efficiency_saving"
+      }
+    },
+    {
+      "id": "DEF-A01",
+      "type": "ASSUMPTION",
+      "statement": "The 2.5% of GDP defence spending target is sufficient for UK security given the current threat environment",
+      "source_id": "SRC-DEF-001",
+      "source_loc": "Assumption 1",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "ALREADY OBSOLETE. NATO agreed 5% at The Hague. 3.5% core is the real minimum for credibility. Defence Select Committee concluded forces must be fully funded or commitments reduced. Germany now outspends the UK."
+    },
+    {
+      "id": "DEF-A02",
+      "type": "ASSUMPTION",
+      "statement": "Defence spending increases can be funded by cutting overseas development aid without creating new security risks",
+      "source_id": "SRC-DEF-010",
+      "source_loc": "Assumption 2",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "verdict": "SHORT-TERM FIX THAT MAY WORSEN LONG-TERM SECURITY. \u00a36.1bn from aid provides immediate funding but aid addresses upstream causes of instability \u2014 failed states, displacement, poverty \u2014 that generate security threats. The military itself has argued aid is a security investment."
+    },
+    {
+      "id": "DEF-A03",
+      "type": "ASSUMPTION",
+      "statement": "The nuclear deterrent remains the appropriate strategic insurance and should be maintained at current scale",
+      "source_id": "SRC-DEF-004",
+      "source_loc": "Assumption 3",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "STRATEGIC CASE STRONG but FISCAL COST ENORMOUS. Case strengthened by Russian nuclear threats and uncertain US commitment. However nuclear spending crowds out conventional capabilities \u2014 fewer ships, aircraft, ground forces than before WWI. Maintain but be honest about opportunity cost."
+    },
+    {
+      "id": "DEF-A04",
+      "type": "ASSUMPTION",
+      "statement": "The capital-heavy investment bias toward new equipment rather than personnel and readiness is the right balance for UK defence",
+      "source_id": "SRC-DEF-004",
+      "source_loc": "Assumption 5",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "BALANCE IS WRONG. Capital up 95.5% while day-to-day fell 2.4%. Armed forces 15% below strength. Ukraine proves mass still matters alongside technology. Need personnel AND technology, not one at the expense of the other."
+    },
+    {
+      "id": "DEF-A05",
+      "type": "ASSUMPTION",
+      "statement": "Defence spending can increase to 3.5% of GDP without squeezing other public services or raising taxes",
+      "source_id": "SRC-DEF-002",
+      "source_loc": "Assumption 6",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "NOT WITHOUT TAX INCREASES. IFS says non-defence spending is 'almost flat' due to defence growth. Reaching 3% without tax rises means real cuts to NHS, education, housing, welfare \u2014 all already underfunded. Defence increases require taxation reform."
+    },
+    {
+      "id": "DEF-C01",
+      "type": "CLAIM",
+      "statement": "Spain's framing that 5% of GDP on defence is incompatible with a welfare state is the most honest statement any NATO ally has made, and the UK has not confronted this trade-off",
+      "source_id": "SRC-DEF-003",
+      "source_loc": "Central tension",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "DEF-C02",
+      "type": "CLAIM",
+      "statement": "The total additional spending need across all domains \u2014 NHS \u00a320-25bn, housing \u00a35-10bn, education \u00a37-12bn, defence \u00a330-70bn \u2014 is \u00a380-130 billion per year, while total revenue from taxation reforms is only \u00a317-40 billion, leaving an enormous unfunded gap no party acknowledges",
+      "source_id": "SRC-DEF-002",
+      "source_loc": "Fiscal synthesis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 80,
+        "amount_high": 130,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "DEF-P01",
+      "type": "POLICY",
+      "statement": "Reach 2.5% of GDP by 2027 and establish a credible pathway to 3.5% core by 2035 per NATO commitment, funded through taxation reform rather than cuts to other underfunded public services",
+      "source_id": "SRC-DEF-001",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 30,
+        "amount_high": 30,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "DEF-P02",
+      "type": "POLICY",
+      "statement": "Maintain the nuclear deterrent as strategic insurance given Russian threats and uncertain US commitment, while honestly stating the opportunity cost to conventional military capability",
+      "source_id": "SRC-DEF-004",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "DEF-P03",
+      "type": "POLICY",
+      "statement": "Rebalance defence spending from capital-heavy to include adequate personnel, readiness, and ammunition stockpiles alongside investment in drones, autonomous systems, cyber, and AI",
+      "source_id": "SRC-DEF-004",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "DEF-P04",
+      "type": "POLICY",
+      "statement": "Maintain overseas development aid at 0.5% of GNI rather than cutting it to fund defence, because aid addresses upstream causes of instability that generate downstream security threats",
+      "source_id": "SRC-DEF-002",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "DEF-P05",
+      "type": "POLICY",
+      "statement": "Build a sovereign drone and autonomous systems manufacturing capability, as Ukraine demonstrates cheap drones transform warfare at 1/100th the cost of traditional platforms per engagement",
+      "source_id": "SRC-DEF-004",
+      "source_loc": "Innovation 3",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "DEF-POS-CON-01",
+      "type": "POSITION",
+      "statement": "Reach 2.5% by 2030, maintain the nuclear deterrent, pursue AUKUS, deliver new equipment programmes, and introduce National Service for school leavers",
+      "source_id": "SRC-DEF-009",
+      "source_loc": "Defence section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Conservative",
+        "stance": "endorses",
+        "maps_to": [
+          "DEF-P01",
+          "DEF-P02"
+        ]
+      }
+    },
+    {
+      "id": "DEF-POS-LAB-01",
+      "type": "POSITION",
+      "statement": "Accelerate to 2.5% by 2027 and 3% next parliament via the externally-led Strategic Defence Review, fund partly by cutting aid from 0.5% to 0.3% of GNI, maintain nuclear deterrent and AUKUS",
+      "source_id": "SRC-DEF-010",
+      "source_loc": "Defence section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Labour",
+        "stance": "endorses",
+        "maps_to": [
+          "DEF-P01",
+          "DEF-P02"
+        ]
+      }
+    },
+    {
+      "id": "DEF-POS-LIB-01",
+      "type": "POSITION",
+      "statement": "Commit to 2.5% of GDP, review the nuclear deterrent rather than committing to like-for-like Trident replacement, and invest in cyber and resilience alongside maintaining NATO commitment",
+      "source_id": "SRC-DEF-011",
+      "source_loc": "Defence section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Liberal Democrat",
+        "stance": "endorses",
+        "maps_to": [
+          "DEF-P01"
+        ]
+      }
+    },
+    {
+      "id": "DEF-POS-GRN-01",
+      "type": "POSITION",
+      "statement": "Set no defence spending target, oppose increases, and redirect military spending to public services and climate action with no mention of NATO targets",
+      "source_id": "SRC-DEF-012",
+      "source_loc": "Defence section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Green",
+        "stance": "contests",
+        "maps_to": [
+          "DEF-P01"
+        ]
+      }
+    },
+    {
+      "id": "DEF-POS-REF-01",
+      "type": "POSITION",
+      "statement": "Increase military spending with a strong defence posture, introduce National Service, and take a militarised approach to border enforcement",
+      "source_id": "SRC-DEF-013",
+      "source_loc": "Defence section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Reform UK",
+        "stance": "endorses",
+        "maps_to": [
+          "DEF-P01"
+        ]
+      }
+    }
+  ]
+}

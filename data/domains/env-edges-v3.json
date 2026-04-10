@@ -1,0 +1,339 @@
+{
+  "domain": "environment",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "method": "single-pass",
+  "edges": [
+    {
+      "from": "ENV-F01",
+      "to": "ENV-A01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "26,000-38,000 equivalent deaths with progress slowed proves the UK is failing on air quality targets"
+    },
+    {
+      "from": "ENV-F01",
+      "to": "ENV-P04",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "The scale of air pollution deaths directly justifies a Clean Air Act with WHO-standard legally binding limits"
+    },
+    {
+      "from": "ENV-F01",
+      "to": "ENV-C02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Deaths continuing despite targets proves targets without enforcement are meaningless"
+    },
+    {
+      "from": "ENV-F02",
+      "to": "ENV-A01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "OEP finding government 'largely off track' with 62% seabird decline proves failure across biodiversity metrics"
+    },
+    {
+      "from": "ENV-F02",
+      "to": "ENV-P03",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Being off track on biodiversity targets directly justifies the 30 by 30 enforcement policy"
+    },
+    {
+      "from": "ENV-F02",
+      "to": "ENV-C02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Off track on every metric is the primary evidence for the targets-without-delivery claim"
+    },
+    {
+      "from": "ENV-F03",
+      "to": "ENV-A03",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "71% of land being farmed with agriculture driving biodiversity loss and water pollution proves farming transition is the most important lever"
+    },
+    {
+      "from": "ENV-F03",
+      "to": "ENV-P02",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Agriculture being the dominant land use and pollution source justifies doubling the ELM budget"
+    },
+    {
+      "from": "ENV-F04",
+      "to": "ENV-A02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Dividends extracted while infrastructure degrades and enforcement cut proves regulation alone without structural reform cannot work"
+    },
+    {
+      "from": "ENV-F04",
+      "to": "ENV-P01",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Water company failure with dividends over infrastructure directly justifies structural reform with dividend ban"
+    },
+    {
+      "from": "ENV-F05",
+      "to": "ENV-A05",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Dasgupta Review and \u00a3700m pollination value prove nature's economic value is enormous and systematically underpriced"
+    },
+    {
+      "from": "ENV-F05",
+      "to": "ENV-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Quantified ecosystem service values prove nature is infrastructure priced at zero"
+    },
+    {
+      "from": "ENV-F06",
+      "to": "ENV-P04",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "\u00a320bn/yr in air pollution costs directly sizes the Clean Air Act's economic justification"
+    },
+    {
+      "from": "ENV-F06",
+      "to": "ENV-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "\u00a320bn/yr health costs from pollution that targets fail to address proves nature is infrastructure with quantifiable economic impact"
+    },
+    {
+      "from": "ENV-F07",
+      "to": "ENV-A05",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Nature-based solutions being 50-75% cheaper than engineered alternatives proves environmental protection is economically rational"
+    },
+    {
+      "from": "ENV-F07",
+      "to": "ENV-C01",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Cheaper nature-based flood defence proves nature provides infrastructure services underpriced by current accounting"
+    },
+    {
+      "from": "ENV-F08",
+      "to": "ENV-A05",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Biodiversity decline posing 2008-level systemic risk proves nature loss has quantifiable economic consequences"
+    },
+    {
+      "from": "ENV-F08",
+      "to": "ENV-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Systemic financial risk from nature loss proves the infrastructure metaphor is not rhetorical but literal"
+    },
+    {
+      "from": "ENV-A01",
+      "to": "ENV-C02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Off track on every target directly supports the targets-without-delivery claim"
+    },
+    {
+      "from": "ENV-A02",
+      "to": "ENV-P01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Regulation alone being insufficient supports structural water company reform"
+    },
+    {
+      "from": "ENV-A03",
+      "to": "ENV-P02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Farming being both productive and nature-friendly with sufficient investment supports doubling the ELM budget"
+    },
+    {
+      "from": "ENV-A04",
+      "to": "ENV-P03",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Nutrient neutrality being necessary because waterways are polluted supports maintaining and enforcing biodiversity protections"
+    },
+    {
+      "from": "ENV-A05",
+      "to": "ENV-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Quantified economic value of nature directly supports the nature-as-infrastructure claim"
+    },
+    {
+      "from": "ENV-C01",
+      "to": "ENV-P02",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "Doubling the ELM budget depends on the claim that nature provides infrastructure services worth funding"
+    },
+    {
+      "from": "ENV-C01",
+      "to": "ENV-P03",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "30 by 30 protection depends on the claim that nature is infrastructure worth preserving"
+    },
+    {
+      "from": "ENV-C02",
+      "to": "ENV-P01",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "Water company reform depends on the claim that targets without enforcement are meaningless"
+    },
+    {
+      "from": "ENV-C02",
+      "to": "ENV-P04",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "Clean Air Act depends on the claim that current air quality targets have failed to deliver"
+    },
+    {
+      "from": "ENV-POS-CON-01",
+      "to": "ENV-P02",
+      "type": "CONTRADICTS",
+      "strength": "MEDIUM",
+      "explanation": "\u00a31bn extra focused on food production risks undermining the nature-friendly transition by returning to direct subsidies"
+    },
+    {
+      "from": "ENV-POS-CON-01",
+      "to": "ENV-P03",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Abolishing nutrient neutrality removes protection the evidence says is needed until pollution sources are fixed"
+    },
+    {
+      "from": "ENV-POS-LAB-01",
+      "to": "ENV-P02",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Making ELM work for farmers and nature aligns with the evidence but without commitment to budget doubling"
+    },
+    {
+      "from": "ENV-POS-LAB-01",
+      "to": "ENV-P03",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Meeting Environment Act targets and maintaining BNG aligns with 30 by 30 though delivery is off track"
+    },
+    {
+      "from": "ENV-POS-LIB-01",
+      "to": "ENV-P01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Water company reform and increased regulator funding directly match the evidence-based policy"
+    },
+    {
+      "from": "ENV-POS-LIB-01",
+      "to": "ENV-P04",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Tree planting and fuel poverty measures contribute to air quality and environmental restoration"
+    },
+    {
+      "from": "ENV-POS-GRN-01",
+      "to": "ENV-P02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Tripling farming budget and 50% pesticide reduction exceeds the evidence-based minimum and matches the direction"
+    },
+    {
+      "from": "ENV-POS-GRN-01",
+      "to": "ENV-P03",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Rights of Nature and ending factory farming go beyond but align with the biodiversity protection evidence"
+    },
+    {
+      "from": "ENV-POS-REF-01",
+      "to": "ENV-P01",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Stopping Natural England enforcement and dropping EU environmental laws would remove the protections needed to address water and nature crises"
+    },
+    {
+      "from": "ENV-POS-REF-01",
+      "to": "ENV-P02",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Scrapping nature-friendly farming subsidies directly contradicts the evidence that ELM budget should be doubled"
+    },
+    {
+      "from": "ENV-POS-REF-01",
+      "to": "ENV-P03",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Dropping environmental laws would violate UK international commitments and trigger biodiversity decline with 2008-level economic risk"
+    },
+    {
+      "from": "ENV-F02",
+      "to": "ENV-POS-REF-01",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Already off track on every target while Reform proposes removing protections would accelerate ecological collapse"
+    },
+    {
+      "from": "ENV-P01",
+      "to": "ENV-P02",
+      "type": "ENABLES",
+      "strength": "MEDIUM",
+      "explanation": "Water company reform reducing agricultural runoff pollution enables the farming transition by addressing downstream impacts"
+    },
+    {
+      "from": "ENV-F04",
+      "to": "ENV-A04",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Sewage discharges increasing and waterways already stressed proves nutrient neutrality rules exist for a reason and cannot be safely abolished"
+    }
+  ],
+  "cross_domain_edges": [
+    {
+      "from": "environment:ENV-F01",
+      "to": "nhs:NHS-F04",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "26,000-38,000 equivalent deaths from air pollution is a major contributor to NHS burden comparable to the waiting list crisis"
+    },
+    {
+      "from": "environment:ENV-F06",
+      "to": "nhs:NHS-C03",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "\u00a320bn/yr air pollution health costs are part of the NHS funding gap that tax reform aims to close"
+    },
+    {
+      "from": "environment:ENV-P02",
+      "to": "taxation:TAX-C04",
+      "type": "DEPENDS_ON",
+      "strength": "MEDIUM",
+      "explanation": "Doubling ELM budget at \u00a33bn/yr additional draws from the same constrained fiscal space as every other domain"
+    },
+    {
+      "from": "environment:ENV-F07",
+      "to": "housing:HOU-P01",
+      "type": "SUPPORTS",
+      "strength": "LOW",
+      "explanation": "Nature-based flood defence being cheaper supports housing development when combined with environmental protection rather than opposing it"
+    },
+    {
+      "from": "environment:ENV-A04",
+      "to": "housing:HOU-A02",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Nutrient neutrality being necessary proves that planning reform must address pollution not just remove protections to unlock development"
+    },
+    {
+      "from": "environment:ENV-C01",
+      "to": "energy:ENG-C04",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Peatland carbon sequestration at 3.2bn tonnes supports the energy domain's finding that insulation and nature-based demand reduction are the cheapest interventions"
+    }
+  ]
+}

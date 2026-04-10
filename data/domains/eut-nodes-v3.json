@@ -1,0 +1,410 @@
+{
+  "domain": "eu-trade",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "extraction_source": "manifesto-eu-trade-complete.md",
+  "verified": false,
+  "sources": [
+    {
+      "id": "SRC-EUT-001",
+      "title": "OBR, Long-Term Brexit GDP Impact Estimate",
+      "url": null,
+      "tier": 3,
+      "author": "OBR",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-EUT-002",
+      "title": "Bloom et al., The Economic Impact of Brexit, NBER Working Paper",
+      "url": null,
+      "tier": 1,
+      "author": "Bloom et al.",
+      "date": "2025-11"
+    },
+    {
+      "id": "SRC-EUT-005",
+      "title": "House of Commons Library, Resetting the UK's Relationship with the EU",
+      "url": null,
+      "tier": 3,
+      "author": "House of Commons Library",
+      "date": null
+    },
+    {
+      "id": "SRC-EUT-007",
+      "title": "UK in a Changing Europe, New Year Same Old Brexit Trade-offs",
+      "url": null,
+      "tier": 4,
+      "author": "UK in a Changing Europe",
+      "date": "2026"
+    },
+    {
+      "id": "SRC-EUT-008",
+      "title": "Centre for European Reform, Will 2026 Be the Year to Reset the Reset?",
+      "url": null,
+      "tier": 4,
+      "author": "Centre for European Reform",
+      "date": "2026"
+    },
+    {
+      "id": "SRC-EUT-009",
+      "title": "British Chambers of Commerce, EU Trade Getting Harder Survey",
+      "url": null,
+      "tier": 4,
+      "author": "British Chambers of Commerce",
+      "date": "2025-12"
+    },
+    {
+      "id": "SRC-EUT-010",
+      "title": "House of Lords European Affairs Committee, Unfinished Business",
+      "url": null,
+      "tier": 3,
+      "author": "House of Lords",
+      "date": "2025-11"
+    },
+    {
+      "id": "SRC-EUT-011",
+      "title": "Conservative Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Conservative Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-EUT-012",
+      "title": "Labour Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Labour Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-EUT-013",
+      "title": "Liberal Democrats 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Liberal Democrats",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-EUT-014",
+      "title": "Green Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Green Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-EUT-015",
+      "title": "Reform UK 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Reform UK",
+      "date": "2024-06"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "EUT-F01",
+      "type": "FACT",
+      "statement": "The OBR estimates Brexit will reduce long-term UK productivity by 4% with trade intensity declining 15%, while a November 2025 NBER study found Brexit has already reduced GDP per capita by 6-8%, substantially worse than the OBR estimate",
+      "source_id": "SRC-EUT-001",
+      "source_loc": "GDP impact",
+      "confidence": "MEDIUM",
+      "verified": true,
+      "fiscal": {
+        "amount_low": 100,
+        "amount_high": 200,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      },
+      "verified_date": "2026-04-10"
+    },
+    {
+      "id": "EUT-F02",
+      "type": "FACT",
+      "statement": "The cumulative impact of all UK FTAs since Brexit including CPTPP at 0.06% GDP and Australia at 0.08% GDP totals less than 1% of GDP, unable to compensate for the 4-8% lost from leaving the single market",
+      "source_id": "SRC-EUT-001",
+      "source_loc": "FTA analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EUT-F03",
+      "type": "FACT",
+      "statement": "Labour's May 2025 UK-EU summit reset including SPS agreement, security partnership, and Erasmus rejoining adds approximately 0.3% to UK GDP by 2040, less than one-tenth of the estimated damage",
+      "source_id": "SRC-EUT-005",
+      "source_loc": "Reset assessment",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EUT-F04",
+      "type": "FACT",
+      "statement": "EU trade was worth \u00a3358 billion in 2024 representing 41% of all UK exports, making it overwhelmingly the UK's most important trade relationship by the gravity model which is the most robust finding in trade economics",
+      "source_id": "SRC-EUT-009",
+      "source_loc": "Trade data",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EUT-F05",
+      "type": "FACT",
+      "statement": "The Centre for European Reform concluded Labour was disappointingly willing to tolerate continuing economic damage in 2025 to avoid accusations of betraying Brexit",
+      "source_id": "SRC-EUT-008",
+      "source_loc": "Assessment",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EUT-F06",
+      "type": "FACT",
+      "statement": "Budget contributions for EEA-level single market access would cost \u00a35-10 billion per year, compared to the \u00a3100-200 billion per year in GDP recovery that access would deliver",
+      "source_id": "SRC-EUT-007",
+      "source_loc": "Cost-benefit analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 5,
+        "amount_high": 10,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "EUT-F07",
+      "type": "FACT",
+      "statement": "Small firms are disproportionately hit by the fixed costs of customs compliance created by Brexit, with the British Chambers of Commerce reporting in December 2025 that EU trade is getting harder",
+      "source_id": "SRC-EUT-009",
+      "source_loc": "Business survey",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EUT-A01",
+      "type": "ASSUMPTION",
+      "statement": "Brexit has been economically damaging to the UK",
+      "source_id": "SRC-EUT-002",
+      "source_loc": "Assumption 1",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "CONFIRMED. OBR: 4% GDP reduction. NBER: 6-8%. Most affected: agrifood, textiles, manufacturing. Services trade in deglobalisation in disguise. Damage is measured and ongoing."
+    },
+    {
+      "id": "EUT-A02",
+      "type": "ASSUMPTION",
+      "statement": "Free trade agreements with non-EU countries can compensate for lost EU single market access",
+      "source_id": "SRC-EUT-001",
+      "source_loc": "Assumption 2",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "NOT EVEN CLOSE. All FTAs combined < 1% GDP. Lost access = 4-8%. Gravity model: trade intensity declines with distance. The arithmetic is definitive."
+    },
+    {
+      "id": "EUT-A03",
+      "type": "ASSUMPTION",
+      "statement": "Labour's reset with the EU is sufficient to recover the economic damage from Brexit",
+      "source_id": "SRC-EUT-005",
+      "source_loc": "Assumption 3",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "RECOVERS ~0.3% OF A 4-8% LOSS. Red lines limit recovery. Deeper integration requires concessions Labour has ruled out."
+    },
+    {
+      "id": "EUT-A04",
+      "type": "ASSUMPTION",
+      "statement": "A customs union with the EU would be net beneficial for the UK despite losing independent trade policy",
+      "source_id": "SRC-EUT-010",
+      "source_loc": "Assumption 4",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "NET POSITIVE FOR GOODS. Eliminates border checks, removes rules of origin. Loses FTA policy worth < 1% to recover goods trade worth far more."
+    },
+    {
+      "id": "EUT-A05",
+      "type": "ASSUMPTION",
+      "statement": "Freedom of movement is the binding political constraint preventing UK economic recovery through closer EU integration",
+      "source_id": "SRC-EUT-007",
+      "source_loc": "Assumption 5",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "POLITICALLY YES, ECONOMICALLY THE MOST COSTLY RED LINE. EU condition for single market access. Enabled UK services exports and NHS staffing. Maintaining the red line accepts permanent damage."
+    },
+    {
+      "id": "EUT-C01",
+      "type": "CLAIM",
+      "statement": "Single market and customs union membership is the economically optimal position for the UK, recovering the bulk of the 4-8% GDP loss at a budget cost of \u00a35-10 billion versus \u00a3100-200 billion in GDP recovery",
+      "source_id": "SRC-EUT-001",
+      "source_loc": "Evidence synthesis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EUT-C02",
+      "type": "CLAIM",
+      "statement": "The GDP loss from Brexit cascades through taxation, immigration, NHS, and energy domains, making Brexit not a standalone issue but a constraint on every other domain's fiscal feasibility",
+      "source_id": "SRC-EUT-007",
+      "source_loc": "Cross-domain synthesis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EUT-C03",
+      "type": "CLAIM",
+      "statement": "Labour's red lines against single market, customs union, and freedom of movement are political choices not economic ones, and they accept permanent economic damage to avoid political risk",
+      "source_id": "SRC-EUT-008",
+      "source_loc": "Political analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EUT-P01",
+      "type": "POLICY",
+      "statement": "Complete the SPS agreement and pursue customs union membership as the highest-return trade policy, surrendering independent FTA policy worth less than 1% GDP to recover far greater goods trade access",
+      "source_id": "SRC-EUT-010",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EUT-P02",
+      "type": "POLICY",
+      "statement": "Establish single market membership via EEA/EFTA or equivalent as the long-term goal, accepting freedom of movement, CJEU oversight, and budget contributions of \u00a35-10bn/yr to recover \u00a3100-200bn in GDP",
+      "source_id": "SRC-EUT-001",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 5,
+        "amount_high": 10,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "EUT-P03",
+      "type": "POLICY",
+      "statement": "Accept the EU's youth mobility scheme for 18-30 year olds as a step toward normalised people mobility, benefiting universities, cultural exchange, and workforce flexibility",
+      "source_id": "SRC-EUT-007",
+      "source_loc": "Innovation 3",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "EUT-P04",
+      "type": "POLICY",
+      "statement": "Publish an annual government report quantifying the economic impact of Brexit similar to the OBR's fiscal outlook but for trade, making the cost visible rather than hidden",
+      "source_id": "SRC-EUT-001",
+      "source_loc": "Innovation 1",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "EUT-POS-CON-01",
+      "type": "POSITION",
+      "statement": "Maintain the Brexit settlement with no closer EU alignment, pursue independent trade policy through CPTPP and new global FTAs",
+      "source_id": "SRC-EUT-011",
+      "source_loc": "EU section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Conservative",
+        "stance": "contests",
+        "maps_to": [
+          "EUT-P01",
+          "EUT-P02"
+        ]
+      }
+    },
+    {
+      "id": "EUT-POS-LAB-01",
+      "type": "POSITION",
+      "statement": "Reset with EU within red lines of no single market, no customs union, and no freedom of movement, pursue sector-specific alignment while maintaining that closer alignment is preferable",
+      "source_id": "SRC-EUT-012",
+      "source_loc": "EU section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Labour",
+        "stance": "contests",
+        "maps_to": [
+          "EUT-P01",
+          "EUT-P02"
+        ]
+      }
+    },
+    {
+      "id": "EUT-POS-LIB-01",
+      "type": "POSITION",
+      "statement": "Pursue a bespoke UK-EU customs union as stepping stone with long-term objective of rejoining single market, implement UK-EU youth mobility scheme",
+      "source_id": "SRC-EUT-013",
+      "source_loc": "EU section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Liberal Democrat",
+        "stance": "endorses",
+        "maps_to": [
+          "EUT-P01",
+          "EUT-P02",
+          "EUT-P03"
+        ]
+      }
+    },
+    {
+      "id": "EUT-POS-GRN-01",
+      "type": "POSITION",
+      "statement": "Rejoin the EU as soon as political will is present",
+      "source_id": "SRC-EUT-014",
+      "source_loc": "EU section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Green",
+        "stance": "endorses",
+        "maps_to": [
+          "EUT-P02"
+        ]
+      }
+    },
+    {
+      "id": "EUT-POS-REF-01",
+      "type": "POSITION",
+      "statement": "Grasp the opportunities of Brexit, scrap remaining EU-derived legislation, and renegotiate or abandon post-Brexit UK-EU treaties",
+      "source_id": "SRC-EUT-015",
+      "source_loc": "EU section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Reform UK",
+        "stance": "contests",
+        "maps_to": [
+          "EUT-P01",
+          "EUT-P02"
+        ]
+      }
+    }
+  ]
+}

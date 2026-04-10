@@ -1,0 +1,655 @@
+{
+  "domain": "immigration",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "method": "single-pass",
+  "nhs_cross_domain_fix": "NHS edges reference IMM-POS-LAB-09 which should be IMM-POS-LAB-03 (care route closure)",
+  "edges": [
+    {
+      "from": "IMM-F01",
+      "to": "IMM-A01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "The 764k headline number conflating different categories is the primary evidence that route-specific analysis is required rather than blanket positions"
+    },
+    {
+      "from": "IMM-F01",
+      "to": "IMM-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Conflated headline figures directly support the claim that no blanket fiscal statement is honest"
+    },
+    {
+      "from": "IMM-F01",
+      "to": "IMM-C05",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "The scale of net migration makes the OBR fiscal finding politically difficult to communicate honestly"
+    },
+    {
+      "from": "IMM-F02",
+      "to": "IMM-A07",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "224,700 case backlog having quadrupled since 2014 demonstrates the processing failure driving costs"
+    },
+    {
+      "from": "IMM-F02",
+      "to": "IMM-C03",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Quadrupled caseload with 61% post-refusal proves the system is slow not overwhelmed"
+    },
+    {
+      "from": "IMM-F03",
+      "to": "IMM-A07",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "\u00a38m/day hotel cost is the direct fiscal consequence of processing failure that fast processing would eliminate"
+    },
+    {
+      "from": "IMM-F03",
+      "to": "IMM-P03",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "\u00a38m/day hotel cost means 3-month processing pays for itself through reduced accommodation costs"
+    },
+    {
+      "from": "IMM-F03",
+      "to": "IMM-C03",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Daily hotel costs prove the asylum system's expense is driven by slowness not volume"
+    },
+    {
+      "from": "IMM-F04",
+      "to": "IMM-A08",
+      "type": "CONTRADICTS",
+      "strength": "MEDIUM",
+      "explanation": "UK receiving fewer asylum applications per capita than EU average contradicts the narrative of being uniquely overwhelmed by asylum seekers"
+    },
+    {
+      "from": "IMM-F04",
+      "to": "IMM-C03",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Below-EU-average application rates prove the system is slow not overwhelmed"
+    },
+    {
+      "from": "IMM-F05",
+      "to": "IMM-A01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "\u00a3341k lifetime contribution per skilled migrant is the primary evidence for the positive fiscal case on the skilled worker route"
+    },
+    {
+      "from": "IMM-F05",
+      "to": "IMM-A10",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Skilled migrants contributing \u00a3341k each makes zero net migration economically destructive"
+    },
+    {
+      "from": "IMM-F05",
+      "to": "IMM-C05",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "The scale of skilled migrant fiscal contribution is the finding no party honestly communicates"
+    },
+    {
+      "from": "IMM-F06",
+      "to": "IMM-A10",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "\u00a319.9bn lower borrowing in high migration scenario proves zero net migration would devastate public finances"
+    },
+    {
+      "from": "IMM-F06",
+      "to": "IMM-C05",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "\u00a319.9bn borrowing reduction is the specific OBR finding no party honestly communicates"
+    },
+    {
+      "from": "IMM-F06",
+      "to": "IMM-A01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "OBR borrowing reduction confirms the aggregate positive fiscal case for higher migration"
+    },
+    {
+      "from": "IMM-F07",
+      "to": "IMM-A01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Family route costing -\u00a3109k per person proves fiscal impact is route-dependent, not uniformly positive"
+    },
+    {
+      "from": "IMM-F07",
+      "to": "IMM-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Negative fiscal impact on family route directly supports the claim that blanket statements are dishonest"
+    },
+    {
+      "from": "IMM-F08",
+      "to": "IMM-A02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "0.6% depression at 5th percentile confirms wage suppression exists but is small relative to other factors"
+    },
+    {
+      "from": "IMM-F09",
+      "to": "IMM-A04",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Only 3% of criminal deportation ECHR challenges succeeding proves the ECHR is a minor factor in deportation outcomes"
+    },
+    {
+      "from": "IMM-F09",
+      "to": "IMM-C04",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Low ECHR success rate on criminal deportation supports the claim that ECHR exit is disproportionate"
+    },
+    {
+      "from": "IMM-F10",
+      "to": "IMM-A04",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "ECtHR issuing only 1 judgment against UK each year and granting 15/660 interim measures proves the Court is not blocking UK enforcement"
+    },
+    {
+      "from": "IMM-F10",
+      "to": "IMM-C04",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Near-zero ECtHR interference proves leaving ECHR would not meaningfully increase deportation capacity"
+    },
+    {
+      "from": "IMM-F11",
+      "to": "IMM-A06",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "\u00a3700m spent on Rwanda with zero flights and no deterrence proves the scheme had no evidence base"
+    },
+    {
+      "from": "IMM-F11",
+      "to": "IMM-P05",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Rwanda's failure at \u00a3700m vs Albania's success at bilateral cooperation proves targeted returns outperform performative deterrence"
+    },
+    {
+      "from": "IMM-F11",
+      "to": "IMM-POS-CON-02",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "\u00a3700m with zero deportations contradicts the Conservative position of continuing Rwanda flights"
+    },
+    {
+      "from": "IMM-F12",
+      "to": "IMM-A05",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Albanian arrivals dropping 90% after bilateral deal proves targeted cooperation works"
+    },
+    {
+      "from": "IMM-F12",
+      "to": "IMM-P05",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Albanian model directly demonstrates the bilateral returns approach works in practice"
+    },
+    {
+      "from": "IMM-F13",
+      "to": "IMM-A08",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "1 in 5 NHS staff being foreign and 50% of workforce growth from overseas proves immigration sustains rather than strains the NHS"
+    },
+    {
+      "from": "IMM-F13",
+      "to": "IMM-C02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "NHS dependence on overseas workers proves immigration dependency is a symptom of domestic underinvestment in training"
+    },
+    {
+      "from": "IMM-F13",
+      "to": "IMM-P07",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Scale of NHS overseas workforce dependency is the evidence base for maintaining recruitment routes"
+    },
+    {
+      "from": "IMM-F14",
+      "to": "IMM-A08",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Social care describing international recruitment as a lifeline while the route was closed proves immigration policy is harming not helping services"
+    },
+    {
+      "from": "IMM-F14",
+      "to": "IMM-C02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "19% non-UK care workforce proves the domestic skills deficit that creates immigration dependency"
+    },
+    {
+      "from": "IMM-F14",
+      "to": "IMM-P07",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Care worker route closure threatening extreme workforce shortages is the direct evidence for reinstating the route with standards"
+    },
+    {
+      "from": "IMM-F14",
+      "to": "IMM-POS-LAB-03",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Closing the route while 19% of staff depend on it directly contradicts workforce stability"
+    },
+    {
+      "from": "IMM-F15",
+      "to": "IMM-A08",
+      "type": "CONTRADICTS",
+      "strength": "MEDIUM",
+      "explanation": "4.3 million home undersupply existing before migration increased proves housing pressure is a building failure not an immigration failure"
+    },
+    {
+      "from": "IMM-F16",
+      "to": "IMM-A10",
+      "type": "CONTRADICTS",
+      "strength": "MEDIUM",
+      "explanation": "One-third of productivity growth linked to migration-driven skills expansion proves zero migration would damage economic growth"
+    },
+    {
+      "from": "IMM-F17",
+      "to": "IMM-A04",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Small boats being only 5% of total immigration proves the ECHR debate focuses on a tiny fraction of actual migration"
+    },
+    {
+      "from": "IMM-F17",
+      "to": "IMM-C04",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Constitutional upheaval over 5% of immigration is by definition disproportionate"
+    },
+    {
+      "from": "IMM-A01",
+      "to": "IMM-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Route-specific fiscal finding is the analytical basis for the no-blanket-statement claim"
+    },
+    {
+      "from": "IMM-A03",
+      "to": "IMM-P01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Caps having no evidence of effectiveness is the basis for the MAC-led no-cap policy"
+    },
+    {
+      "from": "IMM-A04",
+      "to": "IMM-C04",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "ECHR being a minor factor supports the disproportionality claim"
+    },
+    {
+      "from": "IMM-A04",
+      "to": "IMM-P05",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "ECHR not blocking deportations means remaining in ECHR has negligible enforcement cost"
+    },
+    {
+      "from": "IMM-A07",
+      "to": "IMM-C03",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Fast processing being dramatically cheaper proves the system is expensive because it's slow"
+    },
+    {
+      "from": "IMM-A07",
+      "to": "IMM-P03",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "The cost evidence is the direct justification for the 3-month processing target"
+    },
+    {
+      "from": "IMM-A08",
+      "to": "IMM-C02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Underfunding being the primary cause of service strain supports the domestic skills deficit diagnosis"
+    },
+    {
+      "from": "IMM-A09",
+      "to": "IMM-P08",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Language being the strongest integration predictor directly justifies the day-one language provision policy"
+    },
+    {
+      "from": "IMM-A09",
+      "to": "IMM-P04",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Speed of processing improving integration outcomes supports the right-to-work-after-3-months policy"
+    },
+    {
+      "from": "IMM-A10",
+      "to": "IMM-P01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Zero net migration being economically incoherent supports the evidence-based alternative of route-specific MAC management"
+    },
+    {
+      "from": "IMM-C01",
+      "to": "IMM-P01",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "Route-specific management only makes sense if the no-blanket-statement claim is correct"
+    },
+    {
+      "from": "IMM-C02",
+      "to": "IMM-P02",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "The immigration-skills pact depends on the claim that domestic underinvestment is the root cause"
+    },
+    {
+      "from": "IMM-C02",
+      "to": "IMM-P07",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "Maintaining overseas routes depends on the claim that immigration dependency reflects domestic failure not immigration excess"
+    },
+    {
+      "from": "IMM-C03",
+      "to": "IMM-P03",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "3-month processing depends on the claim that the system is slow not overwhelmed"
+    },
+    {
+      "from": "IMM-C03",
+      "to": "IMM-P04",
+      "type": "DEPENDS_ON",
+      "strength": "MEDIUM",
+      "explanation": "Right to work after 3 months depends on fast processing being the right approach"
+    },
+    {
+      "from": "IMM-C04",
+      "to": "IMM-P05",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "Remaining in ECHR depends on the claim that exit is disproportionate to the problem"
+    },
+    {
+      "from": "IMM-POS-CON-01",
+      "to": "IMM-P01",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Binding annual cap directly contradicts the evidence-based no-cap MAC-led approach"
+    },
+    {
+      "from": "IMM-POS-CON-02",
+      "to": "IMM-P03",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "IMA blocking all processing contradicts the fast processing approach and the Conservatives' own backlog target"
+    },
+    {
+      "from": "IMM-POS-CON-02",
+      "to": "IMM-P05",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Rwanda continuation contradicts the bilateral returns approach given \u00a3700m with zero flights"
+    },
+    {
+      "from": "IMM-POS-CON-03",
+      "to": "IMM-P07",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Banning care worker dependants directly contradicts maintaining overseas recruitment routes for social care"
+    },
+    {
+      "from": "IMM-POS-LAB-01",
+      "to": "IMM-P01",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Labour's MAC-led skills linkage approach partially aligns with the evidence-based route-specific management"
+    },
+    {
+      "from": "IMM-POS-LAB-01",
+      "to": "IMM-P02",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Labour's principle of sectors training domestically aligns with the skills pact but lacks enforcement mechanism"
+    },
+    {
+      "from": "IMM-POS-LAB-02",
+      "to": "IMM-P05",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Border Security Command and scrapping Rwanda aligns closely with the bilateral cooperation enforcement approach"
+    },
+    {
+      "from": "IMM-POS-LAB-03",
+      "to": "IMM-P07",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Labour closing the care worker route directly contradicts the policy to maintain overseas recruitment during the 15-year domestic transition"
+    },
+    {
+      "from": "IMM-POS-LIB-01",
+      "to": "IMM-P01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Lib Dems ending hostile environment and moving visa policy to economic department closely matches the evidence-based framing"
+    },
+    {
+      "from": "IMM-POS-LIB-01",
+      "to": "IMM-P06",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Lib Dem firewall proposal directly matches the exploitation reporting policy"
+    },
+    {
+      "from": "IMM-POS-LIB-02",
+      "to": "IMM-P03",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "3-month processing target matches the evidence-based asylum processing policy exactly"
+    },
+    {
+      "from": "IMM-POS-LIB-02",
+      "to": "IMM-P07",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Reversing care worker dependant bans partially supports maintaining overseas recruitment"
+    },
+    {
+      "from": "IMM-POS-GRN-01",
+      "to": "IMM-P01",
+      "type": "SUPPORTS",
+      "strength": "LOW",
+      "explanation": "Green no-restriction philosophy aligns directionally with evidence but the open borders aspiration has no evidence base for feasibility"
+    },
+    {
+      "from": "IMM-POS-REF-01",
+      "to": "IMM-P01",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Zero net migration and one-in-one-out directly contradict MAC-led route-specific management"
+    },
+    {
+      "from": "IMM-POS-REF-01",
+      "to": "IMM-P05",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Leaving ECHR and establishing a deportation command contradicts the remain-in-ECHR bilateral cooperation approach"
+    },
+    {
+      "from": "IMM-P01",
+      "to": "IMM-P02",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Route-specific management creates the framework within which the immigration-skills pact operates"
+    },
+    {
+      "from": "IMM-P03",
+      "to": "IMM-P04",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Fast processing is the prerequisite for the right-to-work policy \u2014 if claims are decided in 3 months, the right-to-work trigger is meaningful"
+    },
+    {
+      "from": "IMM-P07",
+      "to": "IMM-P02",
+      "type": "COMPETES",
+      "strength": "MEDIUM",
+      "explanation": "Maintaining overseas routes and requiring domestic training co-investment create tension \u2014 sectors must recruit AND train simultaneously"
+    },
+    {
+      "from": "IMM-F08",
+      "to": "IMM-C02",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Small wage effect at the bottom while immigration fills critical vacancies proves the problem is domestic pay policy not immigration"
+    },
+    {
+      "from": "IMM-F15",
+      "to": "IMM-C02",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "4.3 million home undersupply predating migration increase proves housing pressure is a domestic investment failure"
+    },
+    {
+      "from": "IMM-F16",
+      "to": "IMM-P01",
+      "type": "ENABLES",
+      "strength": "MEDIUM",
+      "explanation": "One-third of productivity growth from migration-driven skills expansion is the economic case for maintaining managed migration"
+    },
+    {
+      "from": "IMM-A02",
+      "to": "IMM-P02",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Small wage suppression in low-pay sectors supports requiring those sectors to co-fund domestic training rather than relying on low-wage overseas workers"
+    },
+    {
+      "from": "IMM-F12",
+      "to": "IMM-A03",
+      "type": "CONTRADICTS",
+      "strength": "MEDIUM",
+      "explanation": "Albanian deal working through bilateral cooperation not caps shows that targeted approaches outperform aggregate numerical restrictions"
+    },
+    {
+      "from": "IMM-A05",
+      "to": "IMM-P05",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Evidence that safe routes reduce irregular crossings supports the remain-in-ECHR bilateral approach which includes expanded resettlement"
+    },
+    {
+      "from": "IMM-A06",
+      "to": "IMM-C04",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Deterrence working only at disproportionate cost reinforces the claim that constitutional upheaval for enforcement is not justified"
+    },
+    {
+      "from": "IMM-F12",
+      "to": "IMM-A09",
+      "type": "SUPPORTS",
+      "strength": "LOW",
+      "explanation": "Albanian deal success partly driven by bilateral cooperation on returns integration, supporting the broader finding that targeted bilateral approaches aid integration"
+    },
+    {
+      "from": "IMM-C05",
+      "to": "IMM-P01",
+      "type": "DEPENDS_ON",
+      "strength": "MEDIUM",
+      "explanation": "The route-specific management policy implicitly depends on honest communication of fiscal evidence which no party currently provides"
+    },
+    {
+      "from": "IMM-A08",
+      "to": "IMM-P06",
+      "type": "DEPENDS_ON",
+      "strength": "MEDIUM",
+      "explanation": "The firewall policy depends on the finding that immigration is not the cause of service strain \u2014 the hostile environment punishes people who sustain services"
+    },
+    {
+      "from": "IMM-A09",
+      "to": "IMM-P08",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "Day-one language provision depends directly on the finding that language is the strongest predictor of integration success"
+    },
+    {
+      "from": "IMM-C02",
+      "to": "IMM-P09",
+      "type": "DEPENDS_ON",
+      "strength": "MEDIUM",
+      "explanation": "Regional visa pathways depend on the claim that immigration dependency reflects domestic regional skills gaps"
+    }
+  ],
+  "cross_domain_edges": [
+    {
+      "from": "immigration:IMM-A08",
+      "to": "nhs:NHS-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "The finding that underfunding not immigration causes service strain reinforces the NHS funding insufficiency claim"
+    },
+    {
+      "from": "immigration:IMM-F13",
+      "to": "nhs:NHS-A03",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "1 in 5 NHS staff being foreign directly supports the NHS workforce plan's dependency on overseas recruitment"
+    },
+    {
+      "from": "immigration:IMM-F14",
+      "to": "nhs:NHS-P04",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Social care sector describing international recruitment as a lifeline supports the NHS social care funding and staffing policy"
+    },
+    {
+      "from": "immigration:IMM-P07",
+      "to": "nhs:NHS-P05",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Reinstating care worker routes directly enables the NHS policy of maintaining overseas recruitment during the domestic transition"
+    },
+    {
+      "from": "immigration:IMM-C02",
+      "to": "housing:HOU-A01",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Immigration dependency being a domestic investment failure supports the claim that housing undersupply is a building failure not an immigration problem"
+    },
+    {
+      "from": "immigration:IMM-F06",
+      "to": "taxation:TAX-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "\u00a319.9bn lower borrowing from higher migration directly affects the fiscal space available for tax and spending policy"
+    },
+    {
+      "from": "immigration:IMM-A02",
+      "to": "welfare:WEL-A03",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Small wage suppression at 5th percentile links to welfare policy on minimum wage and working conditions"
+    }
+  ]
+}

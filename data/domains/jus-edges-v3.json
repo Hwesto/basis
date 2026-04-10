@@ -1,0 +1,62 @@
+{
+  "domain": "justice",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "method": "single-pass",
+
+  "edges": [
+    {"from": "JUS-F01", "to": "JUS-A05", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Backlog projected to 113,000 even with record investment proves current trajectory cannot clear it"},
+    {"from": "JUS-F01", "to": "JUS-C01", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Record investment failing to reduce the backlog proves the system was defunded below the level that can self-recover"},
+    {"from": "JUS-F01", "to": "JUS-C02", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Backlog growing despite record spending proves the funding gap is real and unacknowledged by parties"},
+    {"from": "JUS-F02", "to": "JUS-A01", "type": "SUPPORTS", "strength": "HIGH", "explanation": "20% on remand from backlogs and 48% reoffending proves the system produces failure at every stage — more prisons don't fix this"},
+    {"from": "JUS-F02", "to": "JUS-C01", "type": "SUPPORTS", "strength": "HIGH", "explanation": "The remand-overcrowding-early release-reoffending cascade is the vicious cycle the defunding claim describes"},
+    {"from": "JUS-F02", "to": "JUS-P02", "type": "ENABLES", "strength": "HIGH", "explanation": "48% reoffending from short sentences directly justifies the presumption against sentences under 12 months"},
+    {"from": "JUS-F03", "to": "JUS-A03", "type": "SUPPORTS", "strength": "HIGH", "explanation": "£1bn/yr cut causing self-representation, unresolved disputes, and unchallenged evictions proves legal aid is infrastructure not luxury"},
+    {"from": "JUS-F03", "to": "JUS-P03", "type": "ENABLES", "strength": "HIGH", "explanation": "The LASPO damage directly sizes and justifies the restoration policy"},
+    {"from": "JUS-F03", "to": "JUS-C01", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Legal aid cuts are one of the specific austerity defunding mechanisms that created the system failure"},
+    {"from": "JUS-F04", "to": "JUS-A01", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Prison population doubling from longer sentences not more crime proves it's a demand problem driven by sentencing not crime levels"},
+    {"from": "JUS-F04", "to": "JUS-A02", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Crime at historic lows while imprisonment doubled proves tougher sentences have not reduced crime"},
+    {"from": "JUS-F05", "to": "JUS-A04", "type": "SUPPORTS", "strength": "HIGH", "explanation": "25 years of Portuguese evidence with HIV down 95% and crime down proves decriminalisation outperforms punitive approaches"},
+    {"from": "JUS-F05", "to": "JUS-P04", "type": "ENABLES", "strength": "HIGH", "explanation": "Portuguese success and £4 per £1 treatment return directly justify the drug policy commission and decriminalisation"},
+    {"from": "JUS-F06", "to": "JUS-A02", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Certainty of detection mattering more than severity is the primary criminological evidence against mandatory minimum sentences"},
+    {"from": "JUS-F06", "to": "JUS-P02", "type": "ENABLES", "strength": "HIGH", "explanation": "Detection over severity directly supports community sentences and swift justice over long incarceration"},
+    {"from": "JUS-F07", "to": "JUS-A05", "type": "SUPPORTS", "strength": "HIGH", "explanation": "42% longer case times since 2010 with every stage slower proves the system cannot recover on its current trajectory"},
+    {"from": "JUS-F07", "to": "JUS-P01", "type": "ENABLES", "strength": "HIGH", "explanation": "Every stage being slower directly justifies the sustained court investment and Institute for Justice"},
+
+    {"from": "JUS-A01", "to": "JUS-P02", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Prisons being a symptom of sentencing policy directly supports sentencing reform as the causal intervention"},
+    {"from": "JUS-A02", "to": "JUS-C01", "type": "SUPPORTS", "strength": "MEDIUM", "explanation": "Tougher sentences not reducing crime proves the system's punitive orientation is counterproductive and part of the failure cycle"},
+    {"from": "JUS-A03", "to": "JUS-C01", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Legal aid being infrastructure means its defunding is part of the systemic collapse the vicious cycle describes"},
+    {"from": "JUS-A04", "to": "JUS-P04", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Punitive drug policy being evidence-free while reform is evidence-based directly supports the commission and decriminalisation"},
+    {"from": "JUS-A05", "to": "JUS-C02", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Current investment being insufficient proves parties have not stated how they would fund recovery"},
+
+    {"from": "JUS-C01", "to": "JUS-P01", "type": "DEPENDS_ON", "strength": "HIGH", "explanation": "Court investment depends on the claim that the system was defunded and the vicious cycle can only be broken by sustained spending"},
+    {"from": "JUS-C01", "to": "JUS-P02", "type": "DEPENDS_ON", "strength": "HIGH", "explanation": "Sentencing reform depends on the claim that the demand side (longer sentences) drives the vicious cycle not crime levels"},
+    {"from": "JUS-C01", "to": "JUS-P03", "type": "DEPENDS_ON", "strength": "HIGH", "explanation": "Legal aid restoration depends on the claim that its defunding is a root cause of system failure"},
+    {"from": "JUS-C02", "to": "JUS-P04", "type": "DEPENDS_ON", "strength": "MEDIUM", "explanation": "Drug policy reform depends on the finding that current enforcement spending is wasteful and treatment gives better returns"},
+
+    {"from": "JUS-POS-CON-01", "to": "JUS-P02", "type": "CONTRADICTS", "strength": "HIGH", "explanation": "Tougher sentences and more prisons directly contradict the evidence that sentencing reform not capacity is the solution"},
+    {"from": "JUS-POS-CON-01", "to": "JUS-P01", "type": "SUPPORTS", "strength": "LOW", "explanation": "Court estate investment aligns with the direction if insufficient in scale and not paired with systemic reform"},
+    {"from": "JUS-POS-LAB-01", "to": "JUS-P01", "type": "SUPPORTS", "strength": "MEDIUM", "explanation": "Sentencing review and specialist courts align but no commitment to fund court or legal aid recovery undermines delivery"},
+    {"from": "JUS-POS-LAB-01", "to": "JUS-P02", "type": "SUPPORTS", "strength": "MEDIUM", "explanation": "Sentencing review and public health approach to youth violence align with evidence-based direction"},
+    {"from": "JUS-POS-LIB-01", "to": "JUS-P01", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Ending overcrowding, through-the-gate support, and prison officer recruitment directly match the evidence-based position"},
+    {"from": "JUS-POS-LIB-01", "to": "JUS-P02", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Youth diversion, secure schools, and Women's Justice Board represent comprehensive sentencing and rehabilitation reform"},
+    {"from": "JUS-POS-LIB-01", "to": "JUS-P03", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Right to affordable legal assistance creates the statutory framework for legal aid restoration"},
+    {"from": "JUS-POS-GRN-01", "to": "JUS-P01", "type": "SUPPORTS", "strength": "HIGH", "explanation": "£2.5bn court repair and judicial recruitment exceed the evidence-based minimum and match the direction"},
+    {"from": "JUS-POS-GRN-01", "to": "JUS-P03", "type": "SUPPORTS", "strength": "HIGH", "explanation": "£11bn legal aid restoration is the most ambitious and exceeds the phased restoration policy"},
+    {"from": "JUS-POS-GRN-01", "to": "JUS-P04", "type": "SUPPORTS", "strength": "HIGH", "explanation": "Drug law reform toward regulated market matches the evidence-based decriminalisation direction"},
+    {"from": "JUS-POS-REF-01", "to": "JUS-P02", "type": "CONTRADICTS", "strength": "HIGH", "explanation": "Mandatory jail for all violent crime and knife possession would massively increase prison population without evidence of crime reduction"},
+    {"from": "JUS-POS-REF-01", "to": "JUS-P04", "type": "CONTRADICTS", "strength": "HIGH", "explanation": "Mandatory life for drug dealing contradicts 25 years of Portuguese evidence that decriminalisation reduces harm and crime"},
+    {"from": "JUS-F04", "to": "JUS-POS-REF-01", "type": "CONTRADICTS", "strength": "HIGH", "explanation": "Crime at historic lows while imprisonment doubled directly contradicts the premise that the system needs more punishment"},
+
+    {"from": "JUS-P01", "to": "JUS-P02", "type": "ENABLES", "strength": "HIGH", "explanation": "Court capacity enables sentencing reform to work because reformed sentences require functioning courts to deliver swift justice"},
+    {"from": "JUS-P02", "to": "JUS-P01", "type": "ENABLES", "strength": "MEDIUM", "explanation": "Reducing short sentence demand frees court and prison capacity making the court investment more effective"}
+  ],
+
+  "cross_domain_edges": [
+    {"from": "justice:JUS-C02", "to": "taxation:TAX-C04", "type": "SUPPORTS", "strength": "MEDIUM", "explanation": "Justice needing £3-4bn/yr additional is another component of the total unfunded gap across all domains"},
+    {"from": "justice:JUS-A05", "to": "immigration:IMM-A04", "type": "SUPPORTS", "strength": "MEDIUM", "explanation": "Court backlog directly affects asylum case processing times creating the detention and delay problems the immigration domain identifies"},
+    {"from": "justice:JUS-F03", "to": "housing:HOU-C01", "type": "SUPPORTS", "strength": "MEDIUM", "explanation": "Legal aid cuts for housing eviction defence connect directly to the housing domain's finding that insecurity drives poor health and welfare outcomes"},
+    {"from": "justice:JUS-F02", "to": "nhs:NHS-C03", "type": "SUPPORTS", "strength": "LOW", "explanation": "Prison health including mental health and addiction treatment depends on NHS provision linking justice failure to health system pressure"},
+    {"from": "justice:JUS-C01", "to": "welfare:WEL-C01", "type": "SUPPORTS", "strength": "MEDIUM", "explanation": "Post-release unemployment and homelessness feed into the welfare system making justice failure a driver of welfare dependency"}
+  ]
+}

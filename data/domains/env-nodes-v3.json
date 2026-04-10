@@ -1,0 +1,400 @@
+{
+  "domain": "environment",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "extraction_source": "manifesto-environment-complete.md",
+  "verified": false,
+  "sources": [
+    {
+      "id": "SRC-ENV-001",
+      "title": "Dasgupta Review, The Economics of Biodiversity",
+      "url": null,
+      "tier": 1,
+      "author": "Dasgupta",
+      "date": "2021"
+    },
+    {
+      "id": "SRC-ENV-002",
+      "title": "Chief Medical Officer Annual Report 2022, Air Pollution",
+      "url": null,
+      "tier": 3,
+      "author": "CMO",
+      "date": "2022"
+    },
+    {
+      "id": "SRC-ENV-003",
+      "title": "Office for Environmental Protection, Progress Report 2024",
+      "url": null,
+      "tier": 3,
+      "author": "OEP",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-ENV-005",
+      "title": "Green Finance Institute, Biodiversity Financial Risk Assessment",
+      "url": null,
+      "tier": 4,
+      "author": "Green Finance Institute",
+      "date": null
+    },
+    {
+      "id": "SRC-ENV-008",
+      "title": "House of Commons Library, Are We On Target for the Environment?",
+      "url": null,
+      "tier": 3,
+      "author": "House of Commons Library",
+      "date": null
+    },
+    {
+      "id": "SRC-ENV-009",
+      "title": "Environment Agency, Water Quality and Sewage Data",
+      "url": null,
+      "tier": 2,
+      "author": "Environment Agency",
+      "date": null
+    },
+    {
+      "id": "SRC-ENV-010",
+      "title": "Conservative Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Conservative Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-ENV-011",
+      "title": "Labour Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Labour Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-ENV-012",
+      "title": "Liberal Democrats 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Liberal Democrats",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-ENV-013",
+      "title": "Green Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Green Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-ENV-014",
+      "title": "Reform UK 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Reform UK",
+      "date": "2024-06"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "ENV-F01",
+      "type": "FACT",
+      "statement": "Outdoor air pollution in England is equivalent to 26,000-38,000 deaths per year according to the Chief Medical Officer's 2022 report, with progress on reducing key pollutants having slowed over the last decade",
+      "source_id": "SRC-ENV-002",
+      "source_loc": "Main findings",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "ENV-F02",
+      "type": "FACT",
+      "statement": "The UK is one of the most nature-depleted countries in the world, with 62% of UK seabird species in decline, and the OEP found the government is largely off track to meet Environment Act targets",
+      "source_id": "SRC-ENV-003",
+      "source_loc": "Progress report",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "ENV-F03",
+      "type": "FACT",
+      "statement": "71% of UK land is farmed, making intensive agriculture a key driver of biodiversity decline, water pollution from fertiliser runoff, and ammonia emissions that show little to no improvement",
+      "source_id": "SRC-ENV-008",
+      "source_loc": "Land use data",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "ENV-F04",
+      "type": "FACT",
+      "statement": "Water companies have extracted billions in dividends while infrastructure degrades, with storm overflow discharges of raw sewage into rivers and seas increasing while Environment Agency enforcement capacity was cut during austerity",
+      "source_id": "SRC-ENV-009",
+      "source_loc": "Water quality data",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "ENV-F05",
+      "type": "FACT",
+      "statement": "The Dasgupta Review commissioned by HM Treasury concluded that the global economy is embedded in nature, with pollination alone worth approximately \u00a3700 million per year to UK agriculture and peatlands storing 3.2 billion tonnes of carbon",
+      "source_id": "SRC-ENV-001",
+      "source_loc": "Main findings",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "ENV-F06",
+      "type": "FACT",
+      "statement": "Air pollution health and productivity losses in England cost approximately \u00a320 billion per year according to Public Health England estimates",
+      "source_id": "SRC-ENV-002",
+      "source_loc": "Health cost data",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 20,
+        "amount_high": 20,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "cost_avoidance"
+      }
+    },
+    {
+      "id": "ENV-F07",
+      "type": "FACT",
+      "statement": "Nature-based flood defence solutions are 50-75% cheaper than engineered alternatives while providing co-benefits for biodiversity, carbon sequestration, and water quality",
+      "source_id": "SRC-ENV-001",
+      "source_loc": "Cost comparison",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "ENV-F08",
+      "type": "FACT",
+      "statement": "The Green Finance Institute warns that continued biodiversity decline could cause a UK economic shock comparable to the 2008 financial crisis through systemic risk to food, water, and ecosystem services",
+      "source_id": "SRC-ENV-005",
+      "source_loc": "Risk assessment",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "ENV-A01",
+      "type": "ASSUMPTION",
+      "statement": "The UK is on track to meet its legally binding environmental targets set in the Environment Act 2021",
+      "source_id": "SRC-ENV-003",
+      "source_loc": "Assumption 1",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "FAILING. OEP: 'largely off track' across all metrics. Air quality, biodiversity, water quality, and waste targets all behind. Targets without funding and enforcement are meaningless."
+    },
+    {
+      "id": "ENV-A02",
+      "type": "ASSUMPTION",
+      "statement": "Sewage pollution can be addressed through regulation alone without structural reform of water companies",
+      "source_id": "SRC-ENV-009",
+      "source_loc": "Assumption 2",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "STRUCTURAL REFORM NEEDED. Water companies extracted billions in dividends while infrastructure degraded. Enforcement capacity was cut. Lib Dem proposal (reform companies, ban dividends until standards met) is most evidence-aligned."
+    },
+    {
+      "id": "ENV-A03",
+      "type": "ASSUMPTION",
+      "statement": "Farming can be both productive and nature-friendly if the transition is properly funded",
+      "source_id": "SRC-ENV-008",
+      "source_loc": "Assumption 3",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "YES with sustained investment. ELM is the correct principle but rollout chaotic and budget insufficient. Regenerative farming maintains yields while restoring biodiversity but transition takes 3-5 years with potential yield dips. Budget needs doubling minimum."
+    },
+    {
+      "id": "ENV-A04",
+      "type": "ASSUMPTION",
+      "statement": "Abolishing nutrient neutrality rules would unlock housing without significant environmental damage",
+      "source_id": "SRC-ENV-008",
+      "source_loc": "Assumption 4",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "REMOVES PROTECTION WITHOUT FIXING POLLUTION. Nutrient neutrality exists because waterways are polluted. Abolishing it adds more pollution to stressed systems. Fix the source (agricultural runoff, sewage), don't remove the downstream protection."
+    },
+    {
+      "id": "ENV-A05",
+      "type": "ASSUMPTION",
+      "statement": "Nature has quantifiable economic value that makes environmental protection economically rational",
+      "source_id": "SRC-ENV-001",
+      "source_loc": "Assumption 6",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "ENORMOUS AND SYSTEMATICALLY UNDERPRICED. Dasgupta Review: economy is embedded in nature. Pollination \u00a3700m/yr. Peatlands 3.2bn tonnes carbon. Nature-based solutions cheaper than engineered alternatives. Nature is infrastructure priced at zero."
+    },
+    {
+      "id": "ENV-C01",
+      "type": "CLAIM",
+      "statement": "Nature is infrastructure that provides services worth billions annually including pollination, flood defence, carbon sequestration, and water purification, but is systematically priced at zero in every fiscal calculation",
+      "source_id": "SRC-ENV-001",
+      "source_loc": "Central finding",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "ENV-C02",
+      "type": "CLAIM",
+      "statement": "The gap between legally binding environmental targets and actual delivery proves that targets without funding and enforcement are meaningless, with the government off track on every metric",
+      "source_id": "SRC-ENV-003",
+      "source_loc": "Progress synthesis",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "ENV-P01",
+      "type": "POLICY",
+      "statement": "Structurally reform water companies with a public interest mandate, ban dividends until infrastructure standards are met, impose automatic penalties for sewage spills, and restore Environment Agency enforcement to 2010 levels",
+      "source_id": "SRC-ENV-009",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 0.5,
+        "amount_high": 0.5,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "ENV-P02",
+      "type": "POLICY",
+      "statement": "Double the ELM budget to support nature-friendly farming transition with 3-5 year bridging finance, maintain public money for public goods, and target 50% pesticide reduction by 2030",
+      "source_id": "SRC-ENV-008",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 3,
+        "amount_high": 3,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "ENV-P03",
+      "type": "POLICY",
+      "statement": "Deliver the 30 by 30 commitment to protect 30% of land and sea by 2030, expand the protected area network, enforce Biodiversity Net Gain in planning, and ban industrial fishing in marine protected areas",
+      "source_id": "SRC-ENV-003",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "ENV-P04",
+      "type": "POLICY",
+      "statement": "Enact a Clean Air Act with legally binding WHO air quality limits, expand clean air zones, address agricultural ammonia as the largest remaining source, and invest in the monitoring network",
+      "source_id": "SRC-ENV-002",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "ENV-POS-CON-01",
+      "type": "POSITION",
+      "statement": "Increase the agriculture budget by \u00a31 billion, ring-fence farming budget, set legally binding food security targets, continue ELM schemes, and abolish nutrient neutrality rules to unlock 100,000 homes",
+      "source_id": "SRC-ENV-010",
+      "source_loc": "Environment section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Conservative",
+        "stance": "contests",
+        "maps_to": [
+          "ENV-P02",
+          "ENV-P03"
+        ]
+      }
+    },
+    {
+      "id": "ENV-POS-LAB-01",
+      "type": "POSITION",
+      "statement": "Meet Environment Act targets, develop a land-use framework, make ELM work for farmers and nature, protect green belt with grey belt release, and maintain Biodiversity Net Gain",
+      "source_id": "SRC-ENV-011",
+      "source_loc": "Environment section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Labour",
+        "stance": "endorses",
+        "maps_to": [
+          "ENV-P02",
+          "ENV-P03"
+        ]
+      }
+    },
+    {
+      "id": "ENV-POS-LIB-01",
+      "type": "POSITION",
+      "statement": "Reform water companies, plant 60 million trees per year, set sewage elimination targets, restore EPC C for landlords, end fuel poverty, and increase regulator funding",
+      "source_id": "SRC-ENV-012",
+      "source_loc": "Environment section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Liberal Democrat",
+        "stance": "endorses",
+        "maps_to": [
+          "ENV-P01",
+          "ENV-P03",
+          "ENV-P04"
+        ]
+      }
+    },
+    {
+      "id": "ENV-POS-GRN-01",
+      "type": "POSITION",
+      "statement": "Enact a Rights of Nature Act, triple the farming budget for nature-friendly transition, end factory farming, ban harmful pesticides with 50% reduction by 2030, and invest \u00a329 billion in insulation",
+      "source_id": "SRC-ENV-013",
+      "source_loc": "Environment section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Green",
+        "stance": "endorses",
+        "maps_to": [
+          "ENV-P01",
+          "ENV-P02",
+          "ENV-P03",
+          "ENV-P04"
+        ]
+      }
+    },
+    {
+      "id": "ENV-POS-REF-01",
+      "type": "POSITION",
+      "statement": "Scrap net zero and climate-related farming subsidies, return to direct payments, stop Natural England enforcement, drop retained EU environmental laws, fast-track oil and gas, and explore coal mining",
+      "source_id": "SRC-ENV-014",
+      "source_loc": "Environment section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Reform UK",
+        "stance": "contests",
+        "maps_to": [
+          "ENV-P01",
+          "ENV-P02",
+          "ENV-P03",
+          "ENV-P04"
+        ]
+      }
+    }
+  ]
+}

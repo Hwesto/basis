@@ -1,0 +1,481 @@
+{
+  "domain": "education",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "extraction_source": "manifesto-education-complete.md",
+  "verified": false,
+  "sources": [
+    {
+      "id": "SRC-EDU-001",
+      "title": "IFS, The Uncertain Course for School and College Funding",
+      "url": null,
+      "tier": 3,
+      "author": "IFS",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-EDU-002",
+      "title": "Education Policy Institute, General Election 2024 Manifesto Analysis",
+      "url": null,
+      "tier": 4,
+      "author": "EPI",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-EDU-004",
+      "title": "Heckman, Skill Formation and the Economics of Investing in Disadvantaged Children, Science",
+      "url": null,
+      "tier": 1,
+      "author": "James Heckman",
+      "date": "2006"
+    },
+    {
+      "id": "SRC-EDU-005",
+      "title": "Education Endowment Foundation, Teaching and Learning Toolkit",
+      "url": null,
+      "tier": 1,
+      "author": "EEF",
+      "date": null
+    },
+    {
+      "id": "SRC-EDU-006",
+      "title": "IFS, Post-16 Education and Skills Analysis",
+      "url": null,
+      "tier": 3,
+      "author": "IFS",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-EDU-008",
+      "title": "Conservative Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Conservative Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-EDU-009",
+      "title": "Labour Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Labour Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-EDU-010",
+      "title": "Liberal Democrats 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Liberal Democrats",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-EDU-011",
+      "title": "Green Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Green Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-EDU-012",
+      "title": "Reform UK 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Reform UK",
+      "date": "2024-06"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "EDU-F01",
+      "type": "FACT",
+      "statement": "School spending per pupil fell 9% in real terms between 2009/10 and 2019/20, with college funding per student falling 14% and sixth form funding falling 28% over the same period",
+      "source_id": "SRC-EDU-001",
+      "source_loc": "Funding analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-F02",
+      "type": "FACT",
+      "statement": "University tuition fees have been frozen in nominal terms since 2017, losing approximately 30% of their real value to inflation and creating a university funding crisis",
+      "source_id": "SRC-EDU-006",
+      "source_loc": "HE funding",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-F03",
+      "type": "FACT",
+      "statement": "The attainment gap between disadvantaged pupils and their peers has widened since the pandemic and was already stagnating before it, identified by the EPI as the central education challenge",
+      "source_id": "SRC-EDU-002",
+      "source_loc": "Disadvantage gap",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-F04",
+      "type": "FACT",
+      "statement": "Apprenticeship starts fell after the apprenticeship levy was introduced, and the IFS notes that few areas of public policy have experienced as much constant reorganisation as skills policy",
+      "source_id": "SRC-EDU-006",
+      "source_loc": "Skills analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-F05",
+      "type": "FACT",
+      "statement": "Returns on investment in education decline with age according to Heckman's research, with early years interventions yielding 7-10% annual returns, the highest ROI in the education system",
+      "source_id": "SRC-EDU-004",
+      "source_loc": "Main findings",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-F06",
+      "type": "FACT",
+      "statement": "The UK spends less per student on post-16 education than almost any OECD comparator, and the EPI concludes that no major party's manifesto commits to adequate education funding",
+      "source_id": "SRC-EDU-002",
+      "source_loc": "International comparison",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-F07",
+      "type": "FACT",
+      "statement": "Teacher vacancies are at record levels with recruitment targets missed in most subjects for most years, and retention is the bigger problem driven by workload, pay erosion, and accountability pressure",
+      "source_id": "SRC-EDU-002",
+      "source_loc": "Workforce data",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-F08",
+      "type": "FACT",
+      "statement": "Each additional year of education increases lifetime earnings by approximately 8-13% according to the widely replicated Mincer equation",
+      "source_id": "SRC-EDU-004",
+      "source_loc": "Returns to education",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-F09",
+      "type": "FACT",
+      "statement": "SEND costs are soaring with local authority SEND deficits now in the billions, and while the government has announced compensation for 90% of historic deficits, the underlying cost drivers remain unaddressed",
+      "source_id": "SRC-EDU-001",
+      "source_loc": "SEND analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-F10",
+      "type": "FACT",
+      "statement": "Sure Start under Labour 1998-2010 showed measurable improvements in child health and development, proving that integrated early years services deliver results when properly funded",
+      "source_id": "SRC-EDU-005",
+      "source_loc": "Early years evidence",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-A01",
+      "type": "ASSUMPTION",
+      "statement": "School funding at current levels is adequate to maintain or improve educational outcomes",
+      "source_id": "SRC-EDU-001",
+      "source_loc": "Assumption 1",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "FUNDING IS INSUFFICIENT. 9% real cut per pupil 2009-2020. Recovery only restored to 2010 levels while costs rose. Neither main party committed to real increases. Lib Dem above-inflation commitment is the minimum. SEND funding crisis is the largest unfunded pressure."
+    },
+    {
+      "id": "EDU-A02",
+      "type": "ASSUMPTION",
+      "statement": "Closing low-quality university courses can fund 100,000 apprenticeships as the Conservatives proposed",
+      "source_id": "SRC-EDU-001",
+      "source_loc": "Assumption 2",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "LOGICALLY FLAWED. IFS notes this only saves money if students don't enrol elsewhere. University funding already in crisis from tuition fee freeze. Not credible as a funding mechanism."
+    },
+    {
+      "id": "EDU-A03",
+      "type": "ASSUMPTION",
+      "statement": "The Growth and Skills Levy will improve skills provision by broadening the apprenticeship levy",
+      "source_id": "SRC-EDU-006",
+      "source_loc": "Assumption 3",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "verdict": "DIRECTION CORRECT, DETAIL INSUFFICIENT. Broadening addresses a real problem of declining quality and starts. But 'big questions over design' remain including what qualifies as training. This is the mechanism immigration skills linkage depends on."
+    },
+    {
+      "id": "EDU-A04",
+      "type": "ASSUMPTION",
+      "statement": "University tuition fees should be scrapped and replaced with free higher education funded through taxation",
+      "source_id": "SRC-EDU-006",
+      "source_loc": "Assumption 4",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "REGRESSIVE UNLESS REPLACEMENT FUNDING SECURED. Costs \u00a315-20bn/yr. Income-contingent loans are progressive \u2014 high earners repay more. But current system is broken with fees frozen losing 30% real value. Better: restore fee real value plus expand maintenance grants."
+    },
+    {
+      "id": "EDU-A05",
+      "type": "ASSUMPTION",
+      "statement": "Early years investment produces the highest return on investment in the entire education system",
+      "source_id": "SRC-EDU-004",
+      "source_loc": "Assumption 5",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "YES. STRONGEST EVIDENCE IN EDUCATION. Heckman shows 7-10% annual returns from early intervention. Sure Start demonstrated measurable improvements. IFS confirms spending shift toward younger children produces better outcomes per pound. Quality is as important as quantity."
+    },
+    {
+      "id": "EDU-A06",
+      "type": "ASSUMPTION",
+      "statement": "Ofsted should be abolished rather than reformed to address its harmful effects on schools and teachers",
+      "source_id": "SRC-EDU-002",
+      "source_loc": "Assumption 6",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "REFORM, NOT ABOLISH. Labour's end to single-word judgements is welcome. Ruth Perry case exposed real harm. But EPI concludes abolition is not evidence-supported and may widen attainment gaps. Accountability is necessary \u2014 the form needs reform."
+    },
+    {
+      "id": "EDU-A07",
+      "type": "ASSUMPTION",
+      "statement": "The teacher workforce crisis can be solved through recruitment targets alone without addressing pay and conditions",
+      "source_id": "SRC-EDU-002",
+      "source_loc": "Assumption 7",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "PAY AND CONDITIONS ARE THE BINDING CONSTRAINT. Recruitment targets missed most years. Retention is the bigger problem \u2014 teachers leave due to workload and pay erosion. Independent pay review body removing political interference is structurally sound."
+    },
+    {
+      "id": "EDU-C01",
+      "type": "CLAIM",
+      "statement": "Education funding was cut more than almost any other public service during austerity and no party has committed to restoring it, making education the root node that constrains every downstream domain's workforce plan",
+      "source_id": "SRC-EDU-001",
+      "source_loc": "Central finding",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-C02",
+      "type": "CLAIM",
+      "statement": "The UK's workforce crises in NHS staffing, construction capacity, social care, and energy transition all trace back to chronic underinvestment in education and skills over 15 years of austerity",
+      "source_id": "SRC-EDU-006",
+      "source_loc": "Cross-domain synthesis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-C03",
+      "type": "CLAIM",
+      "statement": "The skills pipeline that produces the workers every other domain needs is running on fumes, with post-16 funding cut 14-28% and never recovered",
+      "source_id": "SRC-EDU-006",
+      "source_loc": "Skills synthesis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-P01",
+      "type": "POLICY",
+      "statement": "Fund schools above inflation per pupil annually as the minimum to prevent further erosion, with SEND reform via a national funding body to reduce local authority deficit burden",
+      "source_id": "SRC-EDU-001",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 2,
+        "amount_high": 3,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "EDU-P02",
+      "type": "POLICY",
+      "statement": "Establish an independent teacher pay review body that removes political interference from pay decisions and fully fund its recommended rises to address the retention crisis",
+      "source_id": "SRC-EDU-002",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 1,
+        "amount_high": 2,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "EDU-P03",
+      "type": "POLICY",
+      "statement": "Triple the Pupil Premium over 10 years targeted at EEF evidence-based interventions, making evidence-based spending mandatory for disadvantage funding",
+      "source_id": "SRC-EDU-005",
+      "source_loc": "Innovation 1",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "EDU-P04",
+      "type": "POLICY",
+      "statement": "Rebuild Sure Start as integrated children's services combining education, health visiting, early years, and children's social care into a single local service with nurseries in schools",
+      "source_id": "SRC-EDU-004",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 1,
+        "amount_high": 2,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "EDU-P05",
+      "type": "POLICY",
+      "statement": "Broaden the Growth and Skills Levy with clear quality standards while restoring college funding to 2010 real-terms levels, creating genuine parity of esteem for technical education",
+      "source_id": "SRC-EDU-006",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 1,
+        "amount_high": 1,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "EDU-P06",
+      "type": "POLICY",
+      "statement": "Create a National Retrofit Training Academy as a dedicated institution for insulation, heat pump, and building retrofit skills to build the workforce the National Insulation Service requires",
+      "source_id": "SRC-EDU-002",
+      "source_loc": "Innovation 2",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "EDU-P07",
+      "type": "POLICY",
+      "statement": "Restore the real value of tuition fees with inflation indexing and expand maintenance grants for disadvantaged students rather than scrapping fees which would be regressive",
+      "source_id": "SRC-EDU-006",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "EDU-POS-CON-01",
+      "type": "POSITION",
+      "statement": "Protect day-to-day school spending per pupil in real terms, close low-quality university courses to fund 100,000 apprenticeships, introduce National Service for school leavers, and ban mobile phones in schools",
+      "source_id": "SRC-EDU-008",
+      "source_loc": "Education section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Conservative",
+        "stance": "contests",
+        "maps_to": [
+          "EDU-P01",
+          "EDU-P05"
+        ]
+      }
+    },
+    {
+      "id": "EDU-POS-LAB-01",
+      "type": "POSITION",
+      "statement": "Recruit 6,500 new teachers in shortage subjects, reform Ofsted by ending single-word judgements, broaden the apprenticeship levy into a Growth and Skills Levy, establish 3,000 nurseries in schools, and fund state education via VAT on private schools",
+      "source_id": "SRC-EDU-009",
+      "source_loc": "Education section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Labour",
+        "stance": "endorses",
+        "maps_to": [
+          "EDU-P02",
+          "EDU-P04",
+          "EDU-P05"
+        ]
+      }
+    },
+    {
+      "id": "EDU-POS-LIB-01",
+      "type": "POSITION",
+      "statement": "Increase school and college funding above inflation annually, reform the Teachers' Review Body for independent pay, provide a \u00a35,000 Lifelong Skills Grant for all adults, reintroduce maintenance grants, and rejoin Erasmus",
+      "source_id": "SRC-EDU-010",
+      "source_loc": "Education section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Liberal Democrat",
+        "stance": "endorses",
+        "maps_to": [
+          "EDU-P01",
+          "EDU-P02",
+          "EDU-P07"
+        ]
+      }
+    },
+    {
+      "id": "EDU-POS-GRN-01",
+      "type": "POSITION",
+      "statement": "Fully fund all HE students by restoring grants and scrapping tuition fees, cancel graduate debt, abolish Ofsted, end formal assessments, and deliver universal free school meals",
+      "source_id": "SRC-EDU-011",
+      "source_loc": "Education section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Green",
+        "stance": "contests",
+        "maps_to": [
+          "EDU-P07"
+        ]
+      }
+    },
+    {
+      "id": "EDU-POS-REF-01",
+      "type": "POSITION",
+      "statement": "Scrap interest on student loans, restrict undergraduate numbers, enforce minimum entry standards, cut funding to universities undermining free speech, and implement a patriotic curriculum",
+      "source_id": "SRC-EDU-012",
+      "source_loc": "Education section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Reform UK",
+        "stance": "contests",
+        "maps_to": [
+          "EDU-P01",
+          "EDU-P07"
+        ]
+      }
+    }
+  ]
+}

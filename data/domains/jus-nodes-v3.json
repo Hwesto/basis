@@ -1,0 +1,410 @@
+{
+  "domain": "justice",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "extraction_source": "manifesto-justice-complete.md",
+  "verified": false,
+  "sources": [
+    {
+      "id": "SRC-JUS-001",
+      "title": "MoJ, Modernising Justice: Criminal Courts Reform 2025/26",
+      "url": null,
+      "tier": 3,
+      "author": "Ministry of Justice",
+      "date": "2025"
+    },
+    {
+      "id": "SRC-JUS-002",
+      "title": "IfG, Performance Tracker 2025: Criminal Justice System",
+      "url": null,
+      "tier": 3,
+      "author": "IfG",
+      "date": "2025"
+    },
+    {
+      "id": "SRC-JUS-003",
+      "title": "Centre for Justice Innovation, Systems Shift: Ten-Point Plan",
+      "url": null,
+      "tier": 4,
+      "author": "CJI",
+      "date": null
+    },
+    {
+      "id": "SRC-JUS-005",
+      "title": "Portugal Drug Decriminalisation Evaluation (25-Year Evidence)",
+      "url": null,
+      "tier": 1,
+      "author": "Various",
+      "date": null
+    },
+    {
+      "id": "SRC-JUS-007",
+      "title": "MoJ, Reoffending Statistics",
+      "url": null,
+      "tier": 2,
+      "author": "MoJ",
+      "date": null
+    },
+    {
+      "id": "SRC-JUS-008",
+      "title": "IFS, Manifesto Analysis: Justice Gap",
+      "url": null,
+      "tier": 3,
+      "author": "IFS",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-JUS-009",
+      "title": "Criminological Evidence on Deterrence vs Certainty of Detection",
+      "url": null,
+      "tier": 1,
+      "author": "Various",
+      "date": null
+    },
+    {
+      "id": "SRC-JUS-011",
+      "title": "Conservative Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Conservative Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-JUS-012",
+      "title": "Labour Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Labour Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-JUS-013",
+      "title": "Liberal Democrats 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Liberal Democrats",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-JUS-014",
+      "title": "Green Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Green Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-JUS-015",
+      "title": "Reform UK 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Reform UK",
+      "date": "2024-06"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "JUS-F01",
+      "type": "FACT",
+      "statement": "The Crown Court backlog is at record levels and growing quarter on quarter, projected to reach 113,000 by 2029 and potentially 174,000 by 2035 even with record investment of \u00a3287 million in the court estate and \u00a3126 million more per year in criminal legal aid",
+      "source_id": "SRC-JUS-001",
+      "source_loc": "Backlog projections",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 0.413,
+        "amount_high": 0.413,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "JUS-F02",
+      "type": "FACT",
+      "statement": "The prison population is near capacity with 20% of prisoners on remand awaiting trial as a direct consequence of the court backlog, while 48% of released prisoners reoffend within a year and each reoffender costs approximately \u00a365,000 per year in prison plus \u00a320,000 in court and police costs",
+      "source_id": "SRC-JUS-007",
+      "source_loc": "Prison and reoffending data",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "JUS-F03",
+      "type": "FACT",
+      "statement": "Legal aid funding was cut by \u00a31 billion per year under LASPO 2012, making access to justice a function of wealth and causing people to represent themselves in court which increases delays and errors across housing, family, immigration, and domestic abuse cases",
+      "source_id": "SRC-JUS-008",
+      "source_loc": "Legal aid data",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 1,
+        "amount_high": 1,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "JUS-F04",
+      "type": "FACT",
+      "statement": "England and Wales imprison more people per capita than almost any Western European country, with the prison population roughly doubling since 1990 driven by longer sentences not more crime, as crime is at historic lows",
+      "source_id": "SRC-JUS-003",
+      "source_loc": "Comparative data",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "JUS-F05",
+      "type": "FACT",
+      "statement": "Portugal decriminalised personal drug use in 2001 with HIV infections falling 95%, overdose deaths falling below the EU average, and drug-related crime falling, while the Home Office estimates drug treatment returns \u00a34 for every \u00a31 invested",
+      "source_id": "SRC-JUS-005",
+      "source_loc": "Portuguese evidence",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "JUS-F06",
+      "type": "FACT",
+      "statement": "Criminological evidence is clear that certainty of detection reduces crime far more than severity of punishment, as most offenders do not rationally calculate sentence length before offending",
+      "source_id": "SRC-JUS-009",
+      "source_loc": "Deterrence literature",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "JUS-F07",
+      "type": "FACT",
+      "statement": "Mean case time in magistrates' courts reached 6.5 months from offence to justice in 2024, 42% longer than 2010, with every stage slower from offence to charge to hearing to completion",
+      "source_id": "SRC-JUS-002",
+      "source_loc": "Performance data",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "JUS-A01",
+      "type": "ASSUMPTION",
+      "statement": "Building more prisons will solve the overcrowding and justice crisis",
+      "source_id": "SRC-JUS-003",
+      "source_loc": "Assumption 1",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "THE SYSTEM HAS A DEMAND PROBLEM NOT JUST CAPACITY. Prison population doubled since 1990 from longer sentences not more crime. Building more prisons without sentencing reform is treating the symptom. CJI calls for resetting automatic release and reducing short sentences."
+    },
+    {
+      "id": "JUS-A02",
+      "type": "ASSUMPTION",
+      "statement": "Tougher sentencing reduces crime and makes the public safer",
+      "source_id": "SRC-JUS-009",
+      "source_loc": "Assumption 2",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "NO CONSISTENT EVIDENCE. Certainty of detection reduces crime far more than severity. What works: visible policing, swift justice, rehabilitation addressing root causes. Reform UK's mandatory sentences would massively increase prison population without reducing crime. US mass incarceration demonstrates this definitively."
+    },
+    {
+      "id": "JUS-A03",
+      "type": "ASSUMPTION",
+      "statement": "Legal aid is a luxury that can be cut without systemic consequences",
+      "source_id": "SRC-JUS-008",
+      "source_loc": "Assumption 3",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "A NECESSITY. LASPO cuts caused self-representation increasing delays, unresolved family disputes, unchallenged evictions, unrepresented immigration cases, and domestic abuse victims unable to access protection. Legal aid is infrastructure not charity."
+    },
+    {
+      "id": "JUS-A04",
+      "type": "ASSUMPTION",
+      "statement": "The UK's punitive drug policy is more effective than decriminalisation or harm reduction approaches",
+      "source_id": "SRC-JUS-005",
+      "source_loc": "Assumption 4",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "EVIDENCE OVERWHELMINGLY SUPPORTS REFORM. Portugal's 25 years: HIV down 95%, overdoses below EU average, crime down. UK policy fills prisons, costs billions, fails to reduce use. Drug treatment returns \u00a34 per \u00a31 invested."
+    },
+    {
+      "id": "JUS-A05",
+      "type": "ASSUMPTION",
+      "statement": "The court backlog can be cleared with current levels of investment and reform",
+      "source_id": "SRC-JUS-002",
+      "source_loc": "Assumption 5",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "NOT WITHOUT SYSTEMIC INVESTMENT. Even with record spending, backlog projected to reach 113,000 by 2029. The cascade: backlog grows remand, remand fills prisons, overcrowding triggers early release, early release increases reoffending, reoffending creates more court cases."
+    },
+    {
+      "id": "JUS-C01",
+      "type": "CLAIM",
+      "statement": "The justice system was systematically defunded during austerity and has never recovered, creating a vicious cycle where court backlogs drive remand which drives prison overcrowding which drives early release which drives reoffending which drives more court cases",
+      "source_id": "SRC-JUS-002",
+      "source_loc": "System failure synthesis",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "JUS-C02",
+      "type": "CLAIM",
+      "statement": "Justice is one of the domains where neither major party has stated how they would fund recovery, with the IFS putting it alongside education, social care, and local government as unfunded commitments",
+      "source_id": "SRC-JUS-008",
+      "source_loc": "IFS analysis",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 3,
+        "amount_high": 4,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "JUS-P01",
+      "type": "POLICY",
+      "statement": "Invest in sustained court capacity including estate, digital systems, sitting days, and judicial recruitment, and establish an Institute for Justice providing independent capacity and demand forecasting as an OBR for criminal justice",
+      "source_id": "SRC-JUS-003",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 0.5,
+        "amount_high": 0.5,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "JUS-P02",
+      "type": "POLICY",
+      "statement": "Reform sentencing with a presumption against short sentences under 12 months which increase reoffending, expand community sentences with robust supervision, and address the IPP injustice of thousands imprisoned beyond tariff",
+      "source_id": "SRC-JUS-003",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "JUS-P03",
+      "type": "POLICY",
+      "statement": "Restore legal aid to pre-LASPO levels phased over a parliament with priority for housing evictions, family law, immigration, and domestic abuse, and enact the Hillsborough Law duty of candour",
+      "source_id": "SRC-JUS-008",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 1,
+        "amount_high": 1,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "JUS-P04",
+      "type": "POLICY",
+      "statement": "Establish an independent drug policy commission, decriminalise personal possession as a minimum step, and redirect enforcement spending to treatment and prevention based on the Portuguese model with 25 years of evidence",
+      "source_id": "SRC-JUS-005",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "JUS-POS-CON-01",
+      "type": "POSITION",
+      "statement": "Build four new prisons with 20,000 places, impose tougher sentences for knife crime and grooming and retail assault, continue legal aid at current levels, and mandate life for repeat violent offenders",
+      "source_id": "SRC-JUS-011",
+      "source_loc": "Justice section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Conservative",
+        "stance": "contests",
+        "maps_to": [
+          "JUS-P01",
+          "JUS-P02"
+        ]
+      }
+    },
+    {
+      "id": "JUS-POS-LAB-01",
+      "type": "POSITION",
+      "statement": "Review sentencing, create specialist rape courts, extend associate prosecutor powers, restore neighbourhood policing, adopt a public health approach to youth violence, and manage prison capacity through early release with no commitment to increase court or legal aid funding",
+      "source_id": "SRC-JUS-012",
+      "source_loc": "Justice section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Labour",
+        "stance": "endorses",
+        "maps_to": [
+          "JUS-P01",
+          "JUS-P02"
+        ]
+      }
+    },
+    {
+      "id": "JUS-POS-LIB-01",
+      "type": "POSITION",
+      "statement": "End prison overcrowding, recruit and retain prison officers, create a Women's Justice Board, replace young offender institutions with secure schools, implement statutory youth diversion, through-the-gate mentorship, and establish a right to affordable legal assistance",
+      "source_id": "SRC-JUS-013",
+      "source_loc": "Justice section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Liberal Democrat",
+        "stance": "endorses",
+        "maps_to": [
+          "JUS-P01",
+          "JUS-P02",
+          "JUS-P03"
+        ]
+      }
+    },
+    {
+      "id": "JUS-POS-GRN-01",
+      "type": "POSITION",
+      "statement": "Invest \u00a311 billion to restore legal aid and \u00a32.5 billion to repair courts, recruit judges, presume against prison sentences under 2 years, reform drug laws toward a regulated market, and defend the Human Rights Act and ECHR",
+      "source_id": "SRC-JUS-014",
+      "source_loc": "Justice section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Green",
+        "stance": "endorses",
+        "maps_to": [
+          "JUS-P01",
+          "JUS-P02",
+          "JUS-P03",
+          "JUS-P04"
+        ]
+      }
+    },
+    {
+      "id": "JUS-POS-REF-01",
+      "type": "POSITION",
+      "statement": "Implement zero tolerance policing, mandate jail for all violent crime and knife possession, impose mandatory life for drug dealing and repeat violent offenders, deport foreign criminals immediately, and establish high-intensity training camps for young offenders",
+      "source_id": "SRC-JUS-015",
+      "source_loc": "Justice section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Reform UK",
+        "stance": "contests",
+        "maps_to": [
+          "JUS-P02",
+          "JUS-P04"
+        ]
+      }
+    }
+  ]
+}

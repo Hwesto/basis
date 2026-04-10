@@ -1,0 +1,535 @@
+{
+  "domain": "housing",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "method": "single-pass",
+  "edges": [
+    {
+      "from": "HOU-F01",
+      "to": "HOU-A01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "4.3 million homes missing with only 208,600 added in 2024/25 shows the scale of deficit that makes 300k/yr a minimum not an aspiration"
+    },
+    {
+      "from": "HOU-F01",
+      "to": "HOU-A03",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "4.3m deficit existing before the migration surge proves undersupply not immigration is the primary driver"
+    },
+    {
+      "from": "HOU-F01",
+      "to": "HOU-C02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "The scale of the deficit is the primary evidence for the 80-year underbuilding claim"
+    },
+    {
+      "from": "HOU-F02",
+      "to": "HOU-A01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "731 London starts and record-low permissions show the planning pipeline is nowhere near 300k delivery"
+    },
+    {
+      "from": "HOU-F02",
+      "to": "HOU-A02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Record-low permissions at 42,239 down 19% is direct evidence that the planning system constrains supply"
+    },
+    {
+      "from": "HOU-F03",
+      "to": "HOU-A01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Savills forecasting 42% shortfall against 1.5m target proves current policies cannot deliver at scale"
+    },
+    {
+      "from": "HOU-F03",
+      "to": "HOU-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Industry forecast falling 42% short directly supports the claim that no party is being honest about delivery"
+    },
+    {
+      "from": "HOU-F04",
+      "to": "HOU-C02",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "110,000 in temporary accommodation at \u00a31.7bn/yr is a measurable consequence of decades of underbuilding"
+    },
+    {
+      "from": "HOU-F04",
+      "to": "HOU-A07",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "The human cost of 110k families in temporary accommodation demonstrates the need for supply to moderate costs and reduce homelessness"
+    },
+    {
+      "from": "HOU-F05",
+      "to": "HOU-A03",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Government spending falling 45% during austerity proves the crisis was created by spending cuts not immigration"
+    },
+    {
+      "from": "HOU-F05",
+      "to": "HOU-C02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "45% spending cuts are the primary evidence that government investment failure drives the crisis"
+    },
+    {
+      "from": "HOU-F06",
+      "to": "HOU-A02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Building rates dropping >1/3 after the 1947 Act is the 80-year dataset proving discretionary planning suppresses supply"
+    },
+    {
+      "from": "HOU-F06",
+      "to": "HOU-P02",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "The 80-year dataset directly justifies the rules-based zoning proposal as an alternative to the discretionary system"
+    },
+    {
+      "from": "HOU-F06",
+      "to": "HOU-C02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Building rate decline since 1947 is the structural evidence for the 80-year underbuilding claim"
+    },
+    {
+      "from": "HOU-F07",
+      "to": "HOU-A04",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "2m homes sold with only a fraction replaced and stock declining by 1.5m is the direct evidence that RTB devastated social housing"
+    },
+    {
+      "from": "HOU-F07",
+      "to": "HOU-P05",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "The 1.5m net loss of social homes is the case for mandatory 1:1 replacement and local suspension powers"
+    },
+    {
+      "from": "HOU-F08",
+      "to": "HOU-A06",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Private sector peaking at 200k and 300k only with council building is unambiguous evidence the private sector cannot deliver alone"
+    },
+    {
+      "from": "HOU-F08",
+      "to": "HOU-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Historic record proving 300k requires public sector building means any party promising it without council building is dishonest"
+    },
+    {
+      "from": "HOU-F08",
+      "to": "HOU-P01",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Historical precedent of council-led delivery is the evidence base for reviving council housebuilding at 50k+/yr"
+    },
+    {
+      "from": "HOU-F09",
+      "to": "HOU-A08",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "\u00a31 saving \u00a32-7 in health costs is the ROI evidence proving existing stock quality is a crisis worth investing in"
+    },
+    {
+      "from": "HOU-F09",
+      "to": "HOU-C03",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "The \u00a32-7 return per \u00a31 spent is the direct evidence that retrofit is the highest-ROI housing policy"
+    },
+    {
+      "from": "HOU-F10",
+      "to": "HOU-A08",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Oldest stock in Europe with millions below EPC C proves the quality crisis is real and measurable"
+    },
+    {
+      "from": "HOU-F10",
+      "to": "HOU-P04",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Scale of the EPC failure justifies the national retrofit programme targeting 1 million homes per year"
+    },
+    {
+      "from": "HOU-F11",
+      "to": "HOU-A07",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Price-to-earnings doubling since 1990s confirms the affordability crisis that increased supply aims to moderate"
+    },
+    {
+      "from": "HOU-F11",
+      "to": "HOU-C02",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Affordability collapse is a consequence of the 80-year underbuilding pattern"
+    },
+    {
+      "from": "HOU-F12",
+      "to": "HOU-A06",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "5 firms controlling 50% of output and releasing homes to maintain prices is structural evidence the private sector won't solve the crisis"
+    },
+    {
+      "from": "HOU-F12",
+      "to": "HOU-C01",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Market concentration means private targets are constrained by the business model \u2014 developers don't build if it crashes their prices"
+    },
+    {
+      "from": "HOU-F13",
+      "to": "HOU-P01",
+      "type": "ENABLES",
+      "strength": "MEDIUM",
+      "explanation": "The \u00a339bn SAHP at 60% social rent provides the funding mechanism for the council housebuilding revival policy"
+    },
+    {
+      "from": "HOU-A01",
+      "to": "HOU-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "300k being unachievable without public sector building supports the claim that parties promising it without council building are dishonest"
+    },
+    {
+      "from": "HOU-A02",
+      "to": "HOU-P02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Planning being a major barrier is the evidence base for zoning reform"
+    },
+    {
+      "from": "HOU-A02",
+      "to": "HOU-C01",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Planning being necessary but not sufficient means parties claiming planning reform alone will deliver are wrong"
+    },
+    {
+      "from": "HOU-A03",
+      "to": "HOU-C02",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Immigration being secondary and undersupply primary supports the 80-year underbuilding framing"
+    },
+    {
+      "from": "HOU-A04",
+      "to": "HOU-P05",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "RTB devastating social stock is the direct evidence for requiring 1:1 replacement and local suspension"
+    },
+    {
+      "from": "HOU-A05",
+      "to": "HOU-P07",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Rent controls being useful only as interim stabilisers justifies the inflation-linked cap alongside supply increase"
+    },
+    {
+      "from": "HOU-A06",
+      "to": "HOU-C01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Private sector inability to deliver alone proves the dishonesty of targets without council building plans"
+    },
+    {
+      "from": "HOU-A06",
+      "to": "HOU-P01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Historic evidence that public sector building is essential directly justifies the council housebuilding policy"
+    },
+    {
+      "from": "HOU-A07",
+      "to": "HOU-P01",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Supply moderating prices over decades means sustained building at scale is justified even if results take time"
+    },
+    {
+      "from": "HOU-A08",
+      "to": "HOU-C03",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Quality crisis being measurable and costly supports retrofit being the highest-ROI policy"
+    },
+    {
+      "from": "HOU-A08",
+      "to": "HOU-P04",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Measurable quality crisis directly justifies the national insulation programme"
+    },
+    {
+      "from": "HOU-C01",
+      "to": "HOU-P01",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "Council housebuilding revival is the specific policy response to the claim that private sector can't deliver alone"
+    },
+    {
+      "from": "HOU-C02",
+      "to": "HOU-P01",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "The 80-year underbuilding diagnosis means the policy response must be public sector building at historic scale"
+    },
+    {
+      "from": "HOU-C02",
+      "to": "HOU-P02",
+      "type": "DEPENDS_ON",
+      "strength": "MEDIUM",
+      "explanation": "The planning system suppressing building since 1947 is part of the underbuilding claim that zoning reform addresses"
+    },
+    {
+      "from": "HOU-C02",
+      "to": "HOU-P03",
+      "type": "DEPENDS_ON",
+      "strength": "MEDIUM",
+      "explanation": "Land value capture depends on the claim that the current system where developers capture planning uplift is part of the 80-year failure"
+    },
+    {
+      "from": "HOU-C03",
+      "to": "HOU-P04",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "The national retrofit programme depends on retrofit being the highest-ROI housing investment"
+    },
+    {
+      "from": "HOU-C04",
+      "to": "HOU-P03",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "Land value capture reform depends on the claim that 10-100x planning uplift currently benefits developers not the public"
+    },
+    {
+      "from": "HOU-A07",
+      "to": "HOU-P07",
+      "type": "DEPENDS_ON",
+      "strength": "MEDIUM",
+      "explanation": "Rent stabilisation as interim measure depends on the assumption that supply will eventually moderate prices but takes decades"
+    },
+    {
+      "from": "HOU-A05",
+      "to": "HOU-P07",
+      "type": "DEPENDS_ON",
+      "strength": "MEDIUM",
+      "explanation": "The inflation-linked cap design depends on the evidence that strict controls reduce supply while moderate controls don't"
+    },
+    {
+      "from": "HOU-POS-CON-01",
+      "to": "HOU-P01",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Abandoning mandatory targets and relying on brownfield and Help to Buy contradicts the evidence that public sector building at scale is essential"
+    },
+    {
+      "from": "HOU-POS-CON-01",
+      "to": "HOU-P05",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Maintaining Right to Buy without reform contradicts the 1:1 replacement policy given 2m homes sold without replacement"
+    },
+    {
+      "from": "HOU-POS-LAB-01",
+      "to": "HOU-P01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Labour's mandatory targets, \u00a339bn SAHP at 60% social rent, and New Towns most closely match the evidence-based council building policy"
+    },
+    {
+      "from": "HOU-POS-LAB-01",
+      "to": "HOU-P02",
+      "type": "SUPPORTS",
+      "strength": "LOW",
+      "explanation": "NPPF reform moves toward but falls short of the rules-based zoning the evidence supports"
+    },
+    {
+      "from": "HOU-POS-LIB-01",
+      "to": "HOU-P01",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "380k/yr target with 150k social homes is the most ambitious commitment and closest to evidence-based scale"
+    },
+    {
+      "from": "HOU-POS-LIB-01",
+      "to": "HOU-P04",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "EPC C minimum for landlords directly aligns with the national retrofit programme"
+    },
+    {
+      "from": "HOU-POS-LIB-01",
+      "to": "HOU-P05",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Local authority power to end RTB matches the evidence-based reform with local suspension"
+    },
+    {
+      "from": "HOU-POS-GRN-01",
+      "to": "HOU-P01",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "150k social homes/yr matches the scale of public sector building needed though funded differently"
+    },
+    {
+      "from": "HOU-POS-GRN-01",
+      "to": "HOU-P04",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "\u00a329bn for EPC B exceeds the evidence-based minimum and Green retrofit commitment is the most ambitious"
+    },
+    {
+      "from": "HOU-POS-GRN-01",
+      "to": "HOU-P07",
+      "type": "SUPPORTS",
+      "strength": "LOW",
+      "explanation": "Green rent controls go further than the evidence supports \u2014 strict controls rather than the inflation-linked stabiliser the evidence favours"
+    },
+    {
+      "from": "HOU-POS-REF-01",
+      "to": "HOU-P01",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "No targets, no social housing plan, and immigration scapegoating contradicts every element of the evidence-based building programme"
+    },
+    {
+      "from": "HOU-F01",
+      "to": "HOU-POS-REF-01",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "4.3m home deficit from 80 years of underbuilding directly contradicts Reform's framing that foreign nationals cause housing pressure"
+    },
+    {
+      "from": "HOU-F08",
+      "to": "HOU-POS-CON-01",
+      "type": "CONTRADICTS",
+      "strength": "HIGH",
+      "explanation": "Private sector never delivering 300k alone directly contradicts the Conservative approach of no mandatory targets and market-led delivery"
+    },
+    {
+      "from": "HOU-P02",
+      "to": "HOU-P01",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Rules-based zoning would dramatically increase consented land, enabling the council housebuilding programme to find buildable sites"
+    },
+    {
+      "from": "HOU-P03",
+      "to": "HOU-P01",
+      "type": "ENABLES",
+      "strength": "HIGH",
+      "explanation": "Land value capture would fund affordable housing from planning uplift, enabling public sector building without relying solely on borrowing"
+    },
+    {
+      "from": "HOU-P06",
+      "to": "HOU-P01",
+      "type": "ENABLES",
+      "strength": "MEDIUM",
+      "explanation": "Modern Methods of Construction reducing build time by 30-50% enables faster delivery toward the 50k+/yr council building target"
+    },
+    {
+      "from": "HOU-P01",
+      "to": "HOU-P04",
+      "type": "COMPETES",
+      "strength": "MEDIUM",
+      "explanation": "New build investment and retrofit investment compete for the same constrained public spending envelope"
+    },
+    {
+      "from": "HOU-F13",
+      "to": "HOU-C01",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "\u00a339bn SAHP with 60% social rent is Labour showing it can be done at scale but still falls short of what 80 years of underbuilding requires"
+    },
+    {
+      "from": "HOU-F11",
+      "to": "HOU-A05",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Price-to-earnings doubling creates the affordability pressure that makes rent controls politically attractive even where evidence is mixed"
+    },
+    {
+      "from": "HOU-F12",
+      "to": "HOU-C04",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Market concentration with 5 firms capturing planning uplift is evidence that land value currently flows to developers not the public"
+    },
+    {
+      "from": "HOU-A04",
+      "to": "HOU-P05",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "RTB reform with 1:1 replacement depends on the finding that RTB devastated social stock without adequate replacement"
+    },
+    {
+      "from": "HOU-A01",
+      "to": "HOU-P06",
+      "type": "DEPENDS_ON",
+      "strength": "MEDIUM",
+      "explanation": "MMC mandate depends on the finding that 300k/yr is unachievable with current methods \u2014 faster cheaper construction is needed"
+    }
+  ],
+  "cross_domain_edges": [
+    {
+      "from": "housing:HOU-P04",
+      "to": "energy:ENG-P07",
+      "type": "DEPENDS_ON",
+      "strength": "HIGH",
+      "explanation": "The national retrofit programme is the same policy as the energy domain's National Insulation Service \u2014 housing quality and energy efficiency are delivered together"
+    },
+    {
+      "from": "housing:HOU-F10",
+      "to": "nhs:NHS-F04",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "Cold damp housing driving respiratory illness contributes to NHS bed pressure and hospital admissions"
+    },
+    {
+      "from": "housing:HOU-F04",
+      "to": "welfare:WEL-F01",
+      "type": "SUPPORTS",
+      "strength": "MEDIUM",
+      "explanation": "110,000 in temporary accommodation at \u00a31.7bn/yr is a direct welfare cost driven by housing failure"
+    },
+    {
+      "from": "housing:HOU-A03",
+      "to": "immigration:IMM-A08",
+      "type": "SUPPORTS",
+      "strength": "HIGH",
+      "explanation": "Housing undersupply being the primary driver not immigration reinforces the immigration domain's finding that underfunding not immigration causes service strain"
+    },
+    {
+      "from": "housing:HOU-C02",
+      "to": "taxation:TAX-C01",
+      "type": "DEPENDS_ON",
+      "strength": "MEDIUM",
+      "explanation": "The \u00a35-10bn/yr council building programme requires fiscal space constrained by the overall tax and spending envelope"
+    },
+    {
+      "from": "housing:HOU-P04",
+      "to": "welfare:WEL-P03",
+      "type": "ENABLES",
+      "strength": "MEDIUM",
+      "explanation": "Insulating homes reduces fuel poverty which is a direct welfare and energy cost affecting the poorest households"
+    }
+  ]
+}

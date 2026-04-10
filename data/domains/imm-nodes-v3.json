@@ -1,0 +1,816 @@
+{
+  "domain": "immigration",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "extraction_source": "manifesto-immigration-complete.md",
+  "verified": false,
+  "sources": [
+    {
+      "id": "SRC-IMM-001",
+      "title": "OBR, Impact of Migration on the Fiscal Forecast",
+      "url": null,
+      "tier": 3,
+      "author": "OBR",
+      "date": "2024-03"
+    },
+    {
+      "id": "SRC-IMM-003",
+      "title": "MAC Annual Report 2024",
+      "url": null,
+      "tier": 3,
+      "author": "Migration Advisory Committee",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-IMM-004",
+      "title": "MAC Annual Report 2025",
+      "url": null,
+      "tier": 3,
+      "author": "Migration Advisory Committee",
+      "date": "2025"
+    },
+    {
+      "id": "SRC-IMM-005",
+      "title": "Dustmann, Frattini & Preston, The Effect of Immigration along the Distribution of Wages, Review of Economic Studies",
+      "url": null,
+      "tier": 1,
+      "author": "Dustmann et al.",
+      "date": "2013"
+    },
+    {
+      "id": "SRC-IMM-006",
+      "title": "House of Commons Library, Immigration and the ECHR (CBP-10376)",
+      "url": null,
+      "tier": 3,
+      "author": "House of Commons Library",
+      "date": "2025-10"
+    },
+    {
+      "id": "SRC-IMM-007",
+      "title": "House of Commons Library, Asylum Statistics (SN01403)",
+      "url": null,
+      "tier": 3,
+      "author": "House of Commons Library",
+      "date": "2026"
+    },
+    {
+      "id": "SRC-IMM-010",
+      "title": "Nuffield Trust, Foreign-Born NHS Workforce Analysis",
+      "url": null,
+      "tier": 4,
+      "author": "Nuffield Trust",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-IMM-011",
+      "title": "NHS Confederation, Is Immigration Harming the NHS?",
+      "url": null,
+      "tier": 4,
+      "author": "NHS Confederation",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-IMM-012",
+      "title": "ONS, Net Migration Estimates",
+      "url": null,
+      "tier": 2,
+      "author": "ONS",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-IMM-013",
+      "title": "Home Office, Immigration and Asylum Statistics",
+      "url": null,
+      "tier": 2,
+      "author": "Home Office",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-IMM-014",
+      "title": "Skills for Care, Adult Social Care Workforce Data",
+      "url": null,
+      "tier": 2,
+      "author": "Skills for Care",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-IMM-015",
+      "title": "UNHCR, Resettlement Data and Safe Routes Evidence",
+      "url": null,
+      "tier": 3,
+      "author": "UNHCR",
+      "date": null
+    },
+    {
+      "id": "SRC-IMM-016",
+      "title": "Skills England / MAC, UK Productivity Growth and Skills",
+      "url": null,
+      "tier": 3,
+      "author": "Skills England",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-IMM-017",
+      "title": "Conservative Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Conservative Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-IMM-018",
+      "title": "Labour Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Labour Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-IMM-019",
+      "title": "Liberal Democrats 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Liberal Democrats",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-IMM-020",
+      "title": "Green Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Green Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-IMM-021",
+      "title": "Reform UK 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Reform UK",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-IMM-022",
+      "title": "Lift the Ban Coalition, Right to Work Evidence",
+      "url": null,
+      "tier": 4,
+      "author": "Lift the Ban Coalition",
+      "date": null
+    },
+    {
+      "id": "SRC-IMM-023",
+      "title": "Labour Exploitation Advisory Group, Firewall Evidence",
+      "url": null,
+      "tier": 4,
+      "author": "Labour Exploitation Advisory Group",
+      "date": null
+    }
+  ],
+  "nodes": [
+    {
+      "id": "IMM-F01",
+      "type": "FACT",
+      "statement": "UK net migration peaked at an estimated 906,000 in the year ending March 2023 according to the most recent ONS revision, with subsequent estimates for calendar year 2022 revised up to 873,000 and calendar year 2023 at approximately 728,000, but these headline numbers conflate fundamentally different migration categories including students, workers, refugees, and family members",
+      "source_id": "SRC-IMM-012",
+      "source_loc": "Net migration estimates",
+      "confidence": "HIGH",
+      "verified": true,
+      "fiscal": null,
+      "verified_date": "2026-04-10"
+    },
+    {
+      "id": "IMM-F02",
+      "type": "FACT",
+      "statement": "The total asylum caseload was 224,700 cases as of June 2024, having quadrupled since 2014, with 39% awaiting initial decision and 61% awaiting further action after refusal",
+      "source_id": "SRC-IMM-013",
+      "source_loc": "Asylum statistics",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-F03",
+      "type": "FACT",
+      "statement": "Housing asylum seekers in hotels costs approximately \u00a38 million per day, driven almost entirely by processing failure rather than volume",
+      "source_id": "SRC-IMM-013",
+      "source_loc": "Accommodation costs",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 2920,
+        "amount_high": 2920,
+        "unit": "m_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "IMM-F04",
+      "type": "FACT",
+      "statement": "The UK receives fewer asylum applications per capita than the EU average at 15 per 10,000 population compared to the EU's 22 per 10,000",
+      "source_id": "SRC-IMM-007",
+      "source_loc": "Comparative data",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-F05",
+      "type": "FACT",
+      "statement": "A skilled migrant arriving at age 25 on average earnings contributes \u00a3341,000 to public finances over their lifetime, more than a UK-born worker on the same salary because the UK did not pay for their childhood services",
+      "source_id": "SRC-IMM-001",
+      "source_loc": "Fiscal impact section",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 341,
+        "amount_high": 341,
+        "unit": "k_gbp",
+        "period": "cumulative",
+        "direction": "revenue",
+        "category": "tax_reform_revenue"
+      }
+    },
+    {
+      "id": "IMM-F06",
+      "type": "FACT",
+      "statement": "Higher net migration leads to \u00a319.9 billion lower government borrowing by 2028-29 compared to the low migration scenario according to OBR modelling",
+      "source_id": "SRC-IMM-001",
+      "source_loc": "Fiscal scenarios",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 19.9,
+        "amount_high": 19.9,
+        "unit": "bn_gbp",
+        "period": "cumulative",
+        "direction": "revenue",
+        "category": "tax_reform_revenue"
+      }
+    },
+    {
+      "id": "IMM-F07",
+      "type": "FACT",
+      "statement": "The MAC found that the family visa route has a net fiscal cost of -\u00a3109,000 per person over their lifetime, which is expected because the route exists for family unity not economic contribution",
+      "source_id": "SRC-IMM-004",
+      "source_loc": "Family route analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": -109,
+        "amount_high": -109,
+        "unit": "k_gbp",
+        "period": "cumulative",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "IMM-F08",
+      "type": "FACT",
+      "statement": "Immigration depresses wages at the 5th percentile by approximately 0.6% but increases them at the median, with effects small relative to other labour market factors such as minimum wage levels and union density",
+      "source_id": "SRC-IMM-005",
+      "source_loc": "Main findings",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-F09",
+      "type": "FACT",
+      "statement": "From 2015 to 2024, 61,000 ECHR appeals succeeded in the first-tier immigration tribunal with a 53% success rate, but ECHR challenges in criminal deportation cases had a success rate of only approximately 3%",
+      "source_id": "SRC-IMM-006",
+      "source_loc": "Appeal statistics",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-F10",
+      "type": "FACT",
+      "statement": "The European Court of Human Rights issued just one judgment finding a violation against the UK in 2023 and one in 2024, neither on immigration, and granted only 15 of 660 requests for interim measures since 2017",
+      "source_id": "SRC-IMM-006",
+      "source_loc": "ECtHR statistics",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-F11",
+      "type": "FACT",
+      "statement": "The Rwanda deportation scheme cost over \u00a3700 million with zero forced deportation flights completed, only four voluntary relocations and no measurable deterrence effect on Channel crossings before being scrapped by Labour",
+      "source_id": "SRC-IMM-013",
+      "source_loc": "Rwanda costs",
+      "confidence": "HIGH",
+      "verified": true,
+      "fiscal": {
+        "amount_low": 700,
+        "amount_high": 700,
+        "unit": "m_gbp",
+        "period": "one_off",
+        "direction": "cost",
+        "category": "spending_need"
+      },
+      "verified_date": "2026-04-10"
+    },
+    {
+      "id": "IMM-F12",
+      "type": "FACT",
+      "statement": "The Albanian bilateral returns agreement reduced Albanian small boat arrivals by approximately 90%, demonstrating that targeted bilateral cooperation works where blanket deterrence does not",
+      "source_id": "SRC-IMM-013",
+      "source_loc": "Returns data",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-F13",
+      "type": "FACT",
+      "statement": "One in five NHS staff are foreign nationals, 27% of nurses are from overseas, and 50% of health and social care workforce growth between 2009 and 2019 came from workers born abroad",
+      "source_id": "SRC-IMM-010",
+      "source_loc": "Workforce data",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-F14",
+      "type": "FACT",
+      "statement": "The adult social care sector has 19% non-UK national workforce and describes international recruitment as a lifeline, with the overseas care worker route closed by Labour in July 2025",
+      "source_id": "SRC-IMM-014",
+      "source_loc": "Nationality data",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-F15",
+      "type": "FACT",
+      "statement": "The UK has a housing undersupply of approximately 4.3 million homes, with net migration adding to demand but the fundamental driver being decades of underbuilding rather than immigration",
+      "source_id": "SRC-IMM-012",
+      "source_loc": "Cross-domain analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-F16",
+      "type": "FACT",
+      "statement": "Approximately one-third of UK average productivity growth between 2001 and 2019 is attributable to expansion of skills available in the workforce, partly driven by migration",
+      "source_id": "SRC-IMM-016",
+      "source_loc": "Productivity analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-F17",
+      "type": "FACT",
+      "statement": "Small boat arrivals represent approximately 5% of total immigration and around 29,000 people arrived by this route in 2023",
+      "source_id": "SRC-IMM-013",
+      "source_loc": "Channel crossings data",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-A01",
+      "type": "ASSUMPTION",
+      "statement": "Immigrants are net fiscal contributors to the UK economy",
+      "source_id": "SRC-IMM-001",
+      "source_loc": "Assumption 1",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "ROUTE-SPECIFIC. Skilled workers contribute \u00a3341k lifetime. Family route costs -\u00a3109k. Aggregate impact is less than 1% of GDP either way. The system design determines the answer. No blanket statement is honest."
+    },
+    {
+      "id": "IMM-A02",
+      "type": "ASSUMPTION",
+      "statement": "Immigration significantly suppresses wages for British workers",
+      "source_id": "SRC-IMM-005",
+      "source_loc": "Assumption 2",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "verdict": "PARTIALLY SUPPORTED but overstated. 0.6% depression at 5th percentile. Increases wages at median. Effects are small relative to minimum wage, union density, and employer power. In social care, closing routes without raising pay creates vacancies not higher wages."
+    },
+    {
+      "id": "IMM-A03",
+      "type": "ASSUMPTION",
+      "statement": "Numerical caps on immigration reduce net migration effectively",
+      "source_id": "SRC-IMM-003",
+      "source_loc": "Assumption 3",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "NOT SUPPORTED. No successful international precedent. Australia and Canada both overshoot their targets repeatedly. MAC consistently advises against arbitrary targets. Net migration was already expected to fall from 2024 regardless of policy."
+    },
+    {
+      "id": "IMM-A04",
+      "type": "ASSUMPTION",
+      "statement": "ECHR membership prevents the UK from deporting foreign criminals and controlling immigration at scale",
+      "source_id": "SRC-IMM-006",
+      "source_loc": "Assumption 4",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "ECHR EXIT IS DISPROPORTIONATE. Only 3% of criminal deportation cases succeed on ECHR grounds. ECtHR issued just 1 judgment against UK each in 2023 and 2024, neither on immigration. France, Germany, Sweden all deport within ECHR. The problem is administrative capacity not legal framework."
+    },
+    {
+      "id": "IMM-A05",
+      "type": "ASSUMPTION",
+      "statement": "Establishing safe legal routes for refugees would reduce irregular Channel crossings",
+      "source_id": "SRC-IMM-015",
+      "source_loc": "Assumption 5",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "verdict": "PARTIALLY SUPPORTED. Academic literature broadly supports the proposition. Albanian bilateral deal reduced crossings 90%. But no country has eliminated irregular migration through safe routes alone. Necessary but not sufficient."
+    },
+    {
+      "id": "IMM-A06",
+      "type": "ASSUMPTION",
+      "statement": "Deterrence through offshore processing or deportation flights effectively reduces irregular migration",
+      "source_id": "SRC-IMM-013",
+      "source_loc": "Assumption 6",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "MIXED. Rwanda: \u00a3700m, zero flights, no deterrence. Australia reduced boats but at A$5.7bn and severe humanitarian cost. UK is not Australia geographically. Narrow deterrence possible at disproportionate financial and ethical cost."
+    },
+    {
+      "id": "IMM-A07",
+      "type": "ASSUMPTION",
+      "statement": "Fast asylum processing is cheaper than maintaining the backlog",
+      "source_id": "SRC-IMM-013",
+      "source_loc": "Assumption 7",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "FAST PROCESSING IS DRAMATICALLY CHEAPER. \u00a38m/day hotel cost. Backlog quadrupled since 2014. Even granting asylum faster means people can work and contribute. The economic case is overwhelming."
+    },
+    {
+      "id": "IMM-A08",
+      "type": "ASSUMPTION",
+      "statement": "Immigration is the primary cause of pressure on public services such as the NHS, housing, and education",
+      "source_id": "SRC-IMM-011",
+      "source_loc": "Assumption 8",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "UNDERFUNDING IS THE PRIMARY CAUSE. NHS has 100k vacancies regardless of immigration and 1 in 5 staff are foreign nationals. Housing undersupply of 4.3m homes existed before migration increased. Immigration makes underfunding more visible but did not create it."
+    },
+    {
+      "id": "IMM-A09",
+      "type": "ASSUMPTION",
+      "statement": "Successful integration of immigrants depends primarily on language provision, employment access, and speed of processing",
+      "source_id": "SRC-IMM-004",
+      "source_loc": "Assumption 9",
+      "confidence": "HIGH",
+      "verified": false,
+      "verdict": "SUPPORTED. Language proficiency is the single strongest predictor of integration success. Germany post-2015 shows ~50% employment after 5 years with heavy language investment. Countries with earlier right to work show better outcomes."
+    },
+    {
+      "id": "IMM-A10",
+      "type": "ASSUMPTION",
+      "statement": "Zero net migration is an economically viable target for the UK",
+      "source_id": "SRC-IMM-001",
+      "source_loc": "Assumption 10",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "ECONOMICALLY INCOHERENT. OBR: low migration = \u00a319.9bn higher borrowing. NHS LTWP depends on 15 years of overseas recruitment. Social care faces immediate crisis. One-third of productivity growth linked to skills expansion from migration. Would require exit visas or closing all routes."
+    },
+    {
+      "id": "IMM-C01",
+      "type": "CLAIM",
+      "statement": "No blanket statement about immigration being fiscally positive or negative is honest because the impact is entirely determined by route, earnings, and household composition",
+      "source_id": "SRC-IMM-001",
+      "source_loc": "Evidence synthesis",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-C02",
+      "type": "CLAIM",
+      "statement": "The UK has a domestic skills and investment problem that manifests as immigration dependency, making immigration the symptom not the disease",
+      "source_id": "SRC-IMM-010",
+      "source_loc": "Problem framing",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-C03",
+      "type": "CLAIM",
+      "statement": "The asylum system is expensive because it is slow rather than because it is overwhelmed, with the UK receiving fewer applications per capita than the EU average",
+      "source_id": "SRC-IMM-007",
+      "source_loc": "Asylum analysis",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-C04",
+      "type": "CLAIM",
+      "statement": "Leaving the ECHR to control immigration would require also leaving the Refugee Convention and UN Convention Against Torture to have any meaningful effect, making it a disproportionate response to a minor legal factor",
+      "source_id": "SRC-IMM-006",
+      "source_loc": "ECHR synthesis",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-C05",
+      "type": "CLAIM",
+      "statement": "No party honestly communicates the OBR finding that higher migration reduces the deficit by \u00a319.9 billion because the evidence contradicts what voters want to hear",
+      "source_id": "SRC-IMM-001",
+      "source_loc": "Central finding",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-P01",
+      "type": "POLICY",
+      "statement": "Maintain MAC-led route-by-route assessment of immigration with no aggregate numerical caps, as caps have no successful international precedent and create rigidity",
+      "source_id": "SRC-IMM-003",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-P02",
+      "type": "POLICY",
+      "statement": "Require sectors sponsoring more than 5,000 overseas work visas per year to co-fund domestic training at 2x the visa volume within 5 years, enforced via automatic Immigration Skills Charge increases",
+      "source_id": "SRC-IMM-003",
+      "source_loc": "Innovation 2",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "IMM-P03",
+      "type": "POLICY",
+      "statement": "Process asylum claims to initial decision within 3 months by recruiting additional caseworkers and digitising the Home Office's legacy paper-based case management system",
+      "source_id": "SRC-IMM-007",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 200,
+        "amount_high": 200,
+        "unit": "m_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "IMM-P04",
+      "type": "POLICY",
+      "statement": "Grant asylum seekers the right to work after 3 months if the government has not decided their claim, generating an estimated \u00a3750 million per year in tax revenue while reducing accommodation costs",
+      "source_id": "SRC-IMM-022",
+      "source_loc": "Innovation 1",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 750,
+        "amount_high": 750,
+        "unit": "m_gbp",
+        "period": "annual",
+        "direction": "revenue",
+        "category": "tax_reform_revenue"
+      },
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "IMM-P05",
+      "type": "POLICY",
+      "statement": "Remain in the ECHR and expand targeted bilateral returns agreements following the Albanian model, which reduced Albanian boat arrivals by 90% compared to Rwanda's \u00a3700m and zero deportations",
+      "source_id": "SRC-IMM-006",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-P06",
+      "type": "POLICY",
+      "statement": "Establish a statutory firewall prohibiting public services from sharing personal data with Home Office immigration enforcement, allowing migrant workers to report exploitation without risk of deportation",
+      "source_id": "SRC-IMM-023",
+      "source_loc": "Innovation 3",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "IMM-P07",
+      "type": "POLICY",
+      "statement": "Reinstate overseas care worker and NHS recruitment routes with mandatory employer standards while domestic training scales over 15 years under the Long Term Workforce Plan",
+      "source_id": "SRC-IMM-010",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "IMM-P08",
+      "type": "POLICY",
+      "statement": "Invest in mandatory English language provision from day one of arrival and accelerate overseas credential recognition, as language proficiency is the single strongest predictor of integration success",
+      "source_id": "SRC-IMM-004",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 150,
+        "amount_high": 300,
+        "unit": "m_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "IMM-P09",
+      "type": "POLICY",
+      "statement": "Create region-specific visa categories with lower salary thresholds for designated regions with demonstrable labour shortages, following Canada's Provincial Nominee Program model",
+      "source_id": "SRC-IMM-003",
+      "source_loc": "Innovation 5",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "IMM-POS-CON-01",
+      "type": "POSITION",
+      "statement": "Impose a binding annual cap on work and family visas set by MAC recommendations and voted annually by Parliament, with the cap decreasing each year",
+      "source_id": "SRC-IMM-017",
+      "source_loc": "Immigration section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Conservative",
+        "stance": "contests",
+        "maps_to": [
+          "IMM-P01"
+        ]
+      }
+    },
+    {
+      "id": "IMM-POS-CON-02",
+      "type": "POSITION",
+      "statement": "Continue the Rwanda deportation scheme with regular flights, bring the Illegal Migration Act into full force blocking all asylum processing, and clear the asylum backlog within 6 months",
+      "source_id": "SRC-IMM-017",
+      "source_loc": "Asylum section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Conservative",
+        "stance": "contests",
+        "maps_to": [
+          "IMM-P03",
+          "IMM-P05"
+        ]
+      }
+    },
+    {
+      "id": "IMM-POS-CON-03",
+      "type": "POSITION",
+      "statement": "Raise salary thresholds for skilled workers to \u00a338,700, ban student and care worker dependants, and introduce health checks for visa applicants",
+      "source_id": "SRC-IMM-017",
+      "source_loc": "Legal migration section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Conservative",
+        "stance": "contests",
+        "maps_to": [
+          "IMM-P07"
+        ]
+      }
+    },
+    {
+      "id": "IMM-POS-LAB-01",
+      "type": "POSITION",
+      "statement": "Reduce net migration without committing to a specific numerical target, and link immigration policy to skills strategy via a strengthened MAC requiring high-visa sectors to produce domestic training plans",
+      "source_id": "SRC-IMM-018",
+      "source_loc": "Immigration section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Labour",
+        "stance": "endorses",
+        "maps_to": [
+          "IMM-P01",
+          "IMM-P02"
+        ]
+      }
+    },
+    {
+      "id": "IMM-POS-LAB-02",
+      "type": "POSITION",
+      "statement": "Scrap the Rwanda scheme and establish a Border Security Command with counter-terror powers, deploy 1,000-staff returns and enforcement unit, and pursue EU intelligence-sharing agreements for Channel security",
+      "source_id": "SRC-IMM-018",
+      "source_loc": "Enforcement section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Labour",
+        "stance": "endorses",
+        "maps_to": [
+          "IMM-P05"
+        ]
+      }
+    },
+    {
+      "id": "IMM-POS-LAB-03",
+      "type": "POSITION",
+      "statement": "Maintained and raised Conservative salary thresholds to \u00a341,700 and closed the overseas care worker recruitment route to new applicants in July 2025",
+      "source_id": "SRC-IMM-018",
+      "source_loc": "Post-election actions",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Labour",
+        "stance": "contests",
+        "maps_to": [
+          "IMM-P07"
+        ]
+      }
+    },
+    {
+      "id": "IMM-POS-LIB-01",
+      "type": "POSITION",
+      "statement": "End the hostile environment, transfer work visa policy out of the Home Office to an economic department, establish safe legal routes for refugees, and create a UK-EU youth mobility scheme",
+      "source_id": "SRC-IMM-019",
+      "source_loc": "Immigration section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Liberal Democrat",
+        "stance": "endorses",
+        "maps_to": [
+          "IMM-P01",
+          "IMM-P05",
+          "IMM-P06"
+        ]
+      }
+    },
+    {
+      "id": "IMM-POS-LIB-02",
+      "type": "POSITION",
+      "statement": "Set a 3-month processing standard for asylum claims, scrap the Illegal Migration Act, reverse dependant bans for care workers, and establish a firewall preventing public agencies sharing data with the Home Office",
+      "source_id": "SRC-IMM-019",
+      "source_loc": "Asylum and enforcement section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Liberal Democrat",
+        "stance": "endorses",
+        "maps_to": [
+          "IMM-P03",
+          "IMM-P06",
+          "IMM-P07"
+        ]
+      }
+    },
+    {
+      "id": "IMM-POS-GRN-01",
+      "type": "POSITION",
+      "statement": "Pursue a long-term aspiration toward a world without borders, introduce automatic 3-month visitor visas, remove minimum income requirements, establish birthright citizenship, and end all immigration detention",
+      "source_id": "SRC-IMM-020",
+      "source_loc": "Immigration section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Green",
+        "stance": "endorses",
+        "maps_to": []
+      }
+    },
+    {
+      "id": "IMM-POS-REF-01",
+      "type": "POSITION",
+      "statement": "Leave the ECHR, achieve zero net migration, freeze non-essential immigration, establish a UK Deportation Command with 24,000 detention capacity and 5 deportation flights per day, and impose employer NI surcharge on foreign hires",
+      "source_id": "SRC-IMM-021",
+      "source_loc": "Immigration section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Reform UK",
+        "stance": "contests",
+        "maps_to": [
+          "IMM-P01",
+          "IMM-P05"
+        ]
+      }
+    }
+  ]
+}

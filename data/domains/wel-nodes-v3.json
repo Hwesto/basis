@@ -1,0 +1,551 @@
+{
+  "domain": "welfare",
+  "version": "3.0",
+  "extracted_at": "2026-04-09",
+  "extraction_source": "manifesto-welfare-complete.md",
+  "verified": false,
+  "sources": [
+    {
+      "id": "SRC-WEL-001",
+      "title": "IFS, The Two-Child Limit: Poverty, Incentives and Cost",
+      "url": null,
+      "tier": 3,
+      "author": "IFS",
+      "date": "2025"
+    },
+    {
+      "id": "SRC-WEL-002",
+      "title": "DWP, Impact Assessment for UC (Removal of Two Child Limit) Bill",
+      "url": null,
+      "tier": 3,
+      "author": "DWP",
+      "date": "2025-12"
+    },
+    {
+      "id": "SRC-WEL-003",
+      "title": "House of Commons Library, UC (Removal of Two Child Limit) Bill",
+      "url": null,
+      "tier": 3,
+      "author": "House of Commons Library",
+      "date": "2026"
+    },
+    {
+      "id": "SRC-WEL-004",
+      "title": "IPPR, Economic Benefit of NHS Backlog Clearance",
+      "url": null,
+      "tier": 4,
+      "author": "IPPR",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-WEL-005",
+      "title": "JRF, Minimum Income Standard",
+      "url": null,
+      "tier": 4,
+      "author": "Joseph Rowntree Foundation",
+      "date": "2025"
+    },
+    {
+      "id": "SRC-WEL-006",
+      "title": "Resolution Foundation, Child Poverty Analysis",
+      "url": null,
+      "tier": 4,
+      "author": "Resolution Foundation",
+      "date": "2025"
+    },
+    {
+      "id": "SRC-WEL-007",
+      "title": "Carers UK, Valuation of Unpaid Care",
+      "url": null,
+      "tier": 4,
+      "author": "Carers UK",
+      "date": null
+    },
+    {
+      "id": "SRC-WEL-008",
+      "title": "Finnish UBI Pilot Evaluation (Kangas et al.)",
+      "url": null,
+      "tier": 1,
+      "author": "Kangas et al.",
+      "date": "2019"
+    },
+    {
+      "id": "SRC-WEL-009",
+      "title": "Scottish Government, Scottish Child Payment Evaluation",
+      "url": null,
+      "tier": 3,
+      "author": "Scottish Government",
+      "date": null
+    },
+    {
+      "id": "SRC-WEL-011",
+      "title": "IFS, General Election 2024 Manifesto Analysis",
+      "url": null,
+      "tier": 3,
+      "author": "IFS",
+      "date": "2024"
+    },
+    {
+      "id": "SRC-WEL-012",
+      "title": "Conservative Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Conservative Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-WEL-013",
+      "title": "Labour Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Labour Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-WEL-014",
+      "title": "Liberal Democrats 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Liberal Democrats",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-WEL-015",
+      "title": "Green Party 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Green Party",
+      "date": "2024-06"
+    },
+    {
+      "id": "SRC-WEL-016",
+      "title": "Reform UK 2024 General Election Manifesto",
+      "url": null,
+      "tier": 5,
+      "author": "Reform UK",
+      "date": "2024-06"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "WEL-F01",
+      "type": "FACT",
+      "statement": "Over 4 million children live in low-income families in the UK, with the two-child benefit limit affecting 483,000 families and 1.67 million children since its 2015 introduction",
+      "source_id": "SRC-WEL-002",
+      "source_loc": "Headline data",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-F02",
+      "type": "FACT",
+      "statement": "The DWP estimates 300,000 children are in relative poverty directly as a result of the two-child limit, equivalent to approximately 100 children pushed into poverty every day since introduction",
+      "source_id": "SRC-WEL-002",
+      "source_loc": "Impact modelling",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-F03",
+      "type": "FACT",
+      "statement": "DWP modelling shows removing the two-child limit would lift 450,000 children out of relative poverty by end of parliament and increase household income for 2 million children",
+      "source_id": "SRC-WEL-002",
+      "source_loc": "Removal impact",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 2.4,
+        "amount_high": 3.2,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "WEL-F04",
+      "type": "FACT",
+      "statement": "2.8 million people are economically inactive due to long-term sickness, up 800,000 since pre-pandemic levels, with the NHS waiting list of 7.6 million a direct driver of inability to work",
+      "source_id": "SRC-WEL-004",
+      "source_loc": "Economic inactivity data",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-F05",
+      "type": "FACT",
+      "statement": "60% of children in poverty live in working households, meaning in-work poverty driven by low wages, insecure contracts, high housing costs, and inadequate childcare is the dominant form of poverty",
+      "source_id": "SRC-WEL-006",
+      "source_loc": "In-work poverty analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-F06",
+      "type": "FACT",
+      "statement": "The two-child limit increased employment of affected mothers by approximately 3 percentage points from a 50% baseline, but the substantial majority of mothers did not respond through employment and had lower income",
+      "source_id": "SRC-WEL-001",
+      "source_loc": "Employment effect study",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-F07",
+      "type": "FACT",
+      "statement": "Affected households lose \u00a34,300 per year on average from the two-child limit, representing approximately 10% of household income",
+      "source_id": "SRC-WEL-001",
+      "source_loc": "Income impact",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-F08",
+      "type": "FACT",
+      "statement": "Children growing up in poverty earn approximately 25% less at age 30 than their non-poor peers, creating a measurable lifetime economic cost",
+      "source_id": "SRC-WEL-006",
+      "source_loc": "Long-term outcomes",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-F09",
+      "type": "FACT",
+      "statement": "Unpaid carers save the state an estimated \u00a3162 billion per year, more than total NHS spending, while having worse health outcomes and higher poverty rates than non-carers",
+      "source_id": "SRC-WEL-007",
+      "source_loc": "Care valuation",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 162,
+        "amount_high": 162,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "saving",
+        "category": "cost_avoidance"
+      }
+    },
+    {
+      "id": "WEL-F10",
+      "type": "FACT",
+      "statement": "Non-take-up of means-tested benefits is estimated at \u00a310-15 billion per year, meaning people in poverty are not claiming what they are entitled to because the system is too complex",
+      "source_id": "SRC-WEL-005",
+      "source_loc": "Take-up analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 10,
+        "amount_high": 15,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "WEL-F11",
+      "type": "FACT",
+      "statement": "The Scottish Child Payment of \u00a326.70 per week per child for low-income families has demonstrably reduced child poverty in Scotland relative to the rest of the UK",
+      "source_id": "SRC-WEL-009",
+      "source_loc": "Evaluation findings",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-F12",
+      "type": "FACT",
+      "statement": "The UC taper rate means some workers face effective marginal tax rates above 60%, creating a poverty trap where additional earnings are largely clawed back",
+      "source_id": "SRC-WEL-001",
+      "source_loc": "Marginal rate analysis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-A01",
+      "type": "ASSUMPTION",
+      "statement": "The two-child benefit limit reduces poverty or incentivises work sufficiently to justify its impact on children",
+      "source_id": "SRC-WEL-001",
+      "source_loc": "Assumption 1",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "REMOVAL IS CORRECT. DWP's own analysis: removal lifts 450,000 children from poverty. Employment effect is 3 percentage points \u2014 meaningful but the substantial majority of mothers don't respond. The policy trades mass child poverty for a marginal work incentive."
+    },
+    {
+      "id": "WEL-A02",
+      "type": "ASSUMPTION",
+      "statement": "\u00a312 billion in welfare savings can be achieved through tightening eligibility and increased sanctions as the Conservatives proposed",
+      "source_id": "SRC-WEL-011",
+      "source_loc": "Assumption 2",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "NOT CREDIBLE. IFS says it looks 'difficult in the extreme'. Disability rises are driven by genuine long-term sickness up 800,000. Sanctions increase destitution without reliably increasing employment. Tightening eligibility shifts costs to NHS, homelessness, criminal justice."
+    },
+    {
+      "id": "WEL-A03",
+      "type": "ASSUMPTION",
+      "statement": "Universal Basic Income is feasible at meaningful levels in the UK",
+      "source_id": "SRC-WEL-008",
+      "source_loc": "Assumption 3",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "verdict": "THEORETICALLY ATTRACTIVE, PRACTICALLY CHALLENGING. Finland pilot: modest wellbeing gains, no employment effect. Full UBI at \u00a310k/yr would cost ~\u00a3500bn \u2014 equal to total government spending. Partial UBI (guaranteed minimum) is more feasible but functionally similar to UC with less conditionality. Pilot worth exploring."
+    },
+    {
+      "id": "WEL-A04",
+      "type": "ASSUMPTION",
+      "statement": "Getting people into work is sufficient to solve poverty in the UK",
+      "source_id": "SRC-WEL-006",
+      "source_loc": "Assumption 4",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "WORK ALONE IS INSUFFICIENT. 60% of children in poverty live in working households. In-work poverty is the dominant form. Low wages, zero-hours contracts, high housing costs, and inadequate childcare mean employment alone doesn't prevent poverty. The welfare system must address in-work poverty not just worklessness."
+    },
+    {
+      "id": "WEL-A05",
+      "type": "ASSUMPTION",
+      "statement": "The rise in disability benefit claims is driven by fraud rather than genuine increases in long-term sickness",
+      "source_id": "SRC-WEL-002",
+      "source_loc": "Assumption 5",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "GENUINE NEED. The 800,000 increase since the pandemic is driven by mental health, musculoskeletal problems, and long Covid. DWP data shows fraud is a small fraction. NHS waiting lists prevent treatment that would enable return to work. Address the health causes, not the benefit eligibility."
+    },
+    {
+      "id": "WEL-A06",
+      "type": "ASSUMPTION",
+      "statement": "The benefit cap effectively reduces poverty or welfare dependency rather than simply shifting costs elsewhere",
+      "source_id": "SRC-WEL-003",
+      "source_loc": "Assumption 6",
+      "confidence": "LOW",
+      "verified": false,
+      "verdict": "THE BENEFIT CAP ADDRESSES A SYMPTOM NOT A CAUSE. In high-cost areas the cap forces families into cheaper housing, disrupting education and employment. The cap doesn't reduce housing costs \u2014 the underlying problem is housing cost, not benefit generosity."
+    },
+    {
+      "id": "WEL-C01",
+      "type": "CLAIM",
+      "statement": "The welfare budget is rising not because of generosity but because every other system is failing: housing costs drive housing benefit, NHS waiting lists drive sickness benefits, low wages drive in-work poverty",
+      "source_id": "SRC-WEL-011",
+      "source_loc": "Central framing",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-C02",
+      "type": "CLAIM",
+      "statement": "The two-child limit is the clearest single policy failure in the entire manifesto, with the government's own analysis showing it pushes 100 children into poverty every day for a marginal 3 percentage point employment effect",
+      "source_id": "SRC-WEL-002",
+      "source_loc": "Two-child synthesis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-C03",
+      "type": "CLAIM",
+      "statement": "Welfare is a downstream node that rises when upstream systems fail \u2014 it cannot be fixed by cutting welfare spending, only by fixing the upstream failures in NHS, housing, education, and energy",
+      "source_id": "SRC-WEL-011",
+      "source_loc": "Cross-domain synthesis",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-P01",
+      "type": "POLICY",
+      "statement": "Complete removal of the two-child benefit limit, lifting an estimated 450,000 children from poverty at a cost of \u00a32.4-3.2 billion per year",
+      "source_id": "SRC-WEL-002",
+      "source_loc": "Evidence-based position",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 2.4,
+        "amount_high": 3.2,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      }
+    },
+    {
+      "id": "WEL-P02",
+      "type": "POLICY",
+      "statement": "Establish an independent commission on Universal Credit adequacy to recommend annual uprates based on the JRF Minimum Income Standard, closing the \u00a335-50 per week gap between UC rates and actual cost of essentials",
+      "source_id": "SRC-WEL-005",
+      "source_loc": "Innovation 1",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 3,
+        "amount_high": 5,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      },
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "WEL-P03",
+      "type": "POLICY",
+      "statement": "Implement automatic benefits enrolment using HMRC and DWP data to reverse the default, recovering the estimated \u00a310-15 billion per year in unclaimed means-tested benefits",
+      "source_id": "SRC-WEL-005",
+      "source_loc": "Innovation 2",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": {
+        "amount_low": 10,
+        "amount_high": 15,
+        "unit": "bn_gbp",
+        "period": "annual",
+        "direction": "cost",
+        "category": "spending_need"
+      },
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "WEL-P04",
+      "type": "POLICY",
+      "statement": "Adopt the Scottish Child Payment model for England with direct cash payments per child for low-income families, proven to reduce child poverty at modest cost",
+      "source_id": "SRC-WEL-009",
+      "source_loc": "Innovation 3",
+      "confidence": "HIGH",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "WEL-P05",
+      "type": "POLICY",
+      "statement": "Deliver a carers' recognition package including \u00a32 per hour minimum wage premium, guaranteed respite, pension credit for caring, and caring as a protected characteristic",
+      "source_id": "SRC-WEL-007",
+      "source_loc": "Innovation 4",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null,
+      "metadata": {
+        "innovation": true
+      }
+    },
+    {
+      "id": "WEL-P06",
+      "type": "POLICY",
+      "statement": "Treat long-term sickness as a joint NHS-DWP economic emergency with dedicated return-to-work rehabilitation, mental health provision, and Access to Work backlog clearance",
+      "source_id": "SRC-WEL-004",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-P07",
+      "type": "POLICY",
+      "statement": "Reform the UC taper rate to reduce effective marginal tax rates below 60% for low-income workers, eliminating the poverty trap where additional earnings are largely clawed back",
+      "source_id": "SRC-WEL-001",
+      "source_loc": "Evidence-based position",
+      "confidence": "MEDIUM",
+      "verified": false,
+      "fiscal": null
+    },
+    {
+      "id": "WEL-POS-CON-01",
+      "type": "POSITION",
+      "statement": "Maintain the two-child limit, achieve \u00a312 billion in welfare savings through tightened disability benefits and increased sanctions, and reduce welfare rolls through conditionality while protecting the pension triple lock",
+      "source_id": "SRC-WEL-012",
+      "source_loc": "Welfare section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Conservative",
+        "stance": "contests",
+        "maps_to": [
+          "WEL-P01",
+          "WEL-P02"
+        ]
+      }
+    },
+    {
+      "id": "WEL-POS-LAB-01",
+      "type": "POSITION",
+      "statement": "Remove the two-child limit from April 2026 via legislation, develop a child poverty strategy, review Universal Credit, and launch the Get Britain Working plan tackling NHS waits, mental health, and Access to Work alongside a Fair Pay Agreement for social care",
+      "source_id": "SRC-WEL-013",
+      "source_loc": "Welfare section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Labour",
+        "stance": "endorses",
+        "maps_to": [
+          "WEL-P01",
+          "WEL-P06"
+        ]
+      }
+    },
+    {
+      "id": "WEL-POS-LIB-01",
+      "type": "POSITION",
+      "statement": "Remove the two-child limit and benefit cap, end deep poverty within a decade, establish an independent UC adequacy commission, introduce a carer's minimum wage at \u00a32 per hour above standard, and expand Carer's Allowance eligibility",
+      "source_id": "SRC-WEL-014",
+      "source_loc": "Welfare section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Liberal Democrat",
+        "stance": "endorses",
+        "maps_to": [
+          "WEL-P01",
+          "WEL-P02",
+          "WEL-P05"
+        ]
+      }
+    },
+    {
+      "id": "WEL-POS-GRN-01",
+      "type": "POSITION",
+      "statement": "Pilot Universal Basic Income, remove all benefit caps and limits, restore benefits to pre-austerity levels, end the sanctions regime entirely, and fund \u00a320 billion in free personal care through wealth taxes",
+      "source_id": "SRC-WEL-015",
+      "source_loc": "Welfare section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Green",
+        "stance": "endorses",
+        "maps_to": [
+          "WEL-P01",
+          "WEL-P02"
+        ]
+      }
+    },
+    {
+      "id": "WEL-POS-REF-01",
+      "type": "POSITION",
+      "statement": "Cut \u00a350 billion in government spending, incentivise employment through tax cuts rather than welfare reform, redirect overseas aid to domestic welfare, and prioritise British citizens for social housing and benefits",
+      "source_id": "SRC-WEL-016",
+      "source_loc": "Welfare section",
+      "confidence": "LOW",
+      "verified": false,
+      "metadata": {
+        "actor": "Reform UK",
+        "stance": "contests",
+        "maps_to": [
+          "WEL-P01",
+          "WEL-P02"
+        ]
+      }
+    }
+  ]
+}
