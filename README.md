@@ -4,6 +4,10 @@ An evidence-based civic platform that structures political claims as machine-rea
 
 **389 nodes · 745 edges · 172 sources · 12 domains · 9 facts literature-verified**
 
+## Phase 0: Manifesto Seed
+
+**Live:** https://hwesto.github.io/basis/
+
 ## What this is
 
 A manifesto built from evidence forward to policy, not from ideology backward to justification. Every assumption is stated. Every claim is sourced. Every policy is costed. The graph is open. If we're wrong, show us where — with evidence.
