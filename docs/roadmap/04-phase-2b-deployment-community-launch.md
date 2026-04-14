@@ -1,10 +1,17 @@
 ---
 phase: 2b
-status: in_progress
+status: v1_archived
 source: BASIS_ROADMAP.md
 ---
 
-### NEXT — Phase 2b: Deployment & Community Launch
+> **v1 — archived.** Phase 2b was the v1 deployment + community launch
+> plan. It was paused mid-flight when the audit revealed the v1 corpus
+> couldn't conform to the reconciled schema. Deployment of the v1
+> Next.js app is cancelled; v1 stays on gh-pages as a static snapshot
+> until v2 cutover. The "next" slot is now v2 Phase 1 (pipeline build)
+> — see `docs/roadmap/04a-v2-phase-1-pipeline.md`.
+
+### Phase 2b (v1): Deployment & Community Launch — ARCHIVED
 
 **Objective:** Get the platform publicly accessible. Start building the evidence community before the civic OS is built.
 
@@ -49,6 +56,20 @@ source: BASIS_ROADMAP.md
    - Investigate disagreements — genuine missed connections become new edges via curator queue
    - One half-day of compute, one day of review. Not recurring architecture.
 
-**Success metrics:** Deployed, CI green, ≥70 verified FACTs, first external challenge submitted, NLI QA pass complete.
+**Success metrics (v1, not pursued):** Deployed, CI green, ≥70 verified
+FACTs, first external challenge submitted, NLI QA pass complete.
 
----
+**What becomes of each deliverable in v2:**
+
+1. Vercel deployment → deferred to v2 Phase 2 with the rebuilt frontend
+2. CI enforcement → retargeted at v2 schema (`scripts/validate_graph.py`)
+3. Source backfill → superseded by v2 ingestion pipeline processing
+   the full 172-source backlog from scratch
+4. Sensitivity analysis → re-applied on the v2 graph after
+   re-ingestion
+5. Challenge system alpha → retained as a v2 Phase 2 deliverable
+   (`challenges`, `scrutiny` tables still needed)
+6. Email/social → when v2 ships, not before
+7. NLI edge QA → one-time pass on the v2 graph after re-ingestion
+
+**Status:** v1-paused, superseded by v2 Phase 1/2 (see `04a-`, `04b-`).
