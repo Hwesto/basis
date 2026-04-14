@@ -1,9 +1,11 @@
 # Blueberry / foreign-fruit supply tracking — current vs. industry practice
 
 Reference note for a UK importer/trader of foreign fruit (blueberries and
-similar), selling to a mix of UK multiples (EDI), wholesale markets, and
-foodservice/processors. Currently Excel-based with QuickBooks only at the
-accounting end.
+similar, sourced from Chile / South America), with a sister repacker
+company that uses third-party pack houses. Sells to a mix of UK multiples
+(Lidl via EDI — **configured but not in active use**), bulk sell-off
+trade, wholesale, and foodservice. Currently Excel-based with QuickBooks
+only at the accounting end.
 
 ---
 
@@ -28,15 +30,28 @@ accounting end.
 - **Mechanics** — copy-paste between tabs; one tab per PO; QuickBooks only
   receives the final financial summary.
 
-**TODO to confirm:**
-- "Wally payment" — Asda/Walmart settlement terms, or grower final
-  settlement on consignment close-out? The doc below assumes the latter
-  where it matters; correct me if wrong.
-- "Hold up" — retailer short-pay/deduction, or port demurrage/cold-store?
-  Treated as landed-cost adjustment below.
-- Early-assignment sheet: forecast only, firm allocation to customer POs,
-  or programme baseline with weekly flex? Treated as programme + weekly
-  flex below (most common pattern for imported soft fruit).
+**Confirmed definitions:**
+- **"Wally payment"** — advance / early cash payment to the grower.
+  Chilean and South American growers typically want cash up front, so
+  the business pays early on agreed terms. The *final* price is
+  renegotiated post-shipment once actual landed costs (including any
+  port hold-up) are known. This is **not** consignment close-out and
+  **not** Asda settlement; it is a prepaid-with-true-up arrangement.
+- **"Hold up"** — consignment held up in port (lost orders, admin/system
+  issues, clearance delays) causing additional freight, demurrage, or
+  cold-store cost that arrives *after* the initial grower price has been
+  agreed. These post-hoc costs feed back into the price renegotiation
+  with the grower.
+- **Early-assignment sheet** — programme baseline with rough amounts.
+  On the retailer side the actuals flex (demand changes). On the grower
+  side the constraint is supply: "max they can give" from what they can
+  gather that week. Net-missing is therefore usually a *supply* gap, not
+  a demand gap.
+- **Sister repacker** — related-party business that repacks through
+  third-party pack houses. Creates an intercompany cost/revenue layer
+  that currently has to be reconciled by hand.
+- **Lidl EDI** — the connection exists but isn't used; staff work from
+  Excel orders received by email. See §3.
 
 ---
 
@@ -51,6 +66,8 @@ The reference data model the trade uses, roughly upstream to downstream:
 | Grower / supplier | Master record | GGN, BRC/GlobalGAP status, payment terms, incoterms, currency |
 | Programme / contract | Seasonal commitment with grower and (mirrored) with retailer | Variety, class, pack spec, weeks, weekly volume, price basis (fixed / MGP / consignment) |
 | Customer | Master record | Retailer depot codes, GLN, EDI scheme (Tradacoms / EANCOM / GS1), pack code mapping |
+| Sister repacker (intercompany) | Related party, books its own P&L | Intercompany transfer price, margin share policy, pack-house subcontract rates |
+| Third-party pack house | Subcontractor to sister repacker | Site code, pack rates per variety/pack size, minimum charges |
 
 ### 2.2 Flow of a single shipment
 
@@ -127,22 +144,47 @@ Margin per customer PO is then:
 where customer-specific costs include pallet fees, depot levies, promotional
 funding, wastage, short-pay deductions.
 
-### 2.5 Grower settlement (consignment or MGP)
+### 2.5 Grower settlement — advance with post-shipment true-up
 
-For consignment growers the final payment isn't known until sale:
+The pattern here is not consignment and not fixed-price. It's an advance
+payment followed by renegotiation once actual costs are known:
 
 ```
-Gross sales proceeds
-− Freight, duty, port, haulage (landed costs)
-− Agreed commission %
-− Repack / QC write-off (if for grower account)
-= Net remittance to grower (self-billing invoice)
+Step 1 — At/before shipment:
+    Advance payment to grower  (the "wally payment")
+    Booked as: prepayment / grower advance (balance sheet)
+
+Step 2 — Once consignment is landed and costs are in:
+    Provisional landed cost per kg calculated per §2.4
+    (includes any port hold-up costs that arrived after Step 1)
+
+Step 3 — Price renegotiation with grower:
+    Target margin vs. actual landed cost → agreed final grower price
+    Final grower price × confirmed net weight = final grower value
+
+Step 4 — Settlement:
+    Final grower value
+  − Advance already paid (from Step 1)
+  = Top-up to grower   (or clawback / credit note if negative)
 ```
 
-This is typically what "negotiate price for settlement" means in a foreign
-fruit business — it isn't really a negotiation, it's a reconciliation the
-grower can query. The honesty of the numbers matters; this is where
-importers get a reputation.
+**Implications the current process doesn't handle well:**
+
+- **Working capital.** Advances are a cash outflow before any customer
+  invoice is raised. Need visibility of outstanding advances per grower
+  at all times, not just at period end.
+- **FX exposure.** Chilean / SA growers are typically USD-denominated.
+  Advance paid at one FX rate, final settled at another. The FX gain/
+  loss needs to land somewhere explicit, not hide inside "price
+  negotiation".
+- **Hold-up costs must be attributable.** If port demurrage on
+  consignment X is used to justify a lower final grower price on
+  consignment X, that cost-to-consignment link must be provable, not
+  just an aggregate "extra freight this month" number. Otherwise the
+  grower has a legitimate query.
+- **Renegotiation audit trail.** The agreed final price, who signed it
+  off, and on what landed-cost figure, needs to be recorded against the
+  consignment — not just updated in place in a cell.
 
 ---
 
@@ -167,10 +209,36 @@ importers get a reputation.
    want daily P&L because prices move daily.
 7. **No link from early-assign forecast to actuals.** You can't see forecast
    accuracy per grower per week, which is the number that tells you whether
-   to keep buying from them next season.
-8. **"Hold up" and short-pays reconciled manually.** Retailers deduct (price
-   query, wastage, late delivery, spec fail); without a deductions log you
-   lose track of recoverable vs. final.
+   to keep buying from them next season. The forecast-vs-actual gap is
+   mostly a grower *supply* signal ("max they could gather"), not a demand
+   signal — and that information is commercially valuable for next
+   season's programme.
+8. **Advance payments not tracked against consignments.** Wally/early
+   payments are a working-capital item that should sit as an open
+   balance per grower per consignment until settlement. Currently there
+   is no per-consignment advance ledger, so exposure is not visible in
+   real time and the true-up at renegotiation is done by memory.
+9. **Hold-up costs not attributable.** Port delays hit after the initial
+   grower price is agreed, and the additional freight/demurrage is used
+   to justify a lower final price. Without a cost → consignment link,
+   the grower cannot audit this and the business cannot defend it.
+10. **FX exposure on grower advances is implicit.** USD advance paid at
+    one rate, GBP settlement computed at another. The gain/loss hides
+    inside "price negotiation" instead of being booked as FX.
+11. **Lidl EDI configured but unused.** Orders come in by email and are
+    worked off in Excel even though the EDI channel exists. This is a
+    silent cost: UK multiples charge deductions for non-compliant
+    invoicing, mis-keyed prices get short-paid, and ASN failures cause
+    fine-lines. Either switch on the EDI that's already paid for, or
+    decommission it and stop paying for it — but running both is the
+    worst case.
+12. **Intercompany with sister repacker.** Movements to/from the
+    repacker and its third-party pack houses are part of the cost
+    stack and need transfer-pricing discipline. Reconciled by hand,
+    this is where HMRC and audit problems start.
+13. **Retailer short-pays reconciled manually.** Retailers deduct (price
+    query, wastage, late delivery, spec fail); without a deductions log
+    you lose track of recoverable vs. final written-off.
 
 ---
 
@@ -190,10 +258,12 @@ becomes pivots/filters on top.
 | `consignment_lines` | one grower line within a consignment (variety, class, pack, weight) |
 | `customer_pos` | one line on one customer PO |
 | `allocations` | one link from `consignment_lines` to `customer_pos` (many-to-many) |
-| `costs` | one cost line (freight, duty, port, haulage, demurrage, repack) keyed by consignment |
+| `costs` | one cost line (freight, duty, port, haulage, demurrage, repack) keyed by consignment; flag `timing = pre-negotiation` or `post-negotiation (hold-up)` |
 | `sales_invoices` | one invoice line out |
-| `grower_settlements` | one self-bill line in |
+| `grower_advances` | one wally/early payment, keyed by grower + consignment, with currency + FX rate at payment date; status open/settled |
+| `grower_settlements` | one final settlement line — references `grower_advances` and computes top-up or clawback |
 | `deductions` | one retailer deduction, status open/recovered/written-off |
+| `intercompany` | one movement to/from sister repacker, with transfer-price basis |
 
 The "big consolidated sheet" then becomes a pivot off these tables, not a
 copy-paste artefact.
@@ -215,21 +285,65 @@ sheet by `consignment_no`. No free-form cost lines.
 - Wednesday: post week's landed costs + sales + settlements to QuickBooks
   via journal (or CSV import). One journal per week, not per PO.
 
-### 4.5 EDI for the retailers that require it
+### 4.5 EDI — decide, don't drift
 
-For the UK multiples portion: you almost certainly need ORDERS-in and
-INVOIC-out via a bureau (e.g. TrueCommerce, OpenText, Data Interchange).
-Most multiples will charge deductions for non-EDI invoices. Keep wholesale
-and foodservice on email/phone — fine as is.
+The Lidl EDI channel exists but staff work off email/Excel. Pick one:
 
-### 4.6 The three numbers that should exist live
+- **Switch it on properly.** Work out whether the gap is scope (EDI
+  provider doesn't cover the specific document set Lidl sends), training
+  (staff never learned the flow), or trust (past data errors made people
+  revert to email). Fix the specific cause. Map Lidl's pack codes to
+  internal SKUs once, not per order. ORDERS-in + DESADV-out + INVOIC-out
+  is the standard triplet; make sure all three work.
+- **Switch it off.** If the bureau contract is still being paid and the
+  channel isn't used, cancel the contract. Don't run a dead channel.
 
-1. **Net missing by week × variety** — what you already track, formalised:
+Any other UK multiple added later will require EDI from day one — most
+won't accept email orders at all and will charge deductions for non-EDI
+invoices. Wholesale and foodservice on email is fine.
+
+### 4.6 Intercompany with the sister repacker
+
+Treat the repacker as an arm's-length customer/supplier for data
+purposes, even though ownership is shared:
+
+- Transfer price per pack operation, set once per season, not argued
+  per consignment.
+- Pack-house subcontract costs flow through the repacker's P&L, not
+  back into the importer's cost stack directly.
+- Monthly intercompany reconciliation — matched pairs of invoices with
+  zero residual — before month-end close.
+- For HMRC: transfer-pricing documentation if group turnover crosses
+  the SME threshold (currently £50m group / 250 employees). Below that,
+  arm's-length still applies but documentation burden is lighter.
+
+### 4.7 Grower advance ledger + FX
+
+Every wally/early payment:
+
+- Booked as an asset (grower advance) against the specific consignment
+  at the payment-date FX rate.
+- Cleared to cost of sales at final settlement, with the FX difference
+  booked to FX gain/loss — not absorbed into the negotiated price.
+- Age report weekly: advances open > 60 days are a commercial and
+  working-capital red flag.
+
+### 4.8 The numbers that should exist live
+
+1. **Net missing by week × variety** — formalised:
    `programme_target − confirmed_pack − in-transit − landed`.
-2. **Landed cost per kg per consignment** — available the day haulage docket
-   lands, not weeks later.
+   Flag whether the gap is supply (grower couldn't gather) or demand
+   (retailer flexed down) — different commercial response.
+2. **Landed cost per kg per consignment** — available the day haulage
+   docket lands, split into pre-negotiation and post-negotiation
+   (hold-up) so the grower renegotiation basis is auditable.
 3. **Margin per customer PO** — sales line minus allocated landed cost
    minus known deductions. Provisional until deductions close.
+4. **Open grower advances** — per grower, per consignment, per currency,
+   aged. This is the working-capital number that's currently invisible.
+5. **Retailer deductions log** — open vs. recovered vs. written-off, by
+   reason code. Tells you whether to invest in fixing the root cause
+   (e.g. ASN accuracy) or accept the cost.
 
 ---
 
@@ -246,11 +360,16 @@ year of licence.
 
 ## Open questions to resolve before this note is final
 
-- Confirm "wally payment" definition (see §1 TODO).
-- Confirm "hold up" definition (see §1 TODO).
-- Confirm early-assignment commitment level (see §1 TODO).
 - Volumes: consignments per week, growers, customers on EDI — determines
   whether §5 trigger is already hit.
 - Incoterms used with growers (FOB / CFR / CIF / DAP) — determines which
   cost lines are yours vs. theirs.
-- Currency mix and who carries FX risk.
+- Grower currency mix (USD for Chilean / SA assumed) and whether the
+  business hedges FX or takes the spot risk.
+- Why Lidl EDI isn't in use: missing document coverage, staff training,
+  or historical data-quality problems. Determines fix vs. decommission.
+- Sister repacker — shared ownership vs. contractual related-party.
+  Determines transfer-pricing regime.
+- Typical size of the post-negotiation adjustment (hold-up costs as %
+  of grower price). If material and recurring, there's a hedging /
+  cost-smoothing conversation to have with growers.
