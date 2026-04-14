@@ -31,6 +31,7 @@ will be regenerated from these files.
 | [SCHEMA-021](decisions/SCHEMA-021-lex-graph-as-a-reference-table-not-an-import.md) | Lex Graph as a reference table, not an import | PROVISIONAL |  |
 | [SCHEMA-022](decisions/SCHEMA-022-corpus-scoping-via-ego-network-queries.md) | Corpus scoping via ego network queries | PROVISIONAL |  |
 | [SCHEMA-023](decisions/SCHEMA-023-legal-consistency-flags-as-ci-checks-7-8.md) | Legal consistency flags as CI checks 7-8 | SETTLED |  |
+| [SCHEMA-024](decisions/SCHEMA-024-three-tier-curator-routing.md) | Three-tier curator routing with public verification level | PROVISIONAL | OQ-007, OQ-008 |
 
 ## Open questions
 
@@ -42,7 +43,7 @@ will be regenerated from these files.
 | [OQ-004](open_questions/OQ-004-should-evidence-independent-default-to-true-or-false-current.md) | open | No | 2b |
 | [OQ-005](open_questions/OQ-005-how-do-we-handle-provisions-that-apply-to-england-and-wales.md) | resolved | — | — |
 | [OQ-006](open_questions/OQ-006-what-is-the-correct-alpha-for-inferred-sources-ml-classifier.md) | open | No | 5 |
-| [OQ-007](open_questions/OQ-007-how-does-curator-approved-work-for-derived-nodes-computed-au.md) | open | No | 3 |
-| [OQ-008](open_questions/OQ-008-inter-rater-agreement-study-are-high-medium-low-consistently.md) | open | No | 3 |
+| [OQ-007](open_questions/OQ-007-how-does-curator-approved-work-for-derived-nodes-computed-au.md) | resolved | — | — |
+| [OQ-008](open_questions/OQ-008-inter-rater-agreement-study-are-high-medium-low-consistently.md) | resolved | — | — |
 | [OQ-009](open_questions/OQ-009-gdp-constant-for-pct-gdp-unit-conversion-should-this-be-a-dy.md) | open | No | 2b |
 | [OQ-010](open_questions/OQ-010-what-happens-when-lex-graph-provision-ids-change-recovery-pr.md) | open | Yes | 4 |

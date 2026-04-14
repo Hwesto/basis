@@ -8,6 +8,28 @@ source: BASIS_ROADMAP.md
 
 **Objective:** For any issue a citizen identifies, route them through the correct escalation pathway with pre-populated templates.
 
+**Curator routing for action-layer nodes (per SCHEMA-024):**
+
+- **TEMPLATE nodes are solicitor-only.** Templates are the documents
+  citizens send to councils, ombudsmen, courts. Wrong wording can
+  damage a real case. They never reach `verification_level=human_curated`
+  without `solicitor_signed_off=true` (already on the schema at
+  `src/action_schema.py:62`). This is a stricter form of Tier 3 — a
+  generic human approval is not enough.
+- **MECHANISM nodes** route through normal three-tier flow.
+- **OUTCOME nodes** from citizen submissions (Phase 6) are
+  user-submitted and route to Tier 3 by default — they can't be
+  trusted at face value because the submitter has an incentive to
+  report a particular result.
+- **SUBMISSION nodes** are operational records, not knowledge — they
+  bypass the curator queue entirely and write directly to
+  `citizen_actions`.
+
+The solicitor-sign-off rate is the rate-limiter on this phase. Plan
+the template authoring pipeline (council, MP, ombudsman, FOI, EIR,
+pre-action protocol, tribunal applications) around realistic legal
+review throughput — likely 5–10 templates per week, not per day.
+
 **5.1 Routing logic**
 
 The escalation tree is itself part of the knowledge graph. A MECHANISM node carries:

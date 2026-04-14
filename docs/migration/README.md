@@ -115,8 +115,13 @@ v2 Next.js app replaces gh-pages root; v1 served at `/v1/` sub-route.
   `scripts/audit_v1_graph.py` → `scripts/validate_graph.py` as a CI
   check against the live v2 graph.
 - **Phase D — Re-ingest v1 backlog.** Run pipeline over the 172
-  sources + 13 manifestos. Curator queue review cycle. Target ~160
-  FACT, ~70 ASSUMPTION, ~55 CLAIM, ~45 POLICY, ~55 POSITION.
+  sources + 13 manifestos. Three-tier routing pass per SCHEMA-024:
+  Tier 1 auto-passes ~60–70%, Tier 2 (Claude via Supabase MCP)
+  reviews the remainder, Tier 3 (human) handles only escalations
+  and civic findings. Calibration gate first: 100-node blind sample,
+  ≥90% Harry / Claude agreement, before any AI-reviewed node enters
+  the public API. Target curated graph: ~160 FACT, ~70 ASSUMPTION,
+  ~55 CLAIM, ~45 POLICY, ~55 POSITION.
 - **Phase E — Deploy v2 site.** New Next.js frontend reading from
   Supabase. v1 archive at `/v1/` sub-route.
 

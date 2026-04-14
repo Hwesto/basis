@@ -4,7 +4,7 @@ Live snapshot of what runs, what's scaffolded, what's blocked. Updated
 at the end of each work session. Intended as the single-scan overview
 when re-orienting after a break.
 
-**Last updated:** 2026-04-14 (session commits `30f12d8` → HEAD)
+**Last updated:** 2026-04-14 (session commits `30f12d8` → HEAD; SCHEMA-024 added)
 
 ---
 
@@ -38,7 +38,10 @@ when re-orienting after a break.
 | Derived adapter | Constructs `DerivedSource` from passed `input_node_ids` | Caller-populated; no stub code to fix |
 | Parliamentary + local_data agents in `run_agent.py` | Print TODO messages | Connect to parliament-mcp (Phase 4 dep) and ONS release calendar |
 | v2 frontend | Only v1 static `archive/v1/site/index.html` exists | New Next.js build per `docs/roadmap/04b-v2-phase-2-reingest-deploy.md` |
-| Curator queue UI | `src/sql/curator_queue.sql` defines schema, no review UI | Next.js admin page in v2 build |
+| Curator queue UI | `src/sql/curator_queue.sql` defines schema, no review UI | Next.js admin page in v2 build (Tier 3 review per SCHEMA-024) |
+| Three-tier curator routing (SCHEMA-024) | Decision doc landed; SQL fields + `src/curator/routing.py` not yet implemented | Phase 1 deliverable: SCHEMA-024 fields on `curator_queue` + `evidence_nodes`; Tier 1 logic in `src/curator/routing.py` |
+| Verification badge (SCHEMA-024) | Frontend only; no v2 frontend exists yet | Phase 2 deliverable: badge component + routing-chain drawer |
+| Calibration study (SCHEMA-024) | Methodology specced; can't run until ≥100 Tier-2 approved nodes exist | Phase 2 gate before any `verification_level=ai_reviewed` enters public API |
 
 ---
 

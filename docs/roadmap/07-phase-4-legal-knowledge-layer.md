@@ -8,6 +8,25 @@ source: BASIS_ROADMAP.md
 
 **Objective:** Build a Hohfeldian semantic overlay on top of i.AI's Lex Graph. Extract citizen rights, duties, bodies, and mechanisms for the top 20 issue types from an already-structured, already-chunked, already-amendment-tracked legal corpus — without rebuilding what Lex already provides.
 
+**Curator routing for legal nodes (per SCHEMA-024):**
+
+The three-tier routing system applies to legal extraction with three
+hard exceptions — these node types **always** route to Tier 3
+(human review), regardless of what Tier 1 and Tier 2 say:
+
+- **PRECEDENT nodes** — court decisions have legal weight. Misclassifying
+  *ratio* creates downstream errors that propagate into action templates.
+- **ENFORCEMENT_GAP findings** (CI check 7) — a DUTY with no MECHANISM
+  is a civic finding with political consequence. Cannot be auto-approved.
+- **MISSING_CORRELATIVE findings** (CI check 8) — a RIGHT without a
+  correlative DUTY (or a POWER without a LIABILITY) is either an
+  extraction error or a genuine legal incoherence. Either way, human.
+
+All other legal node types (RIGHT, DUTY, POWER, LIABILITY, etc.)
+flow through normal three-tier routing. Estimated effect: ~70–80%
+of routine legal extraction passes Tier 1 + Tier 2 without human
+review, freeing curator time for the cases above plus calibration.
+
 **The strategic foundation: Lex Graph**
 
 i.AI (the UK government's AI incubator, DSIT) has published Lex Graph on Hugging Face: 820,000 provision-level nodes and 2.2 million structural edges covering all UK legislation from 1267 to present, complete from 1963. Citation relationships, amendment relationships, cross-references. Open Government Licence v3.0.

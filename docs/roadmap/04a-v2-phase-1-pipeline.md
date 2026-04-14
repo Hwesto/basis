@@ -56,22 +56,36 @@ docs. This phase fills those gaps.
    - `src/ingest/cli.py` — `python -m basis.ingest <url|id>` one-shot;
      `python -m basis.ingest backlog` batch mode
 
-4. **SQL: add missing tables.** Currently `src/sql/` has `sources`,
-   `legal_nodes`, `lex_provisions`, `area_metrics`, `citizen_actions`.
-   Missing:
+4. **SQL: add missing tables and SCHEMA-024 fields.**
+   Currently `src/sql/` has `sources`, `legal_nodes`, `lex_provisions`,
+   `area_metrics`, `citizen_actions`. Missing:
    - `evidence_nodes` — generic table for FACT / ASSUMPTION / CLAIM /
-     POLICY / POSITION (v1 had these in JSON, never in SQL)
+     POLICY / POSITION (v1 had these in JSON, never in SQL).
+     Includes SCHEMA-024 fields: `approved_by` (auto/claude/human),
+     `verification_level` (auto_verified/ai_reviewed/human_curated),
+     `last_audited_by`, `last_audited_at`.
    - `citation_edges` — per SCHEMA-009, with `default_tier` fallback +
-     `claim_tier_override` + `claim_tier_justification`
+     `claim_tier_override` + `claim_tier_justification`.
    - `curator_queue` — referenced across pipeline.py and the CI
-     validator, never created
+     validator, never created. Carries SCHEMA-024 routing fields:
+     `escalation_reason` (enum), `auto_approval_conditions` (jsonb),
+     `claude_judgment_hash` (cache), `kickback`, `kickback_reason`,
+     `tier` (1/2/3 routing target).
 
-5. **Validator.** Refactor `scripts/audit_v1_graph.py` →
+5. **Curator routing module.** New `src/curator/routing.py` implements
+   SCHEMA-024 Tier 1 logic: every candidate node coming out of
+   `src/ingest/` runs through Tier 1 gates before reaching the queue.
+   Pass-all → routes to `tier=2` for Claude review. Any failure →
+   routes to `tier=3` with structured `escalation_reason`. Always-Tier-3
+   categories (PRECEDENT, civic findings, calibration windows)
+   bypass Tier 1 and go straight to the human queue.
+
+6. **Validator.** Refactor `scripts/audit_v1_graph.py` →
    `scripts/validate_graph.py`. Same Pydantic validation, but operating
    against the live v2 DB rather than the archived v1 JSON. Wire into
    GitHub Actions as a PR gate.
 
-6. **Rebuild banner on public site.** `site/index.html` gets a visible
+7. **Rebuild banner on public site.** `site/index.html` gets a visible
    banner at the top pointing at the v2 rebuild status. No redirect,
    no outage.
 
@@ -79,7 +93,9 @@ docs. This phase fills those gaps.
 
 - Re-ingestion of the v1 corpus (that's Phase 2)
 - New frontend build (Phase 2)
-- Curator queue UI (Phase 2; CLI + SQL only in Phase 1)
+- Curator queue UI / verification badge component (Phase 2)
+- SCHEMA-024 calibration study (Phase 2 — needs ≥100 Tier-2-approved
+  nodes before it can run)
 - `SCHEMA-018` MC engine calibration study (deferred)
 - `SCHEMA-019` alpha calibration study (deferred)
 
@@ -94,6 +110,9 @@ docs. This phase fills those gaps.
   valid `StructuralSource` with `registry='lex_graph'`
 - `scripts/validate_graph.py` passes against a seeded Supabase with at
   least 1 node of each type
+- `src/curator/routing.py` correctly assigns `tier=1/2/3` and
+  `escalation_reason` for synthetic nodes covering each Tier 1 gate
+  (boilerplate, low-tier source, adversarial pattern, etc.)
 - `data/v1_ingestion_backlog.json` generated and committed (~170
   entries)
 - v1 artefacts moved to `archive/v1/`; public site has rebuild banner;

@@ -8,6 +8,20 @@ source: BASIS_ROADMAP.md
 
 **Objective:** The knowledge graph maintains itself. Humans review, not extract.
 
+**Why this phase is viable:** Phase 8 only works because of SCHEMA-024
+three-tier curator routing. A binary `curator_approved` gate would
+make daily automated extraction infeasible — the human review queue
+would grow faster than it could be cleared. The three-tier model
+auto-passes routine extractions, sends judgment-call extractions to
+Claude via MCP (subscription, no per-call cost), and reserves human
+attention for civic findings + calibration windows + always-Tier-3
+node types (PRECEDENT, ENFORCEMENT_GAP, MISSING_CORRELATIVE,
+TEMPLATE).
+
+Steady-state expected curator load (post-launch): a few minutes of
+Tier 3 review per day plus the 5% spot-check sample, instead of
+hours of bulk approval.
+
 **8.1 Source monitoring**
 
 - **Legal layer (Lex Graph):** Daily hash check on watched `lex_provisions`. Changed `content_hash` → targeted re-extraction of that provision only, curator review triggered for linked `legal_nodes`. No RSS monitoring needed — amendment tracking is inherited from Lex Graph's edge structure.
@@ -40,12 +54,21 @@ Each agent run is logged in `agent_log` table with: input hashes, output node co
 - WhatDoTheyKnow integration: submit via API, track response
 - Response ingestion: FOI responses → extraction pipeline → new nodes
 
-**8.4 Human oversight**
+**8.4 Human oversight (per SCHEMA-024)**
 
-Automation handles ingestion; humans handle judgment:
-- Any new legal node requires curator sign-off before live
-- Edge type changes require explanation
-- Systemic findings require human review before surfacing to media/parliamentary channels
-- Model updates require test suite pass (regression fixtures) before deployment
+Automation handles ingestion; the three-tier system handles the
+rest. Humans handle:
+- Always-Tier-3 categories (PRECEDENT, civic findings, TEMPLATE
+  with solicitor sign-off)
+- Tier 3 escalations from Claude
+- 5% weekly spot-check on `approved_by=claude` nodes
+- Calibration windows on new domain / new source / new model version
+- Pattern review when the kickback workflow flags a recurring
+  Claude misjudgment for promotion to a Tier 1 hard-fail rule
+- Edge type changes still require explanation
+- Systemic findings still require human review before surfacing to
+  media or parliamentary channels
+- Model updates still require regression-fixture test suite pass
+  before deployment
 
 ---
