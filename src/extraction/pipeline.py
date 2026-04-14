@@ -69,7 +69,7 @@ def classify_source(url: str | None = None, metadata: dict | None = None) -> str
         return meta["source_type"]
 
     if meta.get("lex_provision_id"):
-        return "LEGISLATIVE_STRUCTURAL"
+        return "STRUCTURAL"
     if meta.get("computation_id"):
         return "DERIVED"
 
@@ -80,7 +80,7 @@ def classify_source(url: str | None = None, metadata: dict | None = None) -> str
         if any(api in u for api in ["ons.gov.uk/api", "police.uk/api", "digital.nhs.uk", "stat-xplore"]):
             return "STRUCTURED_DATA"
         if "lex" in u and ("provision" in u or "legislation" in u):
-            return "LEGISLATIVE_STRUCTURAL"
+            return "STRUCTURAL"
         if any(p in u for p in ["hansard", "parliament.uk", "theyworkforyou"]):
             return "TESTIMONY"
         if "gov.uk" in u:
@@ -274,7 +274,8 @@ def extract_single_provision(
         queue_item = {
             "node_type": node_data.get("node_type", "UNKNOWN"),
             "lex_provision_id": lex_id,
-            "source_type": "LEGISLATIVE_STRUCTURAL",
+            "source_type": "STRUCTURAL",
+            "registry": "lex_graph",
             "extracted_json": node_data,
             "extraction_run_id": f"pipeline_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}",
             "flash_check_result": flash_result,

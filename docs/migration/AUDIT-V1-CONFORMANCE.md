@@ -6,7 +6,7 @@ Validates `data/basis-kg-full.json` against the reconciled v2 schema (`src/base_
 
 | Category | Total | Pass | Fail | Pass % |
 |---|---|---|---|---|
-| Nodes | 389 | 137 | 252 | 35.2% |
+| Nodes | 389 | 185 | 204 | 47.6% |
 | Sources | 172 | 0 | 172 | 0.0% |
 | Edges | 745 | 745 | 0 | 100.0% |
 
@@ -15,16 +15,15 @@ Validates `data/basis-kg-full.json` against the reconciled v2 schema (`src/base_
 | Type | Pass | Fail |
 |---|---|---|
 | ASSUMPTION | 0 | 75 |
-| CLAIM | 26 | 14 |
-| FACT | 77 | 53 |
-| POLICY | 34 | 41 |
+| CLAIM | 36 | 4 |
+| FACT | 102 | 28 |
+| POLICY | 47 | 28 |
 | POSITION | 0 | 69 |
 
 ### Top node-level errors
 
 | Field | Error type | Count |
 |---|---|---|
-| `domain` | `enum` | 86 |
 | `basis_fact_ids` | `missing` | 75 |
 | `falsification_condition` | `missing` | 75 |
 | `actor` | `missing` | 69 |
@@ -49,7 +48,7 @@ Validates `data/basis-kg-full.json` against the reconciled v2 schema (`src/base_
 | Field | Error type | Count |
 |---|---|---|
 | `publisher` | `string_type` | 172 |
-| `tier_justification` | `string_type` | 172 |
+| `default_tier_justification` | `string_type` | 172 |
 | `published_date` | `string_type` | 32 |
 
 ## Edges — by type

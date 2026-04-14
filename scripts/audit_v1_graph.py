@@ -51,10 +51,10 @@ V1_DOMAIN_TO_V2: dict[str, str | None] = {
     "immigration": "immigration",
     "defence": "defence",
     "justice": "justice",
-    # Domains present in v1 but NOT in v2 DomainEnum (base_schema.py lines 26-42):
-    "energy": None,
-    "eu-trade": None,
-    "electoral-reform": None,
+    # v2 DomainEnum extended to include these three (SCHEMA-002 v2 revision):
+    "energy": "energy",
+    "eu-trade": "eu_trade",
+    "electoral-reform": "electoral_reform",
 }
 
 
@@ -100,8 +100,8 @@ def adapt_source_v1_to_v2_payload(s: dict) -> dict:
         "publisher": None,  # v1 has no publisher field
         "published_date": s.get("date"),
         "url": s.get("url"),
-        "tier": tier,
-        "tier_justification": None,  # v1 has no justification field
+        "default_tier": tier,
+        "default_tier_justification": None,  # v1 has no justification field
         "domain": domain,
     }
 

@@ -1,7 +1,7 @@
 {
   "nodes": {
-    "pass_count": 137,
-    "fail_count": 252,
+    "pass_count": 185,
+    "fail_count": 204,
     "failures": [
       {
         "id": "NHS-F05",
@@ -3769,124 +3769,8 @@
         ]
       },
       {
-        "id": "ENG-F01",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-F02",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-F03",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-F04",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-F05",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-F06",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-F07",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-F08",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-F09",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-F10",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
         "id": "ENG-F11",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "fiscal.amount",
             "type": "missing",
@@ -3922,25 +3806,8 @@
         ]
       },
       {
-        "id": "ENG-F12",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
         "id": "ENG-F13",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "fiscal.amount",
             "type": "missing",
@@ -3976,36 +3843,8 @@
         ]
       },
       {
-        "id": "ENG-F14",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-F15",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
         "id": "ENG-A01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "basis_fact_ids",
             "type": "missing",
@@ -4017,7 +3856,7 @@
               "source_id": "SRC-ENG-006",
               "source_loc": "Assumption 1",
               "confidence": "MEDIUM",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           },
@@ -4032,7 +3871,7 @@
               "source_id": "SRC-ENG-006",
               "source_loc": "Assumption 1",
               "confidence": "MEDIUM",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           }
@@ -4042,12 +3881,6 @@
         "id": "ENG-A02",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -4058,7 +3891,7 @@
               "source_id": "SRC-ENG-001",
               "source_loc": "Assumption 2",
               "confidence": "MEDIUM",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           },
@@ -4073,7 +3906,7 @@
               "source_id": "SRC-ENG-001",
               "source_loc": "Assumption 2",
               "confidence": "MEDIUM",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           }
@@ -4083,12 +3916,6 @@
         "id": "ENG-A03",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -4099,7 +3926,7 @@
               "source_id": "SRC-ENG-009",
               "source_loc": "Assumption 3",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           },
@@ -4114,7 +3941,7 @@
               "source_id": "SRC-ENG-009",
               "source_loc": "Assumption 3",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           }
@@ -4124,12 +3951,6 @@
         "id": "ENG-A04",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -4140,7 +3961,7 @@
               "source_id": "SRC-ENG-011",
               "source_loc": "Assumption 4",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           },
@@ -4155,7 +3976,7 @@
               "source_id": "SRC-ENG-011",
               "source_loc": "Assumption 4",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           }
@@ -4165,12 +3986,6 @@
         "id": "ENG-A05",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -4181,7 +3996,7 @@
               "source_id": "SRC-ENG-004",
               "source_loc": "Assumption 5",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           },
@@ -4196,7 +4011,7 @@
               "source_id": "SRC-ENG-004",
               "source_loc": "Assumption 5",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           }
@@ -4206,12 +4021,6 @@
         "id": "ENG-A06",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -4222,7 +4031,7 @@
               "source_id": "SRC-ENG-007",
               "source_loc": "Assumption 6",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           },
@@ -4237,7 +4046,7 @@
               "source_id": "SRC-ENG-007",
               "source_loc": "Assumption 6",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           }
@@ -4247,12 +4056,6 @@
         "id": "ENG-A07",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -4263,7 +4066,7 @@
               "source_id": "SRC-ENG-016",
               "source_loc": "Assumption 7",
               "confidence": "MEDIUM",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           },
@@ -4278,86 +4081,9 @@
               "source_id": "SRC-ENG-016",
               "source_loc": "Assumption 7",
               "confidence": "MEDIUM",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
-          }
-        ]
-      },
-      {
-        "id": "ENG-C01",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-C02",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-C03",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-C04",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-P01",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-P02",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-P03",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
           }
         ]
       },
@@ -4365,12 +4091,6 @@
         "id": "ENG-P04",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "fiscal.amount",
             "type": "missing",
             "msg": "Field required",
@@ -4401,28 +4121,6 @@
             "type": "literal_error",
             "msg": "Input should be 'spending', 'revenue' or 'net'",
             "input_value": "cost"
-          }
-        ]
-      },
-      {
-        "id": "ENG-P05",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ENG-P06",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
           }
         ]
       },
@@ -4430,12 +4128,6 @@
         "id": "ENG-P07",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "fiscal.amount",
             "type": "missing",
             "msg": "Field required",
@@ -4470,25 +4162,8 @@
         ]
       },
       {
-        "id": "ENG-P08",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
         "id": "ENG-POS-CON-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -4500,7 +4175,7 @@
               "source_id": "SRC-ENG-017",
               "source_loc": "Energy section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           }
@@ -4509,12 +4184,6 @@
       {
         "id": "ENG-POS-LAB-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -4526,7 +4195,7 @@
               "source_id": "SRC-ENG-018",
               "source_loc": "Energy section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           }
@@ -4535,12 +4204,6 @@
       {
         "id": "ENG-POS-LIB-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -4552,7 +4215,7 @@
               "source_id": "SRC-ENG-019",
               "source_loc": "Energy section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           }
@@ -4561,12 +4224,6 @@
       {
         "id": "ENG-POS-GRN-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -4578,7 +4235,7 @@
               "source_id": "SRC-ENG-020",
               "source_loc": "Energy section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false,
               "fiscal": {
                 "amount_low": 40,
@@ -4596,12 +4253,6 @@
         "id": "ENG-POS-REF-01",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "actor",
             "type": "missing",
             "msg": "Field required",
@@ -4612,7 +4263,7 @@
               "source_id": "SRC-ENG-021",
               "source_loc": "Energy section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "energy",
               "verified": false
             }
           }
@@ -5113,12 +4764,6 @@
         "id": "EUT-F01",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "fiscal.amount",
             "type": "missing",
             "msg": "Field required",
@@ -5149,50 +4794,6 @@
             "type": "literal_error",
             "msg": "Input should be 'spending', 'revenue' or 'net'",
             "input_value": "cost"
-          }
-        ]
-      },
-      {
-        "id": "EUT-F02",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "EUT-F03",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "EUT-F04",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "EUT-F05",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
           }
         ]
       },
@@ -5200,12 +4801,6 @@
         "id": "EUT-F06",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "fiscal.amount",
             "type": "missing",
             "msg": "Field required",
@@ -5240,25 +4835,8 @@
         ]
       },
       {
-        "id": "EUT-F07",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
         "id": "EUT-A01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "basis_fact_ids",
             "type": "missing",
@@ -5270,7 +4848,7 @@
               "source_id": "SRC-EUT-002",
               "source_loc": "Assumption 1",
               "confidence": "HIGH",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           },
@@ -5285,7 +4863,7 @@
               "source_id": "SRC-EUT-002",
               "source_loc": "Assumption 1",
               "confidence": "HIGH",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           }
@@ -5295,12 +4873,6 @@
         "id": "EUT-A02",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -5311,7 +4883,7 @@
               "source_id": "SRC-EUT-001",
               "source_loc": "Assumption 2",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           },
@@ -5326,7 +4898,7 @@
               "source_id": "SRC-EUT-001",
               "source_loc": "Assumption 2",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           }
@@ -5336,12 +4908,6 @@
         "id": "EUT-A03",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -5352,7 +4918,7 @@
               "source_id": "SRC-EUT-005",
               "source_loc": "Assumption 3",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           },
@@ -5367,7 +4933,7 @@
               "source_id": "SRC-EUT-005",
               "source_loc": "Assumption 3",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           }
@@ -5377,12 +4943,6 @@
         "id": "EUT-A04",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -5393,7 +4953,7 @@
               "source_id": "SRC-EUT-010",
               "source_loc": "Assumption 4",
               "confidence": "HIGH",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           },
@@ -5408,7 +4968,7 @@
               "source_id": "SRC-EUT-010",
               "source_loc": "Assumption 4",
               "confidence": "HIGH",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           }
@@ -5418,12 +4978,6 @@
         "id": "EUT-A05",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -5434,7 +4988,7 @@
               "source_id": "SRC-EUT-007",
               "source_loc": "Assumption 5",
               "confidence": "HIGH",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           },
@@ -5449,65 +5003,15 @@
               "source_id": "SRC-EUT-007",
               "source_loc": "Assumption 5",
               "confidence": "HIGH",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           }
         ]
       },
       {
-        "id": "EUT-C01",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "EUT-C02",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "EUT-C03",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "EUT-P01",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
         "id": "EUT-P02",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "fiscal.amount",
             "type": "missing",
@@ -5543,36 +5047,8 @@
         ]
       },
       {
-        "id": "EUT-P03",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "EUT-P04",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
         "id": "EUT-POS-CON-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -5584,7 +5060,7 @@
               "source_id": "SRC-EUT-011",
               "source_loc": "EU section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           }
@@ -5593,12 +5069,6 @@
       {
         "id": "EUT-POS-LAB-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -5610,7 +5080,7 @@
               "source_id": "SRC-EUT-012",
               "source_loc": "EU section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           }
@@ -5619,12 +5089,6 @@
       {
         "id": "EUT-POS-LIB-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -5636,7 +5100,7 @@
               "source_id": "SRC-EUT-013",
               "source_loc": "EU section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           }
@@ -5645,12 +5109,6 @@
       {
         "id": "EUT-POS-GRN-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -5662,7 +5120,7 @@
               "source_id": "SRC-EUT-014",
               "source_loc": "EU section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           }
@@ -5671,12 +5129,6 @@
       {
         "id": "EUT-POS-REF-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -5688,7 +5140,7 @@
               "source_id": "SRC-EUT-015",
               "source_loc": "EU section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "eu_trade",
               "verified": false
             }
           }
@@ -6081,91 +5533,8 @@
         ]
       },
       {
-        "id": "ELR-F01",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-F02",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-F03",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-F04",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-F05",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-F06",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-F07",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
         "id": "ELR-A01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "basis_fact_ids",
             "type": "missing",
@@ -6177,7 +5546,7 @@
               "source_id": "SRC-ELR-007",
               "source_loc": "Assumption 1",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           },
@@ -6192,7 +5561,7 @@
               "source_id": "SRC-ELR-007",
               "source_loc": "Assumption 1",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           }
@@ -6202,12 +5571,6 @@
         "id": "ELR-A02",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -6218,7 +5581,7 @@
               "source_id": "SRC-ELR-002",
               "source_loc": "Assumption 2",
               "confidence": "MEDIUM",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           },
@@ -6233,7 +5596,7 @@
               "source_id": "SRC-ELR-002",
               "source_loc": "Assumption 2",
               "confidence": "MEDIUM",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           }
@@ -6243,12 +5606,6 @@
         "id": "ELR-A03",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -6259,7 +5616,7 @@
               "source_id": "SRC-ELR-003",
               "source_loc": "Assumption 3",
               "confidence": "MEDIUM",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           },
@@ -6274,7 +5631,7 @@
               "source_id": "SRC-ELR-003",
               "source_loc": "Assumption 3",
               "confidence": "MEDIUM",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           }
@@ -6284,12 +5641,6 @@
         "id": "ELR-A04",
         "errors": [
           {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
-          {
             "field": "basis_fact_ids",
             "type": "missing",
             "msg": "Field required",
@@ -6300,7 +5651,7 @@
               "source_id": "SRC-ELR-004",
               "source_loc": "Assumption 4",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           },
@@ -6315,98 +5666,15 @@
               "source_id": "SRC-ELR-004",
               "source_loc": "Assumption 4",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           }
         ]
       },
       {
-        "id": "ELR-C01",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-C02",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-C03",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-P01",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-P02",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-P03",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
-        "id": "ELR-P04",
-        "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          }
-        ]
-      },
-      {
         "id": "ELR-POS-CON-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -6418,7 +5686,7 @@
               "source_id": "SRC-ELR-010",
               "source_loc": "Constitution section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           }
@@ -6427,12 +5695,6 @@
       {
         "id": "ELR-POS-LAB-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -6444,7 +5706,7 @@
               "source_id": "SRC-ELR-011",
               "source_loc": "Constitution section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           }
@@ -6453,12 +5715,6 @@
       {
         "id": "ELR-POS-LIB-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -6470,7 +5726,7 @@
               "source_id": "SRC-ELR-012",
               "source_loc": "Constitution section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           }
@@ -6479,12 +5735,6 @@
       {
         "id": "ELR-POS-GRN-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -6496,7 +5746,7 @@
               "source_id": "SRC-ELR-013",
               "source_loc": "Constitution section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           }
@@ -6505,12 +5755,6 @@
       {
         "id": "ELR-POS-REF-01",
         "errors": [
-          {
-            "field": "domain",
-            "type": "enum",
-            "msg": "Input should be 'housing', 'health', 'education', 'benefits', 'economy', 'taxation', 'environment', 'immigration', 'policing', 'defence', 'transport', 'social_care', 'employment', 'consumer' or 'justice'",
-            "input_value": null
-          },
           {
             "field": "actor",
             "type": "missing",
@@ -6522,7 +5766,7 @@
               "source_id": "SRC-ELR-014",
               "source_loc": "Constitution section",
               "confidence": "LOW",
-              "domain": null,
+              "domain": "electoral_reform",
               "verified": false
             }
           }
@@ -7004,7 +6248,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7021,7 +6265,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7038,7 +6282,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7055,7 +6299,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7072,7 +6316,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7095,7 +6339,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7112,7 +6356,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7129,7 +6373,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7146,7 +6390,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7163,7 +6407,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7180,7 +6424,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7203,7 +6447,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7226,7 +6470,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7243,7 +6487,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7260,7 +6504,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7277,7 +6521,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7294,7 +6538,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7311,7 +6555,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7328,7 +6572,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7345,7 +6589,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7362,7 +6606,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7379,7 +6623,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7396,7 +6640,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7413,7 +6657,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7430,7 +6674,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7447,7 +6691,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7464,7 +6708,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7481,7 +6725,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7498,7 +6742,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7515,7 +6759,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7532,7 +6776,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7555,7 +6799,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7572,7 +6816,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7589,7 +6833,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7606,7 +6850,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7623,7 +6867,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7640,7 +6884,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7657,7 +6901,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7680,7 +6924,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7703,7 +6947,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7720,7 +6964,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7737,7 +6981,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7754,7 +6998,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7777,7 +7021,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7800,7 +7044,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7817,7 +7061,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7834,7 +7078,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7857,7 +7101,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7880,7 +7124,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7903,7 +7147,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7920,7 +7164,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7943,7 +7187,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7960,7 +7204,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7977,7 +7221,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -7994,7 +7238,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8011,7 +7255,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8028,7 +7272,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8045,7 +7289,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8062,7 +7306,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8079,7 +7323,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8096,7 +7340,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8113,7 +7357,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8130,7 +7374,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8147,7 +7391,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8164,7 +7408,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8181,7 +7425,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8198,7 +7442,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8215,7 +7459,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8232,7 +7476,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8249,7 +7493,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8266,7 +7510,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8283,7 +7527,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8300,7 +7544,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8317,7 +7561,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8340,7 +7584,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8357,7 +7601,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8380,7 +7624,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8397,7 +7641,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8414,7 +7658,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8431,7 +7675,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8448,7 +7692,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8465,7 +7709,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8482,7 +7726,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8499,7 +7743,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8516,7 +7760,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8533,7 +7777,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8556,7 +7800,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8573,7 +7817,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8590,7 +7834,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8607,7 +7851,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8624,7 +7868,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8641,7 +7885,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8658,7 +7902,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8675,7 +7919,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8692,7 +7936,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8715,7 +7959,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8732,7 +7976,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8749,7 +7993,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8766,7 +8010,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8783,7 +8027,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8806,7 +8050,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8829,7 +8073,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8846,7 +8090,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8863,7 +8107,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8880,7 +8124,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8897,7 +8141,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8920,7 +8164,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8937,7 +8181,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8954,7 +8198,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8971,7 +8215,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -8988,7 +8232,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9005,7 +8249,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9028,7 +8272,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9051,7 +8295,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9068,7 +8312,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9085,7 +8329,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9102,7 +8346,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9119,7 +8363,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9136,7 +8380,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9153,7 +8397,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9170,7 +8414,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9187,7 +8431,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9204,7 +8448,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9221,7 +8465,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9238,7 +8482,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9255,7 +8499,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9272,7 +8516,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9295,7 +8539,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9312,7 +8556,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9329,7 +8573,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9346,7 +8590,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9363,7 +8607,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9380,7 +8624,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9397,7 +8641,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9414,7 +8658,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9431,7 +8675,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9448,7 +8692,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9465,7 +8709,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9482,7 +8726,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9499,7 +8743,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9522,7 +8766,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9545,7 +8789,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9568,7 +8812,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9585,7 +8829,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9602,7 +8846,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9619,7 +8863,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9636,7 +8880,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9653,7 +8897,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9670,7 +8914,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9687,7 +8931,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9704,7 +8948,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9721,7 +8965,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9744,7 +8988,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9767,7 +9011,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9790,7 +9034,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9807,7 +9051,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9824,7 +9068,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9841,7 +9085,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9858,7 +9102,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9875,7 +9119,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9892,7 +9136,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9909,7 +9153,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9932,7 +9176,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9955,7 +9199,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9978,7 +9222,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -9995,7 +9239,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -10018,7 +9262,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -10035,7 +9279,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -10052,7 +9296,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -10069,7 +9313,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -10086,7 +9330,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null
@@ -10103,7 +9347,7 @@
             "input_value": null
           },
           {
-            "field": "tier_justification",
+            "field": "default_tier_justification",
             "type": "string_type",
             "msg": "Input should be a valid string",
             "input_value": null

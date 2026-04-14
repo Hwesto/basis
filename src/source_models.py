@@ -4,9 +4,15 @@ source_models.py — Five source types with type-specific provenance and MC prio
 The single most common architectural mistake in knowledge systems is treating all
 sources as the same thing. They are not.
 
+v2 revisions (2026-04):
+    - SCHEMA-008: LEGISLATIVE_STRUCTURAL renamed to STRUCTURAL; registry
+      field on StructuralSource is the discriminator per SCHEMA-010
+    - SCHEMA-009: DocumentarySource.tier renamed to default_tier; per-
+      citation overrides live on CitationEdge (base_schema.py)
+
 References:
     SCHEMA-008: Five source types
-    SCHEMA-009: Tier on citation edge (migration pending)
+    SCHEMA-009: Tier on citation edge
     SCHEMA-010: STRUCTURAL alpha by registry
     SCHEMA-019: Alpha values (provisional)
     SCHEMA-020: Assumption contestability discount
@@ -28,10 +34,17 @@ from base_schema import DomainEnum, JurisdictionEnum
 # ---------------------------------------------------------------------------
 
 class SourceTypeEnum(str, Enum):
-    """SCHEMA-008: Closed for now, explicitly extensible."""
+    """
+    SCHEMA-008: Closed for now, explicitly extensible.
+
+    v2 rename: LEGISLATIVE_STRUCTURAL -> STRUCTURAL. The narrower name
+    wrongly excluded registry records that aren't legal (Companies
+    House, ONS NSPL, Land Registry). The `registry` field on
+    StructuralSource is the discriminator per SCHEMA-010.
+    """
     DOCUMENTARY = "DOCUMENTARY"
     STRUCTURED_DATA = "STRUCTURED_DATA"
-    LEGISLATIVE_STRUCTURAL = "LEGISLATIVE_STRUCTURAL"
+    STRUCTURAL = "STRUCTURAL"
     DERIVED = "DERIVED"
     TESTIMONY = "TESTIMONY"
     # Future: INFERRED (Phase 5), CITIZEN_EVIDENCE (Phase 5 challenge system)
@@ -85,6 +98,11 @@ class BaseSource(BaseModel):
 class DocumentarySource(BaseSource):
     """
     Human-authored documents: reports, papers, statutes, guidance, manifestos.
+
+    SCHEMA-009: default_tier is the global quality prior for this source.
+    Per-citation overrides live on CitationEdge.claim_tier_override with
+    mandatory justification.
+
     Tier auto-assigned from signals at ingestion; human can override.
     """
     source_type: Literal[SourceTypeEnum.DOCUMENTARY] = SourceTypeEnum.DOCUMENTARY
@@ -94,8 +112,8 @@ class DocumentarySource(BaseSource):
     published_date: str
     url: str | None = None
     doi: str | None = None
-    tier: DocumentaryTier
-    tier_justification: str = Field(min_length=5)
+    default_tier: DocumentaryTier
+    default_tier_justification: str = Field(min_length=5)
     full_text: str | None = None
     content_hash: str | None = None  # sha256; change = re-verify
     fetched_at: datetime | None = None
@@ -129,26 +147,57 @@ class StructuredDataSource(BaseSource):
 
 
 # ---------------------------------------------------------------------------
-# LEGISLATIVE_STRUCTURAL (SCHEMA-008, SCHEMA-010)
+# STRUCTURAL (SCHEMA-008, SCHEMA-010)
 # ---------------------------------------------------------------------------
 
-class LegislativeStructuralSource(BaseSource):
+class RegistryEnum(str, Enum):
     """
-    Lex Graph edges and provision attributes.
-    No tier. Structural sources have certainty, not tier.
-    MC alpha = 1.0 on the structural fact itself (SCHEMA-010 nuances by registry).
+    SCHEMA-010: Registry discriminator on StructuralSource.
+
+    One entry per authoritative registry we can currently ingest. Alpha
+    priors for each live in STRUCTURAL_ALPHA below. Extend when a new
+    registry is brought online.
     """
-    source_type: Literal[SourceTypeEnum.LEGISLATIVE_STRUCTURAL] = (
-        SourceTypeEnum.LEGISLATIVE_STRUCTURAL
-    )
-    lex_provision_id: str
+    lex_graph = "lex_graph"                  # UK legislation graph
+    companies_house = "companies_house"      # UK company register
+    ons_nspl = "ons_nspl"                    # postcode to geography
+    land_registry = "land_registry"          # property titles
+    electoral_commission = "electoral_commission"
+    ico_register = "ico_register"            # data controller register
+    fca_register = "fca_register"            # financial services
+    charity_commission = "charity_commission"
+
+
+class StructuralSource(BaseSource):
+    """
+    Authoritative registry records. Lex Graph edges are one instance of
+    this type; Companies House, ONS NSPL, Land Registry are others.
+
+    No tier — structural sources have registry-assigned certainty, not
+    documentary tier. A registry record either exists or it doesn't;
+    the epistemic question is the registry's data quality, captured as
+    alpha per SCHEMA-010.
+
+    The lex_provision_id / edge_type fields below are only meaningful
+    when registry='lex_graph'. For other registries the record_id is
+    the registry-local identifier and edge_type is None.
+    """
+    source_type: Literal[SourceTypeEnum.STRUCTURAL] = SourceTypeEnum.STRUCTURAL
+    registry: RegistryEnum
+    record_id: str  # registry-local id (lex_provision_id, CRN, LRTitle, postcode…)
+    # Lex-only fields (None for other registries):
     edge_type: Literal[
         "citation", "amendment", "cross_reference",
         "commencement", "repeal"
-    ]
-    related_provision_id: str | None = None
+    ] | None = None
+    related_record_id: str | None = None
     recorded_date: date | None = None
     # No tier field. See SCHEMA-010.
+
+
+# Backwards-compatibility alias removed — all callers in src/ and tests
+# are updated in the same commit. If external code referenced the old
+# name, it will need the same renames.
 
 
 # ---------------------------------------------------------------------------
@@ -215,17 +264,18 @@ STRUCTURED_DATA_ALPHA: dict[str, float] = {
     "T3": 0.60,  # Council CSVs
 }
 
-# SCHEMA-010: Structural alpha by registry (not by category)
+# SCHEMA-010: Structural alpha by registry (not by category).
+# Keys match RegistryEnum members. These are design priors, not
+# calibrated measurements — see SCHEMA-019.
 STRUCTURAL_ALPHA: dict[str, float] = {
-    "lex_graph_commencement":    0.95,
-    "lex_graph_amendment":       0.98,
-    "ons_nspl_postcode":         0.99,
-    "land_registry_title":       0.90,
-    "companies_house_active":    0.85,
-    "electoral_commission":      0.92,
-    "ico_register":              0.93,
-    "fca_register":              0.94,
-    "charity_commission":        0.91,
+    "lex_graph":             0.95,  # UK legislation graph
+    "companies_house":       0.80,  # known data quality issues post-PSC
+    "ons_nspl":              0.98,  # postcode to geography
+    "land_registry":         0.92,  # property titles
+    "electoral_commission":  0.92,
+    "ico_register":          0.93,
+    "fca_register":          0.94,
+    "charity_commission":    0.91,
 }
 
 # SCHEMA-019: Testimony alpha by tier

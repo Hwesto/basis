@@ -15,8 +15,8 @@ CREATE TABLE IF NOT EXISTS lex_provisions (
     last_checked DATE,
     amendment_watch BOOLEAN DEFAULT true,
 
-    -- Structural signals from Lex Graph (LegislativeStructuralSource facts)
-    -- These have alpha = 1.0 in the MC engine on the structural fact itself.
+    -- Structural signals from Lex Graph (StructuralSource facts, registry='lex_graph').
+    -- Alpha 0.95 per SCHEMA-010 registry table.
     in_degree INTEGER,                           -- how many Acts cite this provision
     amendment_count INTEGER,                     -- times amended since enacted
     last_amended DATE,

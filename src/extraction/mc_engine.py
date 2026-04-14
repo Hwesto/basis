@@ -113,7 +113,7 @@ def resolve_alpha(node: MCNode) -> float:
         )
     elif st == "STRUCTURED_DATA":
         return get_structured_data_alpha(node.provider_tier or "T3")
-    elif st == "LEGISLATIVE_STRUCTURAL":
+    elif st == "STRUCTURAL":
         return get_structural_alpha(node.registry or "unknown")
     elif st == "TESTIMONY":
         return get_testimony_alpha(node.source_tier or "T5")

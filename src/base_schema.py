@@ -1,12 +1,13 @@
 """
 base_schema.py — The contract everything is built against.
 
-Implements schema_decisions.md v0.2. Every node in BASIS is a BaseNode subclass.
-The curator queue, CI validator, and MC engine operate against BaseNode only.
-Domain-specific fields belong on subclasses, never on the base.
+Implements the schema decisions under docs/schema/ (v0.3). Every node in
+BASIS is a BaseNode subclass. The curator queue, CI validator, and MC
+engine operate against BaseNode only. Domain-specific fields belong on
+subclasses, never on the base.
 
 References:
-    SCHEMA-001 through SCHEMA-017, SCHEMA-023
+    SCHEMA-001 through SCHEMA-023 (docs/schema/decisions/)
 """
 
 from __future__ import annotations
@@ -24,7 +25,13 @@ from pydantic import BaseModel, Field, field_validator, model_validator
 # ---------------------------------------------------------------------------
 
 class DomainEnum(str, Enum):
-    """SCHEMA-002: Typed, extensible. New domains require a code change."""
+    """
+    SCHEMA-002: Typed, extensible. New domains require a code change.
+
+    The three entries at the end (energy, eu_trade, electoral_reform)
+    were added in the v2 revision after the v1 audit showed 22% of the
+    v1 corpus was in these domains with ad-hoc labels.
+    """
     housing = "housing"
     health = "health"
     education = "education"
@@ -40,6 +47,10 @@ class DomainEnum(str, Enum):
     employment = "employment"
     consumer = "consumer"
     justice = "justice"
+    # SCHEMA-002 v2 extension (see docs/migration/README.md)
+    energy = "energy"
+    eu_trade = "eu_trade"
+    electoral_reform = "electoral_reform"
 
 
 class JurisdictionEnum(str, Enum):
@@ -185,14 +196,42 @@ class FiscalMetadata(BaseModel):
     """
     SCHEMA-014: Attached to FACT, CLAIM, POLICY nodes with monetary content.
     gap_role determines contribution to the computed fiscal gap.
+
+    v2 adds amount_low / amount_high range fields. v1 stored ranges as
+    separate keys and lost them on the v2 draft's scalar-only model;
+    this is the restoration. When either bound is set both must be set
+    and amount_low <= amount <= amount_high.
     """
     amount: float
+    amount_low: float | None = None
+    amount_high: float | None = None
     unit: Literal["bn_gbp", "m_gbp", "pct_gdp"]
     gap_role: GapRole
     direction: Literal["spending", "revenue", "net"]
     horizon_years: int | None = None
     year: int | None = None
     notes: str | None = None
+
+    @model_validator(mode="after")
+    def range_is_consistent(self) -> "FiscalMetadata":
+        lo, hi = self.amount_low, self.amount_high
+        if (lo is None) != (hi is None):
+            raise ValueError(
+                "FiscalMetadata: amount_low and amount_high must be set "
+                "together, or both None."
+            )
+        if lo is not None and hi is not None:
+            if lo > hi:
+                raise ValueError(
+                    f"FiscalMetadata: amount_low ({lo}) must be <= "
+                    f"amount_high ({hi})."
+                )
+            if not (lo <= self.amount <= hi):
+                raise ValueError(
+                    f"FiscalMetadata: amount ({self.amount}) must lie "
+                    f"within [amount_low={lo}, amount_high={hi}]."
+                )
+        return self
 
 
 # ---------------------------------------------------------------------------
@@ -361,4 +400,42 @@ class CrossLayerEdge(BaseModel):
             raise ValueError(
                 "CrossLayerEdge must connect different layers."
             )
+        return self
+
+
+class CitationEdge(BaseModel):
+    """
+    SCHEMA-009: Tier lives on the citation edge, not the source.
+
+    A source carries a `default_tier` as a global quality prior. The
+    citation between a source and a node carries an optional
+    `claim_tier_override` for cases where the source is being cited
+    outside its primary domain of competence — with mandatory
+    justification when set.
+
+    The MC engine uses claim_tier_override if present, otherwise
+    default_tier from the linked source.
+
+    STRUCTURED_DATA uses provider_tier directly; override not permitted.
+    STRUCTURAL / DERIVED / TESTIMONY: no tier. Override not applicable.
+    """
+    id: str
+    source_id: str
+    node_id: str
+    citation_locator: str | None = None  # "p.14 para 3", "Table 2", etc.
+    claim_tier_override: Literal["T1", "T2", "T3", "T4", "T5", "T6"] | None = None
+    claim_tier_justification: str | None = None
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    created_by: str  # curator id or extraction_run_id
+
+    @model_validator(mode="after")
+    def override_requires_justification(self) -> "CitationEdge":
+        if self.claim_tier_override is not None:
+            if not self.claim_tier_justification or len(
+                self.claim_tier_justification.strip()
+            ) < 10:
+                raise ValueError(
+                    "CitationEdge: claim_tier_override requires a "
+                    "non-trivial claim_tier_justification (>= 10 chars)."
+                )
         return self
