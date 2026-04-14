@@ -1,8 +1,6 @@
-# Extracted skeleton — reference only, not canonical
-# The canonical source is basis_full_build.tar.gz; once we begin modifying
-# this code in-repo (step c), we will remove this gitignore and commit it.
-/src/
 __pycache__/
 *.pyc
 .venv/
 venv/
+.env
+.env.local

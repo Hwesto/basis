@@ -1,0 +1,80 @@
+name: Extraction Agents
+
+on:
+  schedule:
+    # Structural signals first (no LLM, updates stability)
+    - cron: '0 3 * * *'   # daily 03:00 UTC
+  workflow_dispatch:
+    inputs:
+      agent:
+        description: 'Agent to run'
+        required: true
+        type: choice
+        options:
+          - structural_signals
+          - legal_extraction
+          - evidence
+          - parliamentary
+          - local_data
+
+jobs:
+  structural-signals:
+    if: github.event_name == 'schedule' || github.event.inputs.agent == 'structural_signals'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pydantic requests
+      - name: Run structural signals agent
+        env:
+          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python scripts/run_agent.py structural_signals
+      - name: Commit updated watchlist
+        run: |
+          git config user.name "BASIS Agent"
+          git config user.email "agent@basis.uk"
+          git add data/lex_watchlist.json
+          git diff --cached --quiet || git commit -m "chore: structural signals update"
+          git push
+
+  legal-extraction:
+    if: github.event_name == 'schedule' || github.event.inputs.agent == 'legal_extraction'
+    needs: structural-signals
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pydantic requests
+      - name: Run legal extraction agent
+        env:
+          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python scripts/run_agent.py legal_extraction --max 50
+      - name: Upload extraction log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: extraction-log
+          path: logs/
+
+  local-data:
+    if: github.event.inputs.agent == 'local_data'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pydantic requests
+      - name: Run local data agent
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python scripts/run_agent.py local_data

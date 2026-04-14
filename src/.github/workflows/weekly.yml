@@ -1,0 +1,58 @@
+name: Weekly Maintenance
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Monday 06:00 UTC
+  workflow_dispatch:       # manual trigger
+
+jobs:
+  confidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pydantic numpy requests
+
+      - name: Run MC confidence propagation
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python scripts/compute_confidence.py --seed 42
+
+      - name: Commit updated confidence scores
+        run: |
+          git config user.name "BASIS CI"
+          git config user.email "ci@basis.uk"
+          git add data/confidence_results.json
+          git diff --cached --quiet || git commit -m "chore: weekly MC confidence update"
+          git push
+
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Check all source URLs
+        run: python scripts/check_links.py --report
+        continue-on-error: true
+
+      - name: Upload link report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-report
+          path: reports/link_check.json

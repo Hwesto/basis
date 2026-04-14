@@ -1,0 +1,47 @@
+name: Validate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install pydantic requests
+
+      - name: Run schema validation
+        run: python scripts/validate.py
+
+      - name: Run legal consistency checks
+        run: python scripts/legal_checks.py
+        # Only runs if legal_nodes exist; exits 0 if table is empty
+
+  link-check:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Check source URLs
+        run: python scripts/check_links.py
+        continue-on-error: true  # don't block deploy on transient 5xx

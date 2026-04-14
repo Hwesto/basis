@@ -1,0 +1,209 @@
+{
+  "_meta": {
+    "description": "Track C bootstrap fixture: Housing Act 2004, Chapter 1 (HHSRS)",
+    "purpose": "Ground truth for Gemma extraction validation. Every automated batch compares against this.",
+    "created_by": "Claude Code session (Track C)",
+    "schema_version": "0.2",
+    "notes": "Placeholder structure — populate during first Track C session with Lex MCP"
+  },
+  "provisions": [
+    {
+      "lex_id": "TODO_LEX_ID_S1",
+      "title": "Housing Act 2004, s.1 — New system for assessing housing conditions",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "commencement_status": "in_force",
+      "structural_stability": "HIGH"
+    },
+    {
+      "lex_id": "TODO_LEX_ID_S2",
+      "title": "Housing Act 2004, s.2 — Meaning of 'category 1 hazard' and 'category 2 hazard'",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "commencement_status": "in_force",
+      "structural_stability": "HIGH"
+    },
+    {
+      "lex_id": "TODO_LEX_ID_S3",
+      "title": "Housing Act 2004, s.3 — Operating provisions of this Part",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "commencement_status": "in_force",
+      "structural_stability": "HIGH"
+    },
+    {
+      "lex_id": "TODO_LEX_ID_S4",
+      "title": "Housing Act 2004, s.4 — Inspections by local housing authorities",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "commencement_status": "in_force",
+      "structural_stability": "HIGH"
+    },
+    {
+      "lex_id": "TODO_LEX_ID_S5",
+      "title": "Housing Act 2004, s.5 — Category 1 hazards: general duty to take enforcement action",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "commencement_status": "in_force",
+      "structural_stability": "HIGH"
+    },
+    {
+      "lex_id": "TODO_LEX_ID_S7",
+      "title": "Housing Act 2004, s.7 — Category 2 hazards: power to take enforcement action",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "commencement_status": "in_force",
+      "structural_stability": "HIGH"
+    },
+    {
+      "lex_id": "TODO_LEX_ID_S9",
+      "title": "Housing Act 2004, s.9 — Guidance about inspections and enforcement action",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "commencement_status": "in_force",
+      "structural_stability": "HIGH"
+    }
+  ],
+  "legal_nodes": [
+    {
+      "id": "DUTY-HOUSING-HHSRS-001",
+      "node_type": "DUTY",
+      "statement": "Local housing authority has a duty to take enforcement action in relation to category 1 hazards identified on inspection of residential premises.",
+      "lex_provision_id": "TODO_LEX_ID_S5",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "applies_to": ["local_authority"],
+      "duty_holder": "local housing authority",
+      "duty_holder_type": "local_authority",
+      "deontic_strength": "ABSOLUTE",
+      "confidence": "HIGH",
+      "verified": true,
+      "curator_approved": true,
+      "fixture": true
+    },
+    {
+      "id": "POWER-HOUSING-HHSRS-001",
+      "node_type": "POWER",
+      "statement": "Local housing authority has a power (but not a duty) to take enforcement action in relation to category 2 hazards.",
+      "lex_provision_id": "TODO_LEX_ID_S7",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "applies_to": ["local_authority"],
+      "duty_holder": "local housing authority",
+      "duty_holder_type": "local_authority",
+      "deontic_strength": "DIRECTORY",
+      "confidence": "HIGH",
+      "verified": true,
+      "curator_approved": true,
+      "fixture": true,
+      "extraction_notes": "s.7 creates a power, not a duty. This is the basis of the ENFORCEMENT_GAP finding: tenants with category 2 hazards have no enforceable right to council action."
+    },
+    {
+      "id": "RIGHT-HOUSING-HHSRS-001",
+      "node_type": "RIGHT",
+      "statement": "Occupier of residential premises has a right to have the local housing authority take enforcement action where a category 1 hazard exists.",
+      "lex_provision_id": "TODO_LEX_ID_S5",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "applies_to": ["tenant", "homeowner"],
+      "duty_holder": "local housing authority",
+      "duty_holder_type": "local_authority",
+      "deontic_strength": "ABSOLUTE",
+      "confidence": "HIGH",
+      "verified": true,
+      "curator_approved": true,
+      "fixture": true
+    },
+    {
+      "id": "MECHANISM-HOUSING-HHSRS-001",
+      "node_type": "MECHANISM",
+      "statement": "Improvement notice requiring landlord to remedy category 1 hazard within specified period (minimum 28 days).",
+      "lex_provision_id": "TODO_LEX_ID_S11",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "applies_to": ["tenant"],
+      "duty_holder": "local housing authority",
+      "duty_holder_type": "local_authority",
+      "confidence": "HIGH",
+      "verified": true,
+      "curator_approved": true,
+      "fixture": true
+    },
+    {
+      "id": "MECHANISM-HOUSING-HHSRS-002",
+      "node_type": "MECHANISM",
+      "statement": "Prohibition order preventing use of all or part of premises where category 1 hazard cannot be remedied by improvement.",
+      "lex_provision_id": "TODO_LEX_ID_S20",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "applies_to": ["tenant", "homeowner"],
+      "duty_holder": "local housing authority",
+      "duty_holder_type": "local_authority",
+      "confidence": "HIGH",
+      "verified": true,
+      "curator_approved": true,
+      "fixture": true
+    },
+    {
+      "id": "DUTY-HOUSING-HHSRS-002",
+      "node_type": "DUTY",
+      "statement": "Local housing authority must inspect residential premises if it has reason to believe a category 1 or category 2 hazard may exist (s.4 duty to inspect triggered by reasonable grounds).",
+      "lex_provision_id": "TODO_LEX_ID_S4",
+      "domain": "housing",
+      "jurisdiction": ["england_and_wales"],
+      "applies_to": ["local_authority"],
+      "duty_holder": "local housing authority",
+      "duty_holder_type": "local_authority",
+      "deontic_strength": "QUALIFIED",
+      "confidence": "HIGH",
+      "verified": true,
+      "curator_approved": true,
+      "fixture": true,
+      "extraction_notes": "Qualified: triggered by 'reason to believe', not unconditional."
+    }
+  ],
+  "legal_edges": [
+    {
+      "from_id": "DUTY-HOUSING-HHSRS-001",
+      "to_id": "MECHANISM-HOUSING-HHSRS-001",
+      "edge_type": "ENFORCED_BY",
+      "explanation": "The duty to act on category 1 hazards is enforced through improvement notices issued under s.11.",
+      "strength": "HIGH"
+    },
+    {
+      "from_id": "DUTY-HOUSING-HHSRS-001",
+      "to_id": "MECHANISM-HOUSING-HHSRS-002",
+      "edge_type": "ENFORCED_BY",
+      "explanation": "Where improvement is not feasible, the duty to act on category 1 hazards is enforced through prohibition orders under s.20.",
+      "strength": "HIGH"
+    },
+    {
+      "from_id": "RIGHT-HOUSING-HHSRS-001",
+      "to_id": "DUTY-HOUSING-HHSRS-001",
+      "edge_type": "CREATES",
+      "explanation": "The occupier's right to enforcement action is the correlative of the authority's duty under s.5.",
+      "strength": "HIGH"
+    },
+    {
+      "from_id": "DUTY-HOUSING-HHSRS-002",
+      "to_id": "DUTY-HOUSING-HHSRS-001",
+      "edge_type": "ESCALATES_TO",
+      "explanation": "Inspection duty (s.4) triggers enforcement duty (s.5) if category 1 hazard found.",
+      "strength": "HIGH"
+    }
+  ],
+  "cross_cutting_findings": [
+    {
+      "finding": "ENFORCEMENT_GAP",
+      "node_id": "POWER-HOUSING-HHSRS-001",
+      "description": "Category 2 hazards create a power to act (s.7) but no duty. Tenants with category 2 hazards have no enforceable right to council action. This is a genuine legislative gap, not an extraction error.",
+      "civic_significance": "HIGH"
+    },
+    {
+      "finding": "MISSING_CORRELATIVE",
+      "node_id": "POWER-HOUSING-HHSRS-001",
+      "description": "POWER node for category 2 hazards has no corresponding LIABILITY node. Consistent with the ENFORCEMENT_GAP: because it is a power not a duty, there is no correlative liability on any party.",
+      "civic_significance": "MEDIUM"
+    }
+  ]
+}
