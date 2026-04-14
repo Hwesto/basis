@@ -86,6 +86,12 @@ class LocalJsonPersistence:
             summary["sources"] += 1
 
         for node in result.candidate_nodes:
+            # node may already carry a `_routing` key (SCHEMA-024
+            # routing decision) attached by ingest.cli._apply_curator_routing.
+            # We pass it through verbatim so downstream tooling (review
+            # CLI, future Supabase writer) can read tier / escalation_reason
+            # / fast_fail_check / auto_approval_conditions without
+            # re-running the routing module.
             _append_jsonl(
                 self.root / "candidate_nodes.jsonl",
                 node | {"_run_id": result.run_id, "curator_approved": False},

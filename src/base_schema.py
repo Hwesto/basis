@@ -179,6 +179,25 @@ class StructuralStability(str, Enum):
     LOW = "LOW"
 
 
+class ApprovedBy(str, Enum):
+    """SCHEMA-024: who flipped curator_approved last (audit trail)."""
+    auto = "auto"
+    claude = "claude"
+    human = "human"
+
+
+class VerificationLevel(str, Enum):
+    """SCHEMA-024: cumulative assurance label, displayed publicly.
+
+    auto_verified  = passed Tier 1 only
+    ai_reviewed    = passed Tier 1 + Claude judgment
+    human_curated  = above + human spot-confirmed (or human-approved direct)
+    """
+    auto_verified = "auto_verified"
+    ai_reviewed = "ai_reviewed"
+    human_curated = "human_curated"
+
+
 # ---------------------------------------------------------------------------
 # Nested models
 # ---------------------------------------------------------------------------
@@ -254,9 +273,26 @@ class BaseNode(BaseModel):
     jurisdiction: list[JurisdictionEnum] | None = None
     verified: bool = False
     curator_approved: bool = False
+    # SCHEMA-024: who flipped curator_approved + cumulative assurance level
+    approved_by: ApprovedBy | None = None
+    verification_level: VerificationLevel | None = None
+    last_audited_by: ApprovedBy | None = None
+    last_audited_at: datetime | None = None
     extraction_run_id: str | None = None
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+    @model_validator(mode="after")
+    def approval_requires_verification_level(self) -> "BaseNode":
+        """SCHEMA-024 mirror of the SQL CHECK: if curator_approved is true,
+        verification_level must say how it got there. Caller must set both
+        atomically."""
+        if self.curator_approved and self.verification_level is None:
+            raise ValueError(
+                "BaseNode: curator_approved=True requires verification_level "
+                "to be set (SCHEMA-024)."
+            )
+        return self
 
 
 # ---------------------------------------------------------------------------

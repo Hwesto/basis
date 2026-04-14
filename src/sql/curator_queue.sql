@@ -44,6 +44,23 @@ CREATE TABLE IF NOT EXISTS curator_queue (
     flagged BOOLEAN NOT NULL DEFAULT false,
     flag_reason TEXT,
 
+    -- SCHEMA-024 routing fields. tier is the *current* queue target;
+    -- it's updated as the row moves through the system (1 -> auto-approved,
+    -- 2 -> awaiting Claude, 3 -> awaiting human).
+    tier SMALLINT CHECK (tier IN (1, 2, 3)),
+    escalation_reason TEXT CHECK (escalation_reason IN (
+        'none', 'claude_uncertain', 'source_text_unavailable',
+        'extraction_ambiguous', 'cross_domain', 'precedent_node',
+        'civic_finding', 'low_source_provenance', 'model_disagreement',
+        'out_of_distribution', 'template_legal_review',
+        'tier1_hard_fail', 'first_in_window'
+    )),
+    fast_fail_check TEXT,                         -- which Tier 1 gate failed
+    auto_approval_conditions JSONB,               -- which Tier 1 gates passed
+    claude_judgment_hash TEXT,                    -- cache key for Tier 2 reuse
+    kickback BOOLEAN NOT NULL DEFAULT false,      -- spot-check overturned approval
+    kickback_reason TEXT,                         -- why the spot-check disagreed
+
     -- Outcome
     decision TEXT CHECK (decision IN (
         'approved', 'rejected', 'edited', 'deferred'
@@ -66,6 +83,10 @@ CREATE INDEX IF NOT EXISTS idx_curator_queue_pending
     ON curator_queue (needs_review, created_at) WHERE needs_review = true;
 CREATE INDEX IF NOT EXISTS idx_curator_queue_source
     ON curator_queue (source_id) WHERE source_id IS NOT NULL;
+CREATE INDEX IF NOT EXISTS idx_curator_queue_tier
+    ON curator_queue (tier, needs_review) WHERE needs_review = true;
+CREATE INDEX IF NOT EXISTS idx_curator_queue_kickback
+    ON curator_queue (kickback) WHERE kickback = true;
 CREATE INDEX IF NOT EXISTS idx_curator_queue_flagged
     ON curator_queue (flagged) WHERE flagged = true;
 

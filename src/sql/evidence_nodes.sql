@@ -38,6 +38,19 @@ CREATE TABLE IF NOT EXISTS evidence_nodes (
     curator_approved BOOLEAN NOT NULL DEFAULT false,  -- SCHEMA-006 gate
     extraction_run_id TEXT,
 
+    -- SCHEMA-024 verification provenance.
+    -- approved_by = who flipped curator_approved last (audit).
+    -- verification_level = highest assurance reached (public-facing badge).
+    -- The two differ when e.g. Claude approved a node and a human later
+    -- spot-confirmed it: approved_by stays 'claude', verification_level
+    -- becomes 'human_curated', last_audited_by = 'human'.
+    approved_by TEXT CHECK (approved_by IN ('auto', 'claude', 'human')),
+    verification_level TEXT CHECK (verification_level IN (
+        'auto_verified', 'ai_reviewed', 'human_curated'
+    )),
+    last_audited_by TEXT CHECK (last_audited_by IN ('auto', 'claude', 'human')),
+    last_audited_at TIMESTAMPTZ,
+
     -- Fiscal metadata with range support (SCHEMA-014 v2)
     fiscal_amount NUMERIC,
     fiscal_amount_low NUMERIC,
@@ -95,8 +108,19 @@ CREATE TABLE IF NOT EXISTS evidence_nodes (
         fiscal_amount_low IS NULL
         OR (fiscal_amount_low <= fiscal_amount
             AND fiscal_amount <= fiscal_amount_high)
+    ),
+
+    -- SCHEMA-024: a node can only be public when the gate has flipped
+    -- AND the verification_level says how it got there.
+    CHECK (
+        curator_approved = false
+        OR verification_level IS NOT NULL
     )
 );
+
+CREATE INDEX IF NOT EXISTS idx_evidence_nodes_verification
+    ON evidence_nodes (verification_level)
+    WHERE verification_level IS NOT NULL;
 
 CREATE INDEX IF NOT EXISTS idx_evidence_nodes_type ON evidence_nodes (node_type);
 CREATE INDEX IF NOT EXISTS idx_evidence_nodes_domain ON evidence_nodes (domain);

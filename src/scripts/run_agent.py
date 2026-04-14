@@ -267,18 +267,28 @@ def run_evidence(args, run: AgentRun):
         run.complete(output_count=0)
         return
 
-    counts = ingest_backlog(
+    summary = ingest_backlog(
         path=backlog_path,
         dry_run=dry_run,
         backend=backend,
         limit=limit,
     )
-    print(f"  Status counts: {counts}")
+    by_status = summary.get("by_status", {})
+    by_tier = summary.get("by_tier", {})
+    by_reason = summary.get("by_escalation_reason", {})
+    print(f"  Status counts:    {by_status}")
+    print(f"  Tier counts:      {by_tier}  (SCHEMA-024)")
+    if by_reason:
+        print(f"  Escalation reasons: {by_reason}")
 
-    ok = counts.get("ok", 0)
-    failed = sum(v for k, v in counts.items() if k != "ok")
-    run.input_count = sum(counts.values())
+    ok = by_status.get("ok", 0)
+    failed = sum(v for k, v in by_status.items() if k != "ok")
+    run.input_count = sum(by_status.values())
     run.complete(output_count=ok, error_count=failed)
+    run.notes = (
+        f"tier1={by_tier.get(1, 0)} tier2={by_tier.get(2, 0)} "
+        f"tier3={by_tier.get(3, 0)}"
+    )
 
 
 def run_parliamentary(args, run: AgentRun):
