@@ -208,6 +208,16 @@ The numbers (100, 90%, 5%) are design choices, not measurements,
 matching the SCHEMA-019 disclaimer. They get refined when the
 calibration data accumulates.
 
+**Calibration-knob convention.** All numeric thresholds in SCHEMA-024
+(calibration sample size, agreement bar, spot-check rate, first-N
+windows, kickback recurrence threshold, escalation-reason frequency
+alarm) are placeholders pending empirical observation per pipeline
+stage. Tracked in `docs/status.md` under "Calibration knobs" with:
+initial value, what observation would justify changing it, and which
+pipeline stage produces the data that informs the change. Do not
+treat the initial values as load-bearing — they are starting points
+for a tuning loop, not commitments.
+
 **Solicitor flag (TEMPLATE nodes):**
 TEMPLATE nodes carry a separate `solicitor_signed_off: bool` field
 (already in `src/action_schema.py:62`). They cannot reach

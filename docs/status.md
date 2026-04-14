@@ -85,6 +85,33 @@ fe28f13 docs: reframe roadmap for v2 rebuild (archive v1 phases, add v2 1/2)
 
 ---
 
+## Calibration knobs
+
+Numeric thresholds whose right value isn't known yet. Initial values
+are placeholders. Each row records what observation would justify
+changing it and which pipeline stage produces that observation. Do
+not change without evidence.
+
+| Knob | Initial value | Source | Change when... | Data comes from |
+|---|---|---|---|---|
+| Calibration sample size | 100 nodes | SCHEMA-024 | Agreement variance is too high to trust the % at this N | First Tier 2 batch in Phase 2 |
+| Calibration agreement bar | ≥90% | SCHEMA-024 | Bar repeatedly missed even after Tier 1 tightening (signal: design is wrong, not threshold) | Phase 2 calibration study |
+| Ongoing spot-check rate | 5% of `approved_by=claude` weekly | SCHEMA-024 | Drift detected (lower agreement than initial calibration) — increase rate; or no drift over 6 months — decrease | Weekly spot-check job (Phase 2+) |
+| First-N: new domain calibration | 20 nodes | SCHEMA-024 | First batch hits ≥95% agreement consistently — drop. Or hits <85% — raise. | First time each new domain is ingested |
+| First-N: new source calibration | 5 nodes | SCHEMA-024 | Same logic as new-domain | Each new source first appears |
+| Kickback recurrence threshold | 3 errors / 30 days → propose Tier 1 rule | SCHEMA-024 | Too many false alarms (3 is too low) or too many genuine patterns slipping (3 is too high) | Kickback workflow logs |
+| Escalation-reason alarm | >30% of weekly escalations from one reason | SCHEMA-024 | Alarm fires too often / never — adjust | Weekly escalation_reason histogram |
+| MC engine sample count | 10,000 | SCHEMA-018 | Confidence interval at p5/p95 too wide — increase | After first MC run on v2 graph |
+| Documentary alpha (T1, verified, well-cited) | 0.95 | SCHEMA-019 | Empirical accuracy of T1 nodes diverges materially from 0.95 prior | After 6 months of audited node accuracy |
+| Assumption contestability cap | HIGH→0.85, MEDIUM→0.70, LOW→0.50 | SCHEMA-020 | Top-5 ASSUMPTION node accuracies don't match these caps | After top-20 CLAIM audit (SCHEMA-015) |
+
+**Promotion rule:** when a knob's empirical evidence justifies a
+change, update both the SCHEMA decision (with a note recording the
+change) and this row. Do not silently change values in code without
+the doc trail.
+
+---
+
 ## Maintenance rule
 
 This doc is the first thing edited at the end of every session that
@@ -97,6 +124,8 @@ materially changes what works. Sections:
 3. **Blocked on external action** — infrastructure gaps that no code
    change can fix.
 4. **Known duplication / debt** — carried-forward cleanup items.
+5. **Calibration knobs** — numeric thresholds awaiting empirical
+   observation; never change without evidence + doc trail.
 
 Remove from this doc only when the underlying issue is closed, not
 when it's merely deferred.
