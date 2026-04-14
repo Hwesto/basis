@@ -31,90 +31,18 @@ from pydantic import ValidationError  # noqa: E402
 import base_schema as bs  # noqa: E402
 import source_models as sm  # noqa: E402
 
+# Shared v1 -> v2 adapters (canonical map + adapter functions)
+from migration import (  # noqa: E402
+    V1_DOMAIN_TO_V2,
+    adapt_node_v1_to_v2_payload,
+    adapt_source_v1_to_v2_payload,
+    adapt_edge_v1_to_v2_payload,
+)
+
 
 GRAPH_PATH = REPO / "archive" / "v1" / "data" / "basis-kg-full.json"
 REPORT_MD = REPO / "docs" / "migration" / "AUDIT-V1-CONFORMANCE.md"
 REPORT_JSON = REPO / "docs" / "migration" / "audit-v1-conformance.json"
-
-
-# ---------------------------------------------------------------------------
-# v1 → v2 field adapters
-# ---------------------------------------------------------------------------
-
-V1_DOMAIN_TO_V2: dict[str, str | None] = {
-    "housing": "housing",
-    "nhs": "health",
-    "education": "education",
-    "welfare": "benefits",
-    "taxation": "taxation",
-    "environment": "environment",
-    "immigration": "immigration",
-    "defence": "defence",
-    "justice": "justice",
-    # v2 DomainEnum extended to include these three (SCHEMA-002 v2 revision):
-    "energy": "energy",
-    "eu-trade": "eu_trade",
-    "electoral-reform": "electoral_reform",
-}
-
-
-def adapt_node_v1_to_v2_payload(n: dict) -> dict:
-    """
-    Best-effort transform from v1 node shape to v2 Pydantic BaseNode payload.
-    Does NOT invent data — missing required fields are reported by validation.
-    """
-    out = {
-        "id": n.get("id"),
-        "node_type": n.get("type"),
-        "statement": n.get("statement"),
-        "source_id": n.get("source_id") or None,
-        "source_loc": n.get("source_loc"),
-        "confidence": n.get("confidence"),
-        "domain": V1_DOMAIN_TO_V2.get(n.get("domain", ""), n.get("domain")),
-        "verified": bool(n.get("verified", False)),
-    }
-    # v1 fiscal is a free-form dict in some nodes; pass through if present.
-    if n.get("fiscal"):
-        out["fiscal"] = n["fiscal"]
-    return out
-
-
-def adapt_source_v1_to_v2_payload(s: dict) -> dict:
-    """
-    v1 sources have no source_type discriminator. Heuristic:
-    - if tier is int in 1..6 and has url/author/date → DOCUMENTARY (most likely)
-    Everything else requires manual classification.
-    """
-    # v1 tier is int; v2 expects 'T<n>'
-    raw_tier = s.get("tier")
-    tier = f"T{raw_tier}" if isinstance(raw_tier, int) else raw_tier
-
-    # v1 domain mapping
-    domain = V1_DOMAIN_TO_V2.get(s.get("domain", ""), s.get("domain"))
-
-    return {
-        "source_id": s.get("id"),
-        "source_type": "DOCUMENTARY",  # heuristic guess
-        "title": s.get("title"),
-        "author": s.get("author"),
-        "publisher": None,  # v1 has no publisher field
-        "published_date": s.get("date"),
-        "url": s.get("url"),
-        "default_tier": tier,
-        "default_tier_justification": None,  # v1 has no justification field
-        "domain": domain,
-    }
-
-
-def adapt_edge_v1_to_v2_payload(e: dict, synthetic_id: str) -> dict:
-    return {
-        "id": synthetic_id,
-        "from_id": e.get("from"),
-        "to_id": e.get("to"),
-        "edge_type": e.get("type"),
-        "explanation": e.get("explanation"),
-        "strength": e.get("strength"),
-    }
 
 
 # ---------------------------------------------------------------------------

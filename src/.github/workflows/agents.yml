@@ -2,8 +2,17 @@ name: Extraction Agents
 
 on:
   schedule:
-    # Structural signals first (no LLM, updates stability)
-    - cron: '0 3 * * *'   # daily 03:00 UTC
+    # Cadence per src/extraction/agents.py:
+    # 02:00 local_data (per-source refresh, cheap)
+    # 03:00 structural_signals (no LLM; feeds legal_extraction)
+    # 04:00 legal_extraction (depends on structural_signals)
+    # 06:00 parliamentary (new bills + Hansard)
+    # Monday 05:00 evidence (weekly backlog drain)
+    - cron: '0 2 * * *'   # local_data
+    - cron: '0 3 * * *'   # structural_signals
+    - cron: '0 4 * * *'   # legal_extraction (job-level `needs:` keeps ordering)
+    - cron: '0 6 * * *'   # parliamentary
+    - cron: '0 5 * * 1'   # evidence (Monday)
   workflow_dispatch:
     inputs:
       agent:
@@ -18,8 +27,28 @@ on:
           - local_data
 
 jobs:
+  local-data:
+    # Runs on the 02:00 cron slot or on manual dispatch of local_data.
+    if: |
+      github.event.schedule == '0 2 * * *' ||
+      github.event.inputs.agent == 'local_data'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pydantic requests
+      - name: Run local data agent
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python scripts/run_agent.py local_data
+
   structural-signals:
-    if: github.event_name == 'schedule' || github.event.inputs.agent == 'structural_signals'
+    if: |
+      github.event.schedule == '0 3 * * *' ||
+      github.event.inputs.agent == 'structural_signals'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,7 +71,11 @@ jobs:
           git push
 
   legal-extraction:
-    if: github.event_name == 'schedule' || github.event.inputs.agent == 'legal_extraction'
+    # 04:00 slot OR manual dispatch. `needs:` keeps it sequenced after
+    # structural-signals on the same day's workflow run.
+    if: |
+      github.event.schedule == '0 4 * * *' ||
+      github.event.inputs.agent == 'legal_extraction'
     needs: structural-signals
     runs-on: ubuntu-latest
     steps:
@@ -61,11 +94,15 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: extraction-log
+          name: extraction-log-legal
           path: logs/
 
-  local-data:
-    if: github.event.inputs.agent == 'local_data'
+  parliamentary:
+    # 06:00 daily. Pulls bills + Hansard + committee reports via
+    # parliament-mcp (currently stubbed pending MCP connection).
+    if: |
+      github.event.schedule == '0 6 * * *' ||
+      github.event.inputs.agent == 'parliamentary'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -73,8 +110,37 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pydantic requests
-      - name: Run local data agent
+      - name: Run parliamentary agent
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: python scripts/run_agent.py local_data
+        run: python scripts/run_agent.py parliamentary
+
+  evidence:
+    # Weekly Monday 05:00. Drains data/v1_ingestion_backlog.json +
+    # (future) live release calendars, through the ingest.documentary
+    # adapter chain with CrossRef / Semantic Scholar / gov.uk
+    # enrichment and optional Gemma node extraction.
+    if: |
+      github.event.schedule == '0 5 * * 1' ||
+      github.event.inputs.agent == 'evidence'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pydantic requests
+      - name: Run evidence agent
+        env:
+          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          BASIS_PERSISTENCE: ${{ vars.BASIS_PERSISTENCE || 'local_json' }}
+        run: python scripts/run_agent.py evidence --max 20
+      - name: Upload extraction log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: extraction-log-evidence
+          path: logs/

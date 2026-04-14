@@ -31,6 +31,7 @@ Output:
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
@@ -38,21 +39,9 @@ GRAPH = REPO / "archive" / "v1" / "data" / "basis-kg-full.json"
 URLS = REPO / "archive" / "v1" / "data" / "basis_source_urls.json"
 BACKLOG = REPO / "data" / "v1_ingestion_backlog.json"
 
-V1_TO_V2_DOMAIN = {
-    "housing": "housing",
-    "nhs": "health",
-    "education": "education",
-    "welfare": "benefits",
-    "taxation": "taxation",
-    "environment": "environment",
-    "immigration": "immigration",
-    "defence": "defence",
-    "justice": "justice",
-    # Newly-added v2 domains (SCHEMA-002 v2)
-    "energy": "energy",
-    "eu-trade": "eu_trade",
-    "electoral-reform": "electoral_reform",
-}
+# Canonical v1 -> v2 domain map (shared with the audit + base validator).
+sys.path.insert(0, str(REPO / "src"))
+from migration import V1_DOMAIN_TO_V2  # noqa: E402
 
 
 def priority_for_tier(tier: int | None) -> str:
@@ -94,7 +83,7 @@ def main() -> None:
         raw_tier = s.get("tier")
         tier_str = f"T{raw_tier}" if isinstance(raw_tier, int) else None
         v1_domain = s.get("domain") or ""
-        v2_domain = V1_TO_V2_DOMAIN.get(v1_domain, v1_domain)
+        v2_domain = V1_DOMAIN_TO_V2.get(v1_domain, v1_domain)
         sid = s.get("id")
         url = url_map.get(sid) or s.get("url")
         if not url:

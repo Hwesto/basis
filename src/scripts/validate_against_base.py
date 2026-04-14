@@ -86,6 +86,9 @@ def validate_nodes(nodes: list[dict]) -> dict:
 
     valid_domains = {d.value for d in DomainEnum}
 
+    # Use the canonical v1 -> v2 domain map for "did you mean" suggestions.
+    from migration import V1_DOMAIN_TO_V2
+
     for node in nodes:
         node_id = node.get("id", "UNKNOWN")
         node_type = node.get("node_type", "UNKNOWN")
@@ -94,10 +97,11 @@ def validate_nodes(nodes: list[dict]) -> dict:
         # Check domain
         domain = node.get("domain")
         if domain and domain not in valid_domains:
+            suggestion = V1_DOMAIN_TO_V2.get(domain) or domain.lower().replace(" ", "_")
             report["domain_issues"].append({
                 "id": node_id,
                 "domain": domain,
-                "suggestion": domain.lower().replace(" ", "_"),
+                "suggestion": suggestion,
             })
 
         # Validate against BaseNode

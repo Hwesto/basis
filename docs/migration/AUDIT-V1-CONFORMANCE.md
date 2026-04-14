@@ -29,7 +29,6 @@ Validates `data/basis-kg-full.json` against the reconciled v2 schema (`src/base_
 | `actor` | `missing` | 69 |
 | `fiscal.amount` | `missing` | 60 |
 | `fiscal.gap_role` | `missing` | 60 |
-| `fiscal.direction` | `literal_error` | 48 |
 | `fiscal.unit` | `literal_error` | 2 |
 
 ## Sources — by v1 tier
