@@ -239,11 +239,46 @@ def run_local_data(args, run: AgentRun):
 
 
 def run_evidence(args, run: AgentRun):
-    """Weekly: check for new statistical releases and extract."""
-    print("Evidence agent: checking release calendars")
-    print("  Would monitor: ONS release calendar, DWP publications, NHS stats")
-    print("  Not yet connected — stub for now")
-    run.complete(output_count=0)
+    """
+    Weekly: drain the documentary ingestion backlog (manifesto-derived
+    sources, new think-tank publications, gov.uk reports).
+
+    Backlog path is `data/v1_ingestion_backlog.json` by default — entries
+    are passed through the documentary / structural / testimony adapter
+    chain and any schema-valid source record is persisted via the
+    ingest.persistence backend selected by BASIS_PERSISTENCE env (default
+    local_json for Phase 1, supabase once wired).
+    """
+    from ingest.cli import ingest_backlog
+
+    # Resolve backlog relative to repo root, not the current cwd
+    repo_root = Path(__file__).resolve().parents[2]
+    default_backlog = repo_root / "data" / "v1_ingestion_backlog.json"
+    backlog_path = Path(getattr(args, "path", None) or default_backlog)
+    limit = getattr(args, "max", 50)
+    dry_run = getattr(args, "dry_run", False)
+    backend = os.environ.get("BASIS_PERSISTENCE")
+
+    print(f"Evidence agent: draining backlog at {backlog_path}")
+    print(f"  limit={limit}  dry_run={dry_run}  backend={backend or 'local_json'}")
+
+    if not backlog_path.exists():
+        print(f"  Backlog file missing ({backlog_path}). Nothing to do.")
+        run.complete(output_count=0)
+        return
+
+    counts = ingest_backlog(
+        path=backlog_path,
+        dry_run=dry_run,
+        backend=backend,
+        limit=limit,
+    )
+    print(f"  Status counts: {counts}")
+
+    ok = counts.get("ok", 0)
+    failed = sum(v for k, v in counts.items() if k != "ok")
+    run.input_count = sum(counts.values())
+    run.complete(output_count=ok, error_count=failed)
 
 
 def run_parliamentary(args, run: AgentRun):

@@ -4,3 +4,10 @@ __pycache__/
 venv/
 .env
 .env.local
+
+# Agent run logs
+logs/
+src/logs/
+
+# Local v2 graph outputs (dev persistence backend)
+data/v2_graph/

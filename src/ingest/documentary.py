@@ -266,10 +266,71 @@ class DocumentaryAdapter:
                 run_id=run_id,
             )
 
-        # 5. Candidate node extraction deferred — curator-led in Phase 2,
-        #    LLM-assisted later via extraction.pipeline.extract_evidence.
+        # 5. Candidate node extraction — if Google AI key is present, run
+        #    the skeleton's extract_evidence pipeline on the fetched text
+        #    to produce candidate FACT/CLAIM/ASSUMPTION nodes.
+        #    Per docs/basis-extraction-agent-spec.md this is a single-pass
+        #    call — nodes + intra-domain edges come out together.
         candidate_nodes: list[dict] = []
         candidate_citations: list[dict] = []
+        llm_note: str | None = None
+
+        api_key = os.environ.get("GOOGLE_AI_API_KEY")
+        extract_domain = meta.get("domain") or "economy"  # fallback for routing
+        if api_key and not meta.get("skip_extraction"):
+            try:
+                from extraction.pipeline import extract_evidence
+                extraction = extract_evidence(
+                    text=content[:8000],
+                    title=src.title,
+                    domain=extract_domain,
+                    tier=tier,
+                    publisher=src.publisher,
+                    api_key=api_key,
+                )
+                if extraction.get("status") == "extracted":
+                    parsed = extraction.get("nodes")
+                    if isinstance(parsed, dict):
+                        parsed = [parsed]
+                    if isinstance(parsed, list):
+                        candidate_nodes = parsed
+                        # One citation edge per candidate node back to
+                        # this source. claim_tier_override left None so
+                        # source.default_tier is used as the MC prior.
+                        for i, node in enumerate(candidate_nodes):
+                            node_id = node.get("id") or f"{src.source_id}-CAND-{i:03d}"
+                            node.setdefault("id", node_id)
+                            candidate_citations.append({
+                                "source_id": src.source_id,
+                                "node_id": node_id,
+                                "citation_locator": None,
+                                "claim_tier_override": None,
+                                "claim_tier_justification": None,
+                                "created_by": run_id,
+                            })
+                        llm_note = (
+                            f"Gemma extraction: {len(candidate_nodes)} "
+                            f"candidate node(s), {len(candidate_citations)} "
+                            "citation edge(s)"
+                        )
+                    else:
+                        llm_note = (
+                            f"Gemma returned unexpected shape: {type(parsed)}"
+                        )
+                else:
+                    llm_note = (
+                        f"Gemma extraction error: "
+                        f"{extraction.get('error', 'unknown')}"
+                    )
+            except Exception as exc:  # pragma: no cover — defensive
+                llm_note = f"Gemma extraction skipped ({exc!r})"
+        elif not api_key:
+            llm_note = (
+                "GOOGLE_AI_API_KEY not set — source persisted, "
+                "candidate node extraction deferred"
+            )
+        else:
+            llm_note = "skip_extraction=True in metadata; nodes not extracted"
 
         return IngestionResult(
             status=IngestStatus.OK,
@@ -280,8 +341,7 @@ class DocumentaryAdapter:
                 f"Fetched {len(content)} chars from {url_or_id}",
                 f"Default tier {tier} — {tier_justification}",
                 *enrichment_notes,
-                "LLM extraction deferred: run `ingest.llm_extract` on "
-                "this source to generate candidate nodes.",
+                llm_note,
             ],
             run_id=run_id,
         )

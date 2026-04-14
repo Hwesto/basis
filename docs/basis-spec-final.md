@@ -1,14 +1,36 @@
 # BASIS — PLATFORM SPECIFICATION
-## Version 2.2 FINAL — 9 April 2026
-## Status: DEFINITIVE — BUILD FROM THIS
+## Version 2.2 — 9 April 2026
 
-This document is the single source of truth for the BASIS platform.
-It supersedes all prior design documents. Pipeline details from
-basis-pipelines.md are incorporated in full. Nothing is referenced
-by pointer — everything needed to build is here.
+> **⚠ Superseded for data-model detail.** This doc is retained as the
+> narrative foundation and historical record. The canonical sources for
+> the schema, source types, and CI checks are now:
+>
+> - `docs/schema/decisions/` — 23 SCHEMA-NNN decisions (status-tracked)
+> - `docs/schema/open_questions/` — 10 OQ-NNN questions
+> - `src/base_schema.py` + `src/source_models.py` — Pydantic implementations
+>
+> Known drifts from this doc to current code (as of 14 April 2026):
+>
+> | Spec says | Current state |
+> |---|---|
+> | 12 editorial domains | 18 in `DomainEnum` (SCHEMA-002 v2 added energy, eu_trade, electoral_reform) |
+> | FiscalMetadata uses `category` | Renamed to `gap_role` with explicit enum (SCHEMA-014) |
+> | Tier on SOURCE | Tier on citation edge (`default_tier` on source, `claim_tier_override` on edge — SCHEMA-009) |
+> | `LEGISLATIVE_STRUCTURAL` source | Renamed to `STRUCTURAL` with `registry` discriminator (SCHEMA-008 / SCHEMA-010) |
+> | 6 CI checks implied | 6 runtime + 2 legal-layer (SCHEMA-023) |
+>
+> Spec-only content **still canonical** (not yet implemented in code):
+> verification pipeline (§2.9), Pipeline 6 GAR query endpoint (§3),
+> contested-flag propagation rules (§2.6). These remain design
+> requirements for future phases.
+>
+> Use this doc for theory of change and pipeline overviews; refer to
+> `docs/schema/` and the `src/` code for data-model specifics.
 
-Reconciles: original master notes, product plan, AI architecture,
-pipeline architecture, platform audit, and spec v1.0 review.
+This document is the narrative foundation for the BASIS platform.
+Pipeline details from basis-pipelines.md are incorporated. Reconciles:
+original master notes, product plan, AI architecture, pipeline
+architecture, platform audit, and spec v1.0 review.
 
 ---
 
