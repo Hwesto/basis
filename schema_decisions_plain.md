@@ -29,11 +29,12 @@ slightly different validators that slowly diverged. One base class means one of 
 We had 'housing', 'Housing', and 'housing_disrepair' all in the Phase 1 data.
 New domains require a code change — they can't be added by the extraction pipeline.
 
-**Jurisdictions are typed, and we're missing one (SCHEMA-003)**
+**Jurisdictions are typed (SCHEMA-003 — settled)**
 
-england, wales, scotland, ni, uk_wide. We need `england_and_wales` before the
-legal layer — a lot of housing legislation covers England and Wales jointly.
-Add this before Phase 4 starts. It's blocking.
+england, wales, scotland, ni, england_and_wales, uk_wide. Six values.
+`england_and_wales` is its own first-class jurisdiction because most devolved
+housing, health, and education law applies jointly to those two. Added in
+`base_schema.py`. OQ-005 resolved.
 
 **Confidence is HIGH / MEDIUM / LOW, not a decimal (SCHEMA-004)**
 
@@ -256,7 +257,7 @@ Both are pure database queries against the existing schema. Deferred: CIRCULAR_D
 | ~~OQ-002~~ | ~~Conditional commencement format?~~ **Resolved** — six-value enum + free text notes | — | — |
 | OQ-003 | How does MC work for PRINCIPLE nodes? (Deferred with SCHEMA-012) | No | Phase 4b |
 | OQ-004 | Should evidence_independent default to False (cautious) not True (optimistic)? | No | Phase 2b |
-| OQ-005 | How do we handle England+Wales joint jurisdiction? Add to enum? | **Yes** | Phase 4 |
+| ~~OQ-005~~ | ~~How do we handle England+Wales joint jurisdiction?~~ **Resolved** — `england_and_wales` added to `JurisdictionEnum` | — | — |
 | OQ-006 | What alpha for ML classifier outputs (INFERRED sources)? | No | Phase 5 |
 | OQ-007 | How does curator_approved work for auto-computed DERIVED nodes? | No | Phase 3 |
 | OQ-008 | Are HIGH/MEDIUM/LOW assigned consistently across extractors? (No study done) | No | Phase 3 |
@@ -265,4 +266,4 @@ Both are pure database queries against the existing schema. Deferred: CIRCULAR_D
 
 ---
 
-*v0.2 — April 2026. SCHEMA-011 updated (six-value commencement, OQ-002 resolved). SCHEMA-012 deferred. SCHEMA-023 added.*
+*v0.3 — April 2026. SCHEMA-003 settled (OQ-005 resolved). OQ-003 aligned with SCHEMA-012 deferral. SCHEMA-009 citation_edge model clarified (see roadmap). v0.2 added SCHEMA-011, SCHEMA-012 deferral, SCHEMA-023.*

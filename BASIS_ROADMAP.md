@@ -118,8 +118,10 @@ class DocumentarySource(BaseSource):
     published_date: str
     url:            str | None
     doi:            str | None
-    tier:           Literal['T1','T2','T3','T4','T5','T6']
-    tier_justification: str              # mandatory one sentence
+    default_tier:   Literal['T1','T2','T3','T4','T5','T6']
+    default_tier_justification: str      # mandatory one sentence
+    # Per SCHEMA-009: default_tier is the global quality signal for this source.
+    # Per-citation tier lives on the citation_edge as claim_tier_override.
     full_text:      str | None           # cached, nullable
     content_hash:   str | None           # sha256; change = re-verify
     fetched_at:     datetime | None
@@ -152,22 +154,23 @@ class StructuredDataSource(BaseSource):
 
 No full_text. No author. No T4–T6 — a structured dataset from ONS is either a methodologically sound T1/T2 source or it's not a source. Provider tier is assigned by whitelist: ONS, NHS Digital, DWP Stat-Xplore → T1. Police.uk, Land Registry → T2. Council CSVs → T3 with methodology flag.
 
-**LEGISLATIVE_STRUCTURAL** — Lex Graph edges and provision attributes: amendments, citations, commencements, repeals
+**STRUCTURAL** — authoritative registry records: Lex Graph edges and provision attributes (amendments, citations, commencements, repeals); Companies House entries; Land Registry titles; ONS NSPL postcode-to-area mappings.
 
 ```python
-class LegislativeStructuralSource(BaseSource):
-    source_type:          Literal['LEGISLATIVE_STRUCTURAL']
-    lex_provision_id:     str
-    edge_type:            Literal['citation','amendment','cross_reference',
-                                  'commencement','repeal']
-    related_provision_id: str | None
+class StructuralSource(BaseSource):
+    source_type:          Literal['STRUCTURAL']
+    registry:             Literal['lex_graph','companies_house',
+                                  'land_registry','ons_nspl']
+    record_id:            str                          # registry-local id
+    edge_type:            str | None                   # lex_graph only
+    related_record_id:    str | None                   # lex_graph only
     recorded_date:        date | None
-    # No tier. Structural sources have certainty, not tier.
-    # A commencement edge either exists or it doesn't.
-    # MC confidence alpha = 1.0 on the structural fact itself.
+    # No tier. Structural sources have registry-assigned alpha (SCHEMA-010),
+    # not a documentary tier. A registry record either exists or it doesn't;
+    # the epistemic question is the registry's data quality, not the record's.
 ```
 
-This is the epistemically distinct source type. Lex Graph's structural edges are records of legal events — not claims about the world that require quality assessment. They are definitionally true within the legal system. Treating them as T1 documents is wrong: T1 implies "well-researched document we trust highly." `LEGISLATIVE_STRUCTURAL` sources are a different category entirely. The commencement status of a provision, the amendment history of a section, the citation graph connecting Acts — these have `alpha = 1.0` in the MC engine. The uncertainty is in the semantic extraction on top, not in the structural fact.
+This is the epistemically distinct source type. A registry record is an authoritative statement by the body that maintains the register — not a claim about the world that requires documentary-tier assessment. Treating a Lex Graph commencement edge (or a Companies House PSC entry) as a T1 document is a category error: T1 implies "well-researched document we trust highly." `STRUCTURAL` sources are a different category. Alpha is assigned per registry from a lookup table (SCHEMA-010): Lex Graph 0.95, ONS NSPL 0.98, Land Registry 0.92, Companies House 0.80. The uncertainty is in any semantic extraction on top, not in the structural fact.
 
 **DERIVED** — computations from other nodes: fiscal gap, MC confidence scores, percentile ranks, structural stability scores
 
@@ -201,6 +204,30 @@ class TestimonySource(BaseSource):
 
 Testimony records what someone said, not what the evidence shows. An ombudsman ruling is T3. A minister's claim is T4. A citizen challenge submission is T5 until supported by a DocumentarySource. The tier ceiling of T3 is a hard constraint in the schema.
 
+**Citation edge — tier lives here, not on the source (SCHEMA-009)**
+
+Source quality is claim-relative, not source-absolute. An ONS report is T1 for a fiscal claim and T3 for a housing-disrepair claim. Putting tier on the source forces a single number that is wrong for at least one of those uses. The tier that enters MC propagation is the tier *of this citation* — the `DocumentarySource.default_tier` is a prior, not the final value.
+
+```python
+class CitationEdge(BaseModel):
+    edge_id:                   str
+    source_id:                 str                   # FK → sources.source_id
+    node_id:                   str                   # FK → nodes.id
+    citation_locator:          str | None            # 'p.14 para 3', 'Table 2'
+    claim_tier_override:       Literal['T1','T2','T3','T4','T5','T6'] | None
+    claim_tier_justification:  str | None            # required if override set
+    created_at:                datetime
+    created_by:                str                   # curator id or agent run id
+
+# Effective tier for MC:
+#   citation_edge.claim_tier_override if set,
+#   else source.default_tier
+# STRUCTURED_DATA uses provider_tier; override not permitted (narrower T1–T3).
+# STRUCTURAL / DERIVED / TESTIMONY: no tier, override not applicable.
+```
+
+Migration from Phase 1 source-level tier: the 172 existing sources have `tier` on the source. Step 1, rename field to `default_tier` with no semantic change. Step 2, when a curator notices a source cited outside its primary domain, record the override on the citation edge rather than changing the source. A CI check flags citations where `source.domain != node.domain` and `claim_tier_override is null` (SCHEMA-009 implementation target: Phase 4).
+
 **MC confidence priors by source type**
 
 ```
@@ -212,7 +239,10 @@ DOCUMENTARY  T4-T6                                      → alpha 0.40–0.55
 STRUCTURED_DATA  provider_tier T1 (ONS, NHS Digital)    → alpha 0.92
 STRUCTURED_DATA  provider_tier T2                       → alpha 0.80
 STRUCTURED_DATA  provider_tier T3 (council CSV)         → alpha 0.60
-LEGISLATIVE_STRUCTURAL (any edge type)                  → alpha 1.0
+STRUCTURAL   registry=lex_graph                         → alpha 0.95
+STRUCTURAL   registry=ons_nspl                          → alpha 0.98
+STRUCTURAL   registry=land_registry                     → alpha 0.92
+STRUCTURAL   registry=companies_house                   → alpha 0.80
 DERIVED                                                 → no alpha (MC-propagated)
 TESTIMONY    T3 (ombudsman, court)                      → alpha 0.55
 TESTIMONY    T4 (minister, official)                    → alpha 0.45
@@ -239,8 +269,8 @@ SOURCE TYPE ROUTING
   gov.uk / ons.gov.uk domain?  → DocumentarySource, tier = T1/T2
   ONS / Police.uk / NHS API response?  → StructuredDataSource path
     → provider_tier from whitelist
-  Lex Graph provision / edge?  → LegislativeStructuralSource path
-    → alpha = 1.0, no tier debate, commencement gate runs first
+  Lex Graph provision / edge?  → StructuralSource path (registry=lex_graph)
+    → alpha = 0.95 per SCHEMA-010, no tier debate, commencement gate runs first
   Computed output?  → DerivedSource path
     → no external ingestion, provenance = algorithm + input_node_ids
   Hansard / FOI / submission?  → TestimonySource path
@@ -264,7 +294,7 @@ curator_queue (one table, all node types, source_type visible)
     ↓
 Claude Code session (Max plan, on-demand):
   Supabase MCP → read queue batch
-  Lex MCP → pull provision text for LegislativeStructuralSource nodes
+  Lex MCP → pull provision text for StructuralSource nodes (registry='lex_graph')
   Semantic Scholar / Google → pull source text for DocumentarySource nodes
   Claude judges: approve / reject / escalate
   Supabase MCP → write decisions back
@@ -399,12 +429,12 @@ Every issue in the system maps to one or more of these output mechanisms:
 
 - **SCHEMA-001:** Single BaseNode root class — one curator queue, one CI validator, one MC engine. Domain-specific fields on subclasses only.
 - **SCHEMA-002:** DomainEnum typed — free-text domain fields rejected at validation.
-- **SCHEMA-003:** JurisdictionEnum — requires `england_and_wales` extension before Phase 4.
+- **SCHEMA-003:** JurisdictionEnum — six members: `england`, `wales`, `scotland`, `ni`, `england_and_wales`, `uk_wide`. Resolves OQ-005.
 - **SCHEMA-004:** Confidence categorical (HIGH/MEDIUM/LOW) — false precision argument against decimal scores upheld.
 - **SCHEMA-006:** curator_approved as hard gate — DERIVED node exception requires cleaner contract (OQ-007).
 - **SCHEMA-009:** Tier lives on citation edge, not source — migration from Phase 1 source-level tier required.
 - **SCHEMA-010:** STRUCTURAL source alpha by registry, not by category — values are provisional priors, not measurements.
-- **SCHEMA-011:** Commencement status as six-value enum — `in_force_partial`, `in_force_conditional` added.
+- **SCHEMA-011:** Commencement status as six-value enum — `in_force`, `partially_in_force`, `not_commenced`, `prospectively_repealed`, `repealed`, `unknown`. Resolves OQ-002.
 - **SCHEMA-012:** PRINCIPLE as ninth legal position — weight-based norms that can't be encoded as binary Hohfeld.
 - **SCHEMA-015:** Evidence independence flag on SUPPORTS edges — current default (True) is overconfident; manual audit of top 20 high-confidence CLAIMs required before Phase 2b.
 - **SCHEMA-019:** MC alpha values are design choices, not measurements — provisional, require calibration study.
@@ -417,7 +447,7 @@ Every issue in the system maps to one or more of these output mechanisms:
 1. Manual audit of top 20 high-confidence CLAIM nodes for correlated evidence (SCHEMA-015)
 2. Validate all 389 existing nodes against BaseNode — every mismatch is a known gap
 3. Validate all 172 sources against BaseSource — identify tier-on-source instances requiring migration
-4. Resolve OQ-005 (england_and_wales jurisdiction) before Phase 4 begins
+4. ~~Resolve OQ-005~~ **RESOLVED** — `england_and_wales` added to `JurisdictionEnum` in `base_schema.py`
 
 **Status:** ⏳ schema_decisions.md v0.1 written. base_schema.py and source_models.py to follow.
 
@@ -669,7 +699,7 @@ The explanatory note point deserves emphasis: for any provision with a note, ext
 
 **4.2 Schema: lex_provisions as the reference table**
 
-BASIS does not import Lex Graph into Supabase. It maintains a narrow reference table of the ~5,000 provisions relevant to the 20 priority issue domains. Each row carries both the cached provision text (for extraction) and the structural signals from Lex Graph (for confidence priors and the commencement gate). These structural signals are `LegislativeStructuralSource` facts — they have `alpha = 1.0` in the MC engine.
+BASIS does not import Lex Graph into Supabase. It maintains a narrow reference table of the ~5,000 provisions relevant to the 20 priority issue domains. Each row carries both the cached provision text (for extraction) and the structural signals from Lex Graph (for confidence priors and the commencement gate). These structural signals are `StructuralSource` facts with `registry='lex_graph'` — alpha = 0.95 per SCHEMA-010.
 
 ```sql
 CREATE TABLE lex_provisions (
@@ -682,7 +712,7 @@ CREATE TABLE lex_provisions (
   content_hash         TEXT,              -- sha256; change = re-extract
   last_checked         DATE,
   amendment_watch      BOOLEAN DEFAULT true,
-  -- structural signals from Lex Graph (LegislativeStructuralSource facts)
+  -- structural signals from Lex Graph (StructuralSource facts, registry='lex_graph')
   in_degree            INTEGER,           -- how many Acts cite this provision
   amendment_count      INTEGER,           -- times amended since enacted
   last_amended         DATE,
@@ -846,16 +876,19 @@ class LegalNode(BaseNode):
     # structural signals inherited from lex_provisions at node creation
     # (denormalised here for MC engine access without join)
     structural_stability: Literal['HIGH','MEDIUM','LOW'] | None
-    commencement_status:  Literal['in_force','not_commenced',
+    commencement_status:  Literal['in_force','partially_in_force',
+                                  'not_commenced','prospectively_repealed',
                                   'repealed','unknown'] | None
+    commencement_notes:   str | None   # required when partially_in_force
     extraction_notes:     str | None
 
 # Called via Google AI API with:
 #   response_mime_type="application/json"
 #   response_schema=LegalNode
 # Guaranteed conformant output. Schema violations fail the call.
-# source_type on the linked source = 'LEGISLATIVE_STRUCTURAL'
-# MC alpha = 1.0 on structural facts; semantic extraction adds uncertainty on top
+# source_type on the linked source = 'STRUCTURAL' (registry='lex_graph')
+# MC alpha = 0.95 on Lex Graph structural facts (SCHEMA-010);
+# semantic extraction adds uncertainty on top
 ```
 
 **Track C — Bootstrap (Claude Code + Lex MCP, first)**
@@ -921,9 +954,9 @@ This is repeatable, auditable, and catches amending SIs that a manual selection 
 **4.7 Legal accuracy safeguards**
 
 - **Commencement gate (structural, automated):** Before any legal node enters the curator queue, a structural pre-check runs against `lex_provisions.commencement_status`. `not_commenced` or `repealed` → extraction blocked. `partially_in_force` → extraction proceeds with mandatory `commencement_notes`, displayed with prominent warning to citizens. `prospectively_repealed` → extraction proceeds but nodes flagged for imminent deprecation review. This check costs nothing — it's a database column, not an LLM call.
-- **CI check 7 — Legal consistency (structural, automated):** Two database queries run on every commit once legal nodes exist:
-  - `ENFORCEMENT_GAP`: any DUTY node with no MECHANISM reachable via ENFORCED_BY edges. A duty with no enforcement mechanism is structurally incomplete — either the mechanism wasn't extracted or the law has a genuine gap (both findings are valuable).
-  - `MISSING_CORRELATIVE`: any RIGHT node with no corresponding DUTY node, or any POWER node with no LIABILITY node. Hohfeld requires correlatives — missing ones indicate an extraction error or a genuine legal incoherence.
+- **CI checks 7 and 8 — Legal consistency (structural, automated):** Two database queries run on every commit once legal nodes exist (SCHEMA-023):
+  - **Check 7 — `ENFORCEMENT_GAP`:** any DUTY node with no MECHANISM reachable via ENFORCED_BY edges. A duty with no enforcement mechanism is structurally incomplete — either the mechanism wasn't extracted or the law has a genuine gap (both findings are valuable).
+  - **Check 8 — `MISSING_CORRELATIVE`:** any RIGHT node with no corresponding DUTY node, or any POWER node with no LIABILITY node. Hohfeld requires correlatives — missing ones indicate an extraction error or a genuine legal incoherence.
   These checks catch structural problems between nodes that single-node verification misses.
 - `curator_approved: false` by default — API never returns unapproved nodes to frontend
 - HIGH confidence threshold enforced at query level: legal routing only surfaces HIGH nodes
