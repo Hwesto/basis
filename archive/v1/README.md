@@ -14,12 +14,15 @@ accessible at the `/v1/` sub-route of the new site.
 archive/v1/
 ├── README.md                 (this file)
 ├── data/
-│   ├── basis-kg-full.json    389 nodes · 172 sources · 745 edges
-│   ├── basis-kg-compact.json Derived compact view
-│   ├── basis-data.js         Inline JS bundle for the single-page site
-│   └── domains/              12 per-domain {nodes,edges}.json files
+│   ├── basis-kg-full.json     389 nodes · 172 sources · 745 edges
+│   ├── basis-kg-compact.json  Derived compact view
+│   ├── basis-data.js          Inline JS bundle for the single-page site
+│   ├── basis_source_urls.json Source-id → URL map (172/172 coverage,
+│                              hand-curated; stored separately from the
+│                              graph in v1)
+│   └── domains/               12 per-domain {nodes,edges}.json files
 └── site/
-    └── index.html            Single-page gh-pages site
+    └── index.html             Single-page gh-pages site
 ```
 
 ## Why this is archived
@@ -35,10 +38,12 @@ migrate cleanly:
 - v1 captured fiscal metadata as `[amount_low, amount_high]` ranges;
   the v2 draft dropped this. SCHEMA-014 has since been revised to
   restore range support.
-- v1 sources have **no URLs** (`url: null` on every entry).
-  `data/v1_ingestion_backlog.json` at the repo root lists them by
-  title/author/date for v2 re-ingestion with URL recovery via
-  CrossRef / Semantic Scholar / gov.uk / publisher search.
+- v1 stored URLs separately from the source catalogue. URLs live
+  in `basis_source_urls.json` (this dir); the graph JSON has
+  `url: null` on every source record. The v2 backlog generator
+  (`scripts/generate_backlog.py`) merges them and writes
+  `data/v1_ingestion_backlog.json` at the repo root with 172/172
+  URL coverage.
 
 See `docs/migration/README.md` for the full rebuild plan.
 

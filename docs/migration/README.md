@@ -19,9 +19,12 @@ and rebuild instead.
 
 ## What we keep
 
-- **172 source references** — URLs, titles, authors, dates — become
-  `data/v1_ingestion_backlog.json`, the queue for the v2 ingestion
-  pipeline.
+- **172 source references with URLs.** v1 stored the URLs separately
+  from the source catalogue (titles/authors/tiers were inline in the
+  graph JSON; URLs lived in `basis_source_urls.json`). Both files are
+  now under `archive/v1/data/`. The backlog generator merges them into
+  `data/v1_ingestion_backlog.json` — the queue for the v2 ingestion
+  pipeline. Coverage: 172/172 URLs resolved.
 - **13 manifesto markdowns** — input corpus for evidence extraction,
   unchanged.
 - **v1 graph** — frozen on `archive/v1` branch and moved to

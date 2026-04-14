@@ -1,13 +1,15 @@
 [
   {
     "_meta": true,
-    "generated_from": "data/basis-kg-full.json (v1 archive)",
+    "generated_from": "archive/v1/data/basis-kg-full.json (v1)",
+    "url_source": "archive/v1/data/basis_source_urls.json (v1)",
     "v1_source_count": 172,
-    "note": "v1 sources have no URLs \u2014 only (title, author, tier, date). The v2 ingestion pipeline must resolve URLs before fetching. Resolution order: DOI (if any) via CrossRef / Semantic Scholar; publisher website search (e.g. ifs.org.uk/search) by title; gov.uk content API by title; fallback to Google Custom Search with publisher-domain filter. Entries that do not yield a URL go to the manual curator backlog."
+    "v1_urls_mapped": 172,
+    "note": "URLs resolved from the v1 URL map for entries present there. Entries without a mapped URL must be resolved by the ingestion pipeline: DOI via CrossRef / Semantic Scholar; publisher site search by title; gov.uk Content API by title; fallback to manual curator entry."
   },
   {
     "source_id": "SRC-DEF-001",
-    "url": null,
+    "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-8175/",
     "title": "House of Commons Library, UK Defence Spending (CBP-8175)",
     "author": "House of Commons Library",
     "published_date": null,
@@ -17,12 +19,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-001",
       "v1_domain": "defence",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-002",
-    "url": null,
+    "url": "https://ifs.org.uk/publications/uk-defence-spending",
     "title": "IFS, UK Defence Spending: Composition, Commitments and Challenges",
     "author": "IFS",
     "published_date": null,
@@ -32,12 +35,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-002",
       "v1_domain": "defence",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-003",
-    "url": null,
+    "url": "https://www.nato.int/cps/en/natohq/topics_49198.htm",
     "title": "NATO, Defence Expenditure of NATO Countries 2014-2025",
     "author": "NATO",
     "published_date": "2025",
@@ -47,12 +51,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-003",
       "v1_domain": "defence",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-004",
-    "url": null,
+    "url": "https://committees.parliament.uk/committee/24/defence-committee/publications/",
     "title": "Defence Select Committee, Warfighting Readiness Evidence",
     "author": "Defence Select Committee",
     "published_date": "2024",
@@ -62,12 +67,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-004",
       "v1_domain": "defence",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-005",
-    "url": null,
+    "url": "https://obr.uk/efo/economic-and-fiscal-outlook-march-2025/",
     "title": "OBR, Defence Spending Projections",
     "author": "OBR",
     "published_date": "2025-03",
@@ -77,12 +83,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-005",
       "v1_domain": "defence",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-006",
-    "url": null,
+    "url": "https://www.gov.uk/government/statistics/defence-departmental-resources-2025",
     "title": "MOD, Finance and Economics Annual Statistical Bulletin 2025",
     "author": "MOD",
     "published_date": "2025",
@@ -92,12 +99,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-006",
       "v1_domain": "defence",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-008",
-    "url": null,
+    "url": "https://www.sipri.org/databases/milex",
     "title": "SIPRI, World Military Expenditure Data 2024",
     "author": "SIPRI",
     "published_date": "2024",
@@ -107,12 +115,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-008",
       "v1_domain": "defence",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EDU-001",
-    "url": null,
+    "url": "https://ifs.org.uk/articles/uncertain-course-school-and-college-funding-over-next-parliament",
     "title": "IFS, The Uncertain Course for School and College Funding",
     "author": "IFS",
     "published_date": "2024",
@@ -122,12 +131,13 @@
     "metadata": {
       "v1_id": "SRC-EDU-001",
       "v1_domain": "education",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EDU-004",
-    "url": null,
+    "url": "https://doi.org/10.1126/science.1128898",
     "title": "Heckman, Skill Formation and the Economics of Investing in Disadvantaged Children, Science",
     "author": "James Heckman",
     "published_date": "2006",
@@ -137,12 +147,13 @@
     "metadata": {
       "v1_id": "SRC-EDU-004",
       "v1_domain": "education",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EDU-005",
-    "url": null,
+    "url": "https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit",
     "title": "Education Endowment Foundation, Teaching and Learning Toolkit",
     "author": "EEF",
     "published_date": null,
@@ -152,12 +163,13 @@
     "metadata": {
       "v1_id": "SRC-EDU-005",
       "v1_domain": "education",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EDU-006",
-    "url": null,
+    "url": "https://ifs.org.uk/publications/post-16-education-and-skills",
     "title": "IFS, Post-16 Education and Skills Analysis",
     "author": "IFS",
     "published_date": "2024",
@@ -167,12 +179,13 @@
     "metadata": {
       "v1_id": "SRC-EDU-006",
       "v1_domain": "education",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-001",
-    "url": null,
+    "url": "https://www.electoral-reform.org.uk/manifesto-for-democracy/",
     "title": "Electoral Reform Society, Manifesto for Democracy 2024",
     "author": "ERS",
     "published_date": "2024",
@@ -182,12 +195,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-001",
       "v1_domain": "electoral-reform",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-002",
-    "url": null,
+    "url": "https://www.electoral-reform.org.uk/how-the-2024-election-could-have-looked-with-pr/",
     "title": "ERS, How the 2024 Election Could Have Looked with PR",
     "author": "ERS",
     "published_date": "2024",
@@ -197,12 +211,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-002",
       "v1_domain": "electoral-reform",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-003",
-    "url": null,
+    "url": "https://yougov.co.uk/politics/articles/50777-support-for-proportional-representation-2025",
     "title": "YouGov, PR Support Polling 2025",
     "author": "YouGov",
     "published_date": "2025",
@@ -212,12 +227,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-003",
       "v1_domain": "electoral-reform",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-006",
-    "url": null,
+    "url": "https://elections.nz/democracy-in-nz/what-is-new-zealands-system-of-government/what-is-mmp/",
     "title": "New Zealand Electoral Commission, Post-MMP Evaluations",
     "author": "NZ Electoral Commission",
     "published_date": null,
@@ -227,12 +243,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-006",
       "v1_domain": "electoral-reform",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-007",
-    "url": null,
+    "url": "https://yalebooks.yale.edu/book/9780300172027/patterns-of-democracy/",
     "title": "Comparative Political Science Literature on PR vs FPTP Outcomes",
     "author": "Various",
     "published_date": null,
@@ -242,12 +259,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-007",
       "v1_domain": "electoral-reform",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-009",
-    "url": null,
+    "url": "https://doi.org/10.1016/j.electstud.2012.01.007",
     "title": "Austria, Voting Age 16 Evaluation",
     "author": "Various",
     "published_date": null,
@@ -257,12 +275,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-009",
       "v1_domain": "electoral-reform",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-001",
-    "url": null,
+    "url": "https://www.neso.energy/publications/clean-power-2030",
     "title": "NESO, Clean Power 2030 Report",
     "author": "NESO",
     "published_date": "2024-11",
@@ -272,12 +291,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-001",
       "v1_domain": "energy",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-002",
-    "url": null,
+    "url": "https://www.gov.uk/government/statistical-data-sets/quarterly-energy-prices",
     "title": "DESNZ, Quarterly Energy Prices",
     "author": "DESNZ",
     "published_date": "2025-09",
@@ -287,12 +307,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-002",
       "v1_domain": "energy",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-003",
-    "url": null,
+    "url": "https://www.theccc.org.uk/publication/sixth-carbon-budget/",
     "title": "CCC, Sixth Carbon Budget",
     "author": "Climate Change Committee",
     "published_date": null,
@@ -302,12 +323,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-003",
       "v1_domain": "energy",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-004",
-    "url": null,
+    "url": "https://www.iea.org/reports/net-zero-by-2050",
     "title": "IEA, Net Zero by 2050 Roadmap",
     "author": "IEA",
     "published_date": "2023",
@@ -317,12 +339,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-004",
       "v1_domain": "energy",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-006",
-    "url": null,
+    "url": "https://www.lazard.com/research-insights/levelized-cost-of-energyplus/",
     "title": "Lazard, Levelized Cost of Energy Analysis v17.0",
     "author": "Lazard",
     "published_date": "2024-06",
@@ -332,12 +355,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-006",
       "v1_domain": "energy",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-007",
-    "url": null,
+    "url": "https://doi.org/10.1088/1748-9326/ac2966",
     "title": "Lynas et al., Greater than 99% Consensus on Human Caused Climate Change, Environmental Research Letters",
     "author": "Lynas et al.",
     "published_date": "2021",
@@ -347,12 +371,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-007",
       "v1_domain": "energy",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-009",
-    "url": null,
+    "url": "https://earthquakes.bgs.ac.uk/research/FrackingInducedSeismicity.html",
     "title": "BGS, Scientific Advances in Understanding Induced Seismicity from Hydraulic Fracturing",
     "author": "British Geological Survey",
     "published_date": "2022-07",
@@ -362,12 +387,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-009",
       "v1_domain": "energy",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-010",
-    "url": null,
+    "url": "https://haas.berkeley.edu/wp-content/uploads/WP304.pdf",
     "title": "Jarvis, Jha & Knittel, Private and External Costs of Germany's Nuclear Phase-Out, Berkeley Haas WP304",
     "author": "Jarvis et al.",
     "published_date": null,
@@ -377,12 +403,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-010",
       "v1_domain": "energy",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-011",
-    "url": null,
+    "url": "https://www.lowcarboncontracts.uk/",
     "title": "UK CfD Allocation Round Data (AR1-AR7), LCCC",
     "author": "LCCC",
     "published_date": null,
@@ -392,12 +419,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-011",
       "v1_domain": "energy",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-014",
-    "url": null,
+    "url": "https://www.iea.org/reports/denmark-2023",
     "title": "IEA, Denmark 2023 Country Review",
     "author": "IEA",
     "published_date": "2023",
@@ -407,12 +435,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-014",
       "v1_domain": "energy",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-015",
-    "url": null,
+    "url": "https://www.nao.org.uk/reports/green-homes-grant/",
     "title": "NAO, Green Homes Grant Evaluation",
     "author": "National Audit Office",
     "published_date": "2021",
@@ -422,12 +451,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-015",
       "v1_domain": "energy",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-016",
-    "url": null,
+    "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork",
     "title": "ONS, Energy Employment Statistics",
     "author": "ONS",
     "published_date": null,
@@ -437,12 +467,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-016",
       "v1_domain": "energy",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENV-001",
-    "url": null,
+    "url": "https://www.gov.uk/government/publications/final-report-the-economics-of-biodiversity-the-dasgupta-review",
     "title": "Dasgupta Review, The Economics of Biodiversity",
     "author": "Dasgupta",
     "published_date": "2021",
@@ -452,12 +483,13 @@
     "metadata": {
       "v1_id": "SRC-ENV-001",
       "v1_domain": "environment",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENV-002",
-    "url": null,
+    "url": "https://www.gov.uk/government/publications/chief-medical-officers-annual-report-2022-air-pollution",
     "title": "Chief Medical Officer Annual Report 2022, Air Pollution",
     "author": "CMO",
     "published_date": "2022",
@@ -467,12 +499,13 @@
     "metadata": {
       "v1_id": "SRC-ENV-002",
       "v1_domain": "environment",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENV-003",
-    "url": null,
+    "url": "https://www.theoep.org.uk/report/progress-improving-natural-environment-england-202324",
     "title": "Office for Environmental Protection, Progress Report 2024",
     "author": "OEP",
     "published_date": "2024",
@@ -482,12 +515,13 @@
     "metadata": {
       "v1_id": "SRC-ENV-003",
       "v1_domain": "environment",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENV-008",
-    "url": null,
+    "url": "https://commonslibrary.parliament.uk/are-we-on-target-for-the-environment/",
     "title": "House of Commons Library, Are We On Target for the Environment?",
     "author": "House of Commons Library",
     "published_date": null,
@@ -497,12 +531,13 @@
     "metadata": {
       "v1_id": "SRC-ENV-008",
       "v1_domain": "environment",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENV-009",
-    "url": null,
+    "url": "https://www.gov.uk/government/organisations/environment-agency",
     "title": "Environment Agency, Water Quality and Sewage Data",
     "author": "Environment Agency",
     "published_date": null,
@@ -512,12 +547,13 @@
     "metadata": {
       "v1_id": "SRC-ENV-009",
       "v1_domain": "environment",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-001",
-    "url": null,
+    "url": "https://obr.uk/box/how-are-our-brexit-trade-forecast-assumptions-performing/",
     "title": "OBR, Long-Term Brexit GDP Impact Estimate",
     "author": "OBR",
     "published_date": "2024",
@@ -527,12 +563,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-001",
       "v1_domain": "eu-trade",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-002",
-    "url": null,
+    "url": "https://www.nber.org/papers/w34459",
     "title": "Bloom et al., The Economic Impact of Brexit, NBER Working Paper",
     "author": "Bloom et al.",
     "published_date": "2025-11",
@@ -542,12 +579,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-002",
       "v1_domain": "eu-trade",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-005",
-    "url": null,
+    "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10096/",
     "title": "House of Commons Library, Resetting the UK's Relationship with the EU",
     "author": "House of Commons Library",
     "published_date": null,
@@ -557,12 +595,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-005",
       "v1_domain": "eu-trade",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-010",
-    "url": null,
+    "url": "https://committees.parliament.uk/committee/516/european-affairs-committee/publications/",
     "title": "House of Lords European Affairs Committee, Unfinished Business",
     "author": "House of Lords",
     "published_date": "2025-11",
@@ -572,12 +611,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-010",
       "v1_domain": "eu-trade",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-004",
-    "url": null,
+    "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-7671/",
     "title": "House of Commons Library, Tackling the Under-Supply of Housing in England (CBP-7671)",
     "author": "House of Commons Library",
     "published_date": null,
@@ -587,12 +627,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-004",
       "v1_domain": "housing",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-006",
-    "url": null,
+    "url": "https://www.gov.uk/government/news/39-billion-to-deliver-the-biggest-increase-in-social-and-affordable-housing-in-a-generation",
     "title": "Gov.UK, Delivering a Decade of Renewal: \u00a339bn Social and Affordable Homes Programme 2026-2036",
     "author": "MHCLG",
     "published_date": "2026-01",
@@ -602,12 +643,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-006",
       "v1_domain": "housing",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-007",
-    "url": null,
+    "url": "https://www.gov.uk/government/statistical-data-sets/live-tables-on-house-building",
     "title": "DLUHC, Housing Supply Statistics",
     "author": "DLUHC",
     "published_date": "2025",
@@ -617,12 +659,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-007",
       "v1_domain": "housing",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-008",
-    "url": null,
+    "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/housepriceindex/latest",
     "title": "ONS, House Price Data",
     "author": "ONS",
     "published_date": null,
@@ -632,12 +675,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-008",
       "v1_domain": "housing",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-009",
-    "url": null,
+    "url": "https://www.gov.uk/government/statistical-data-sets/live-tables-on-homelessness",
     "title": "MHCLG, Temporary Accommodation Statistics",
     "author": "MHCLG",
     "published_date": null,
@@ -647,12 +691,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-009",
       "v1_domain": "housing",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-010",
-    "url": null,
+    "url": "https://www.nice.org.uk/guidance/ng6",
     "title": "NICE, Cost-Effectiveness of Housing Adaptations",
     "author": "NICE",
     "published_date": null,
@@ -662,12 +707,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-010",
       "v1_domain": "housing",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-012",
-    "url": null,
+    "url": "https://www.constructionleadershipcouncil.co.uk/wp-content/uploads/2016/10/Farmer-Review.pdf",
     "title": "Farmer Review of UK Construction Labour Model",
     "author": "Mark Farmer",
     "published_date": "2016",
@@ -677,12 +723,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-012",
       "v1_domain": "housing",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-013",
-    "url": null,
+    "url": "https://www.theccc.org.uk/publication/sixth-carbon-budget/",
     "title": "CCC, Insulation as Cost-Effective Carbon Abatement",
     "author": "Climate Change Committee",
     "published_date": null,
@@ -692,12 +739,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-013",
       "v1_domain": "housing",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-001",
-    "url": null,
+    "url": "https://obr.uk/box/the-impact-of-migration-on-the-fiscal-forecast/",
     "title": "OBR, Impact of Migration on the Fiscal Forecast",
     "author": "OBR",
     "published_date": "2024-03",
@@ -707,12 +755,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-001",
       "v1_domain": "immigration",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-003",
-    "url": null,
+    "url": "https://www.gov.uk/government/publications/migration-advisory-committee-annual-report-2024",
     "title": "MAC Annual Report 2024",
     "author": "Migration Advisory Committee",
     "published_date": "2024",
@@ -722,12 +771,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-003",
       "v1_domain": "immigration",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-004",
-    "url": null,
+    "url": "https://www.gov.uk/government/publications/migration-advisory-committee-annual-report-2025",
     "title": "MAC Annual Report 2025",
     "author": "Migration Advisory Committee",
     "published_date": "2025",
@@ -737,12 +787,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-004",
       "v1_domain": "immigration",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-005",
-    "url": null,
+    "url": "https://doi.org/10.1093/restud/rds019",
     "title": "Dustmann, Frattini & Preston, The Effect of Immigration along the Distribution of Wages, Review of Economic Studies",
     "author": "Dustmann et al.",
     "published_date": "2013",
@@ -752,12 +803,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-005",
       "v1_domain": "immigration",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-006",
-    "url": null,
+    "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10376/",
     "title": "House of Commons Library, Immigration and the ECHR (CBP-10376)",
     "author": "House of Commons Library",
     "published_date": "2025-10",
@@ -767,12 +819,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-006",
       "v1_domain": "immigration",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-007",
-    "url": null,
+    "url": "https://commonslibrary.parliament.uk/research-briefings/sn01403/",
     "title": "House of Commons Library, Asylum Statistics (SN01403)",
     "author": "House of Commons Library",
     "published_date": "2026",
@@ -782,12 +835,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-007",
       "v1_domain": "immigration",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-012",
-    "url": null,
+    "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/internationalmigration",
     "title": "ONS, Net Migration Estimates",
     "author": "ONS",
     "published_date": "2024",
@@ -797,12 +851,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-012",
       "v1_domain": "immigration",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-013",
-    "url": null,
+    "url": "https://www.gov.uk/government/statistics/immigration-system-statistics-year-ending-june-2024",
     "title": "Home Office, Immigration and Asylum Statistics",
     "author": "Home Office",
     "published_date": "2024",
@@ -812,12 +867,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-013",
       "v1_domain": "immigration",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-014",
-    "url": null,
+    "url": "https://www.skillsforcare.org.uk/adult-social-care-workforce-data",
     "title": "Skills for Care, Adult Social Care Workforce Data",
     "author": "Skills for Care",
     "published_date": "2024",
@@ -827,12 +883,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-014",
       "v1_domain": "immigration",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-015",
-    "url": null,
+    "url": "https://www.unhcr.org/resettlement-data.html",
     "title": "UNHCR, Resettlement Data and Safe Routes Evidence",
     "author": "UNHCR",
     "published_date": null,
@@ -842,12 +899,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-015",
       "v1_domain": "immigration",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-016",
-    "url": null,
+    "url": "https://www.gov.uk/government/publications/skills-england-report",
     "title": "Skills England / MAC, UK Productivity Growth and Skills",
     "author": "Skills England",
     "published_date": "2024",
@@ -857,12 +915,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-016",
       "v1_domain": "immigration",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-001",
-    "url": null,
+    "url": "https://www.gov.uk/government/publications/modernising-justice",
     "title": "MoJ, Modernising Justice: Criminal Courts Reform 2025/26",
     "author": "Ministry of Justice",
     "published_date": "2025",
@@ -872,12 +931,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-001",
       "v1_domain": "justice",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-002",
-    "url": null,
+    "url": "https://www.instituteforgovernment.org.uk/publication/performance-tracker-2025",
     "title": "IfG, Performance Tracker 2025: Criminal Justice System",
     "author": "IfG",
     "published_date": "2025",
@@ -887,12 +947,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-002",
       "v1_domain": "justice",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-005",
-    "url": null,
+    "url": "https://doi.org/10.1093/bjc/azn083",
     "title": "Portugal Drug Decriminalisation Evaluation (25-Year Evidence)",
     "author": "Various",
     "published_date": null,
@@ -902,12 +963,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-005",
       "v1_domain": "justice",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-007",
-    "url": null,
+    "url": "https://www.gov.uk/government/statistics/proven-reoffending-statistics",
     "title": "MoJ, Reoffending Statistics",
     "author": "MoJ",
     "published_date": null,
@@ -917,12 +979,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-007",
       "v1_domain": "justice",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-008",
-    "url": null,
+    "url": "https://ifs.org.uk/publications/general-election-2024-manifesto-analysis",
     "title": "IFS, Manifesto Analysis: Justice Gap",
     "author": "IFS",
     "published_date": "2024",
@@ -932,12 +995,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-008",
       "v1_domain": "justice",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-009",
-    "url": null,
+    "url": "https://doi.org/10.1086/449118",
     "title": "Criminological Evidence on Deterrence vs Certainty of Detection",
     "author": "Various",
     "published_date": null,
@@ -947,12 +1011,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-009",
       "v1_domain": "justice",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-001",
-    "url": null,
+    "url": "https://www.gov.uk/government/publications/independent-investigation-of-the-nhs-in-england",
     "title": "Lord Darzi, Independent Investigation of the NHS in England",
     "author": "Lord Darzi",
     "published_date": "2024-09",
@@ -962,12 +1027,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-001",
       "v1_domain": "nhs",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-005",
-    "url": null,
+    "url": "https://ifs.org.uk/publications/nhs-workforce-plan",
     "title": "IFS, NHS Workforce Plan Costing",
     "author": "Institute for Fiscal Studies",
     "published_date": "2024",
@@ -977,12 +1043,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-005",
       "v1_domain": "nhs",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-006",
-    "url": null,
+    "url": "https://www.gov.uk/government/publications/phe-roi-tool",
     "title": "PHE, Return on Investment Estimates for Public Health Interventions",
     "author": "Public Health England",
     "published_date": null,
@@ -992,12 +1059,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-006",
       "v1_domain": "nhs",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-007",
-    "url": null,
+    "url": "https://digital.nhs.uk/data-and-information/publications/statistical/nhs-workforce-statistics",
     "title": "NHS Digital, Workforce Statistics",
     "author": "NHS Digital",
     "published_date": "2025-06",
@@ -1007,12 +1075,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-007",
       "v1_domain": "nhs",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-008",
-    "url": null,
+    "url": "https://www.england.nhs.uk/statistics/statistical-work-areas/rtt-waiting-times/",
     "title": "NHS England, Waiting Time Statistics",
     "author": "NHS England",
     "published_date": "2024-06",
@@ -1022,12 +1091,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-008",
       "v1_domain": "nhs",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-009",
-    "url": null,
+    "url": "https://www.skillsforcare.org.uk/adult-social-care-workforce-data",
     "title": "Skills for Care, Adult Social Care Workforce Data",
     "author": "Skills for Care",
     "published_date": "2024",
@@ -1037,12 +1107,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-009",
       "v1_domain": "nhs",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-013",
-    "url": null,
+    "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-7783/",
     "title": "House of Commons Library, NHS Staff from Overseas (CBP-7783)",
     "author": "House of Commons Library",
     "published_date": null,
@@ -1052,12 +1123,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-013",
       "v1_domain": "nhs",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-014",
-    "url": null,
+    "url": "https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/economicinactivity",
     "title": "ONS, Economic Inactivity Due to Long-Term Sickness",
     "author": "Office for National Statistics",
     "published_date": null,
@@ -1067,12 +1139,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-014",
       "v1_domain": "nhs",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-TAX-001",
-    "url": null,
+    "url": "https://ifs.org.uk/publications/general-election-2024-manifesto-analysis",
     "title": "IFS, General Election 2024 Manifesto Analysis",
     "author": "Institute for Fiscal Studies",
     "published_date": "2024-06",
@@ -1082,12 +1155,13 @@
     "metadata": {
       "v1_id": "SRC-TAX-001",
       "v1_domain": "taxation",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-TAX-002",
-    "url": null,
+    "url": "https://ifs.org.uk/publications/options-tax-increases",
     "title": "IFS, Options for Tax Increases",
     "author": "IFS",
     "published_date": "2025-11",
@@ -1097,12 +1171,13 @@
     "metadata": {
       "v1_id": "SRC-TAX-002",
       "v1_domain": "taxation",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-TAX-003",
-    "url": null,
+    "url": "https://obr.uk/efo/economic-and-fiscal-outlook-march-2024/",
     "title": "OBR, Fiscal Drag Estimates and Economic Outlook",
     "author": "OBR",
     "published_date": "2024-03",
@@ -1112,12 +1187,13 @@
     "metadata": {
       "v1_id": "SRC-TAX-003",
       "v1_domain": "taxation",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-TAX-004",
-    "url": null,
+    "url": "https://www.gov.uk/government/statistics/measuring-tax-gaps",
     "title": "HMRC, Tax Gap Estimates",
     "author": "HMRC",
     "published_date": "2024",
@@ -1127,12 +1203,13 @@
     "metadata": {
       "v1_id": "SRC-TAX-004",
       "v1_domain": "taxation",
-      "v1_tier": 2
+      "v1_tier": 2,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-TAX-005",
-    "url": null,
+    "url": "https://www.ukwealth.tax/",
     "title": "Wealth Tax Commission (LSE/Warwick), Final Report",
     "author": "Wealth Tax Commission",
     "published_date": "2020",
@@ -1142,12 +1219,13 @@
     "metadata": {
       "v1_id": "SRC-TAX-005",
       "v1_domain": "taxation",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-001",
-    "url": null,
+    "url": "https://ifs.org.uk/articles/two-child-limit-poverty-incentives-and-cost",
     "title": "IFS, The Two-Child Limit: Poverty, Incentives and Cost",
     "author": "IFS",
     "published_date": "2025",
@@ -1157,12 +1235,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-001",
       "v1_domain": "welfare",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-002",
-    "url": null,
+    "url": "https://www.gov.uk/government/publications/universal-credit-removal-of-two-child-limit-bill-impact-assessment",
     "title": "DWP, Impact Assessment for UC (Removal of Two Child Limit) Bill",
     "author": "DWP",
     "published_date": "2025-12",
@@ -1172,12 +1251,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-002",
       "v1_domain": "welfare",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-003",
-    "url": null,
+    "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10063/",
     "title": "House of Commons Library, UC (Removal of Two Child Limit) Bill",
     "author": "House of Commons Library",
     "published_date": "2026",
@@ -1187,12 +1267,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-003",
       "v1_domain": "welfare",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-008",
-    "url": null,
+    "url": "https://julkaisut.valtioneuvosto.fi/handle/10024/161361",
     "title": "Finnish UBI Pilot Evaluation (Kangas et al.)",
     "author": "Kangas et al.",
     "published_date": "2019",
@@ -1202,12 +1283,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-008",
       "v1_domain": "welfare",
-      "v1_tier": 1
+      "v1_tier": 1,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-009",
-    "url": null,
+    "url": "https://www.gov.scot/publications/scottish-child-payment-evaluation/",
     "title": "Scottish Government, Scottish Child Payment Evaluation",
     "author": "Scottish Government",
     "published_date": null,
@@ -1217,12 +1299,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-009",
       "v1_domain": "welfare",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-011",
-    "url": null,
+    "url": "https://ifs.org.uk/publications/general-election-2024-manifesto-analysis",
     "title": "IFS, General Election 2024 Manifesto Analysis",
     "author": "IFS",
     "published_date": "2024",
@@ -1232,12 +1315,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-011",
       "v1_domain": "welfare",
-      "v1_tier": 3
+      "v1_tier": 3,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-007",
-    "url": null,
+    "url": "https://www.spglobal.com/ratings/en/research/articles/",
     "title": "S&P Global, European NATO Debt Projections from Defence Targets",
     "author": "S&P Global",
     "published_date": "2025",
@@ -1247,12 +1331,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-007",
       "v1_domain": "defence",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EDU-002",
-    "url": null,
+    "url": "https://epi.org.uk/publications-and-research/general-election-2024/",
     "title": "Education Policy Institute, General Election 2024 Manifesto Analysis",
     "author": "EPI",
     "published_date": "2024",
@@ -1262,12 +1347,13 @@
     "metadata": {
       "v1_id": "SRC-EDU-002",
       "v1_domain": "education",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-004",
-    "url": null,
+    "url": "https://www.ucl.ac.uk/constitution-unit/",
     "title": "Constitution Unit UCL, Manifesto Constitutional Analysis",
     "author": "Constitution Unit",
     "published_date": "2024",
@@ -1277,12 +1363,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-004",
       "v1_domain": "electoral-reform",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-012",
-    "url": null,
+    "url": "https://www.lse.ac.uk/granthaminstitute/publication/locational-pricing/",
     "title": "Grantham Institute LSE, Locational Pricing Analysis",
     "author": "Grantham Institute",
     "published_date": "2025-12",
@@ -1292,12 +1379,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-012",
       "v1_domain": "energy",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-013",
-    "url": null,
+    "url": "https://www.common-wealth.org/publications/crude-awakening",
     "title": "Common Wealth, Crude Awakening: Decoupling Electricity from Gas",
     "author": "Common Wealth",
     "published_date": "2026-03",
@@ -1307,12 +1395,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-013",
       "v1_domain": "energy",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENV-005",
-    "url": null,
+    "url": "https://www.greenfinanceinstitute.com/",
     "title": "Green Finance Institute, Biodiversity Financial Risk Assessment",
     "author": "Green Finance Institute",
     "published_date": null,
@@ -1322,12 +1411,13 @@
     "metadata": {
       "v1_id": "SRC-ENV-005",
       "v1_domain": "environment",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-007",
-    "url": null,
+    "url": "https://ukandeu.ac.uk/",
     "title": "UK in a Changing Europe, New Year Same Old Brexit Trade-offs",
     "author": "UK in a Changing Europe",
     "published_date": "2026",
@@ -1337,12 +1427,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-007",
       "v1_domain": "eu-trade",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-008",
-    "url": null,
+    "url": "https://www.cer.eu/",
     "title": "Centre for European Reform, Will 2026 Be the Year to Reset the Reset?",
     "author": "Centre for European Reform",
     "published_date": "2026",
@@ -1352,12 +1443,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-008",
       "v1_domain": "eu-trade",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-009",
-    "url": null,
+    "url": "https://www.britishchambers.org.uk/",
     "title": "British Chambers of Commerce, EU Trade Getting Harder Survey",
     "author": "British Chambers of Commerce",
     "published_date": "2025-12",
@@ -1367,12 +1459,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-009",
       "v1_domain": "eu-trade",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-001",
-    "url": null,
+    "url": "https://www.centreforcities.org/publication/the-housebuilding-crisis/",
     "title": "Centre for Cities, The Housebuilding Crisis: The UK's 4 Million Missing Homes",
     "author": "Centre for Cities",
     "published_date": "2023-02",
@@ -1382,12 +1475,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-001",
       "v1_domain": "housing",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-002",
-    "url": null,
+    "url": "https://www.centreforcities.org/publication/restarting-housebuilding/",
     "title": "Centre for Cities, Restarting Housebuilding Report Series",
     "author": "Centre for Cities",
     "published_date": "2024-12",
@@ -1397,12 +1491,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-002",
       "v1_domain": "housing",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-003",
-    "url": null,
+    "url": "https://www.savills.co.uk/research_articles/229130/371057-0",
     "title": "Savills, Housing Completions Forecast for England 2025",
     "author": "Savills",
     "published_date": "2025",
@@ -1412,12 +1507,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-003",
       "v1_domain": "housing",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-005",
-    "url": null,
+    "url": "https://www.resolutionfoundation.org/publications/building-blocks/",
     "title": "Resolution Foundation, Building Blocks Briefing",
     "author": "Resolution Foundation",
     "published_date": null,
@@ -1427,12 +1523,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-005",
       "v1_domain": "housing",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-010",
-    "url": null,
+    "url": "https://www.nuffieldtrust.org.uk/research/foreign-born-nhs-workforce",
     "title": "Nuffield Trust, Foreign-Born NHS Workforce Analysis",
     "author": "Nuffield Trust",
     "published_date": "2024",
@@ -1442,12 +1539,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-010",
       "v1_domain": "immigration",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-011",
-    "url": null,
+    "url": "https://www.nhsconfed.org/articles/immigration-harming-nhs",
     "title": "NHS Confederation, Is Immigration Harming the NHS?",
     "author": "NHS Confederation",
     "published_date": "2024",
@@ -1457,12 +1555,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-011",
       "v1_domain": "immigration",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-022",
-    "url": null,
+    "url": "https://www.lifttheban.co.uk/",
     "title": "Lift the Ban Coalition, Right to Work Evidence",
     "author": "Lift the Ban Coalition",
     "published_date": null,
@@ -1472,12 +1571,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-022",
       "v1_domain": "immigration",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-023",
-    "url": null,
+    "url": "https://labourexploitation.org/publications/firewall-evidence/",
     "title": "Labour Exploitation Advisory Group, Firewall Evidence",
     "author": "Labour Exploitation Advisory Group",
     "published_date": null,
@@ -1487,12 +1587,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-023",
       "v1_domain": "immigration",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-003",
-    "url": null,
+    "url": "https://justiceinnovation.org/publications/systems-shift",
     "title": "Centre for Justice Innovation, Systems Shift: Ten-Point Plan",
     "author": "CJI",
     "published_date": null,
@@ -1502,12 +1603,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-003",
       "v1_domain": "justice",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-002",
-    "url": null,
+    "url": "https://www.nuffieldtrust.org.uk/research/general-election-2024",
     "title": "Nuffield Trust, NHS Spending Analysis: Manifesto Pledges",
     "author": "Nuffield Trust",
     "published_date": "2024-06",
@@ -1517,12 +1619,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-002",
       "v1_domain": "nhs",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-003",
-    "url": null,
+    "url": "https://www.ippr.org/articles/our-greatest-asset",
     "title": "IPPR / Darzi / Davies Commission, Our Greatest Asset",
     "author": "IPPR",
     "published_date": "2024-09",
@@ -1532,12 +1635,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-003",
       "v1_domain": "nhs",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-004",
-    "url": null,
+    "url": "https://www.kingsfund.org.uk/insight-and-analysis/long-reads/general-election-2024-what-parties-say-health-care",
     "title": "King's Fund, Manifesto Pledges Analysis",
     "author": "King's Fund",
     "published_date": "2024-06",
@@ -1547,12 +1651,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-004",
       "v1_domain": "nhs",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-010",
-    "url": null,
+    "url": "https://www.bma.org.uk/advice-and-support/nhs-delivery-and-workforce/funding/darzi-report",
     "title": "BMA, Darzi Report Briefing and Workforce Analysis",
     "author": "British Medical Association",
     "published_date": "2024",
@@ -1562,12 +1667,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-010",
       "v1_domain": "nhs",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-011",
-    "url": null,
+    "url": "https://www.rcn.org.uk/Professional-Development/publications/nursing-workforce-projections",
     "title": "RCN, Nursing Workforce Projections and Manifesto Analysis",
     "author": "Royal College of Nursing",
     "published_date": "2024",
@@ -1577,12 +1683,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-011",
       "v1_domain": "nhs",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-023",
-    "url": null,
+    "url": "https://www.nhsconfed.org/articles/immigration-harming-nhs",
     "title": "NHS Confederation, Is Immigration Harming the NHS?",
     "author": "NHS Confederation",
     "published_date": "2024",
@@ -1592,12 +1699,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-023",
       "v1_domain": "nhs",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-004",
-    "url": null,
+    "url": "https://www.ippr.org/articles/our-greatest-asset",
     "title": "IPPR, Economic Benefit of NHS Backlog Clearance",
     "author": "IPPR",
     "published_date": "2024",
@@ -1607,12 +1715,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-004",
       "v1_domain": "welfare",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-005",
-    "url": null,
+    "url": "https://www.jrf.org.uk/minimum-income-standard",
     "title": "JRF, Minimum Income Standard",
     "author": "Joseph Rowntree Foundation",
     "published_date": "2025",
@@ -1622,12 +1731,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-005",
       "v1_domain": "welfare",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-006",
-    "url": null,
+    "url": "https://www.resolutionfoundation.org/publications/",
     "title": "Resolution Foundation, Child Poverty Analysis",
     "author": "Resolution Foundation",
     "published_date": "2025",
@@ -1637,12 +1747,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-006",
       "v1_domain": "welfare",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-007",
-    "url": null,
+    "url": "https://www.carersuk.org/policy-and-research/valuing-carers/",
     "title": "Carers UK, Valuation of Unpaid Care",
     "author": "Carers UK",
     "published_date": null,
@@ -1652,12 +1763,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-007",
       "v1_domain": "welfare",
-      "v1_tier": 4
+      "v1_tier": 4,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-009",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -1667,12 +1779,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-009",
       "v1_domain": "defence",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-010",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -1682,12 +1795,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-010",
       "v1_domain": "defence",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-011",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -1697,12 +1811,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-011",
       "v1_domain": "defence",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-012",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -1712,12 +1827,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-012",
       "v1_domain": "defence",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-DEF-013",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -1727,12 +1843,13 @@
     "metadata": {
       "v1_id": "SRC-DEF-013",
       "v1_domain": "defence",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EDU-008",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -1742,12 +1859,13 @@
     "metadata": {
       "v1_id": "SRC-EDU-008",
       "v1_domain": "education",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EDU-009",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -1757,12 +1875,13 @@
     "metadata": {
       "v1_id": "SRC-EDU-009",
       "v1_domain": "education",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EDU-010",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -1772,12 +1891,13 @@
     "metadata": {
       "v1_id": "SRC-EDU-010",
       "v1_domain": "education",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EDU-011",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -1787,12 +1907,13 @@
     "metadata": {
       "v1_id": "SRC-EDU-011",
       "v1_domain": "education",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EDU-012",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -1802,12 +1923,13 @@
     "metadata": {
       "v1_id": "SRC-EDU-012",
       "v1_domain": "education",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-010",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -1817,12 +1939,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-010",
       "v1_domain": "electoral-reform",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-011",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -1832,12 +1955,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-011",
       "v1_domain": "electoral-reform",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-012",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -1847,12 +1971,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-012",
       "v1_domain": "electoral-reform",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-013",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -1862,12 +1987,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-013",
       "v1_domain": "electoral-reform",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ELR-014",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -1877,12 +2003,13 @@
     "metadata": {
       "v1_id": "SRC-ELR-014",
       "v1_domain": "electoral-reform",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-017",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -1892,12 +2019,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-017",
       "v1_domain": "energy",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-018",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -1907,12 +2035,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-018",
       "v1_domain": "energy",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-019",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -1922,12 +2051,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-019",
       "v1_domain": "energy",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-020",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -1937,12 +2067,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-020",
       "v1_domain": "energy",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENG-021",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -1952,12 +2083,13 @@
     "metadata": {
       "v1_id": "SRC-ENG-021",
       "v1_domain": "energy",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENV-010",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -1967,12 +2099,13 @@
     "metadata": {
       "v1_id": "SRC-ENV-010",
       "v1_domain": "environment",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENV-011",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -1982,12 +2115,13 @@
     "metadata": {
       "v1_id": "SRC-ENV-011",
       "v1_domain": "environment",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENV-012",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -1997,12 +2131,13 @@
     "metadata": {
       "v1_id": "SRC-ENV-012",
       "v1_domain": "environment",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENV-013",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -2012,12 +2147,13 @@
     "metadata": {
       "v1_id": "SRC-ENV-013",
       "v1_domain": "environment",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-ENV-014",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -2027,12 +2163,13 @@
     "metadata": {
       "v1_id": "SRC-ENV-014",
       "v1_domain": "environment",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-011",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -2042,12 +2179,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-011",
       "v1_domain": "eu-trade",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-012",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -2057,12 +2195,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-012",
       "v1_domain": "eu-trade",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-013",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -2072,12 +2211,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-013",
       "v1_domain": "eu-trade",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-014",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -2087,12 +2227,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-014",
       "v1_domain": "eu-trade",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-EUT-015",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -2102,12 +2243,13 @@
     "metadata": {
       "v1_id": "SRC-EUT-015",
       "v1_domain": "eu-trade",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-015",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -2117,12 +2259,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-015",
       "v1_domain": "housing",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-016",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -2132,12 +2275,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-016",
       "v1_domain": "housing",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-017",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -2147,12 +2291,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-017",
       "v1_domain": "housing",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-018",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -2162,12 +2307,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-018",
       "v1_domain": "housing",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-HOU-019",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -2177,12 +2323,13 @@
     "metadata": {
       "v1_id": "SRC-HOU-019",
       "v1_domain": "housing",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-017",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -2192,12 +2339,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-017",
       "v1_domain": "immigration",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-018",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -2207,12 +2355,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-018",
       "v1_domain": "immigration",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-019",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -2222,12 +2371,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-019",
       "v1_domain": "immigration",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-020",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -2237,12 +2387,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-020",
       "v1_domain": "immigration",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-IMM-021",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -2252,12 +2403,13 @@
     "metadata": {
       "v1_id": "SRC-IMM-021",
       "v1_domain": "immigration",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-011",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -2267,12 +2419,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-011",
       "v1_domain": "justice",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-012",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -2282,12 +2435,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-012",
       "v1_domain": "justice",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-013",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -2297,12 +2451,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-013",
       "v1_domain": "justice",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-014",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -2312,12 +2467,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-014",
       "v1_domain": "justice",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-JUS-015",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -2327,12 +2483,13 @@
     "metadata": {
       "v1_id": "SRC-JUS-015",
       "v1_domain": "justice",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-017",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -2342,12 +2499,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-017",
       "v1_domain": "nhs",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-018",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -2357,12 +2515,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-018",
       "v1_domain": "nhs",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-019",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -2372,12 +2531,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-019",
       "v1_domain": "nhs",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-020",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -2387,12 +2547,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-020",
       "v1_domain": "nhs",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-021",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -2402,12 +2563,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-021",
       "v1_domain": "nhs",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-NHS-022",
-    "url": null,
+    "url": "https://theconversation.com/how-do-the-parties-differ-on-the-nhs",
     "title": "The Conversation, How the Parties Differ on the NHS",
     "author": "The Conversation",
     "published_date": "2024",
@@ -2417,12 +2579,13 @@
     "metadata": {
       "v1_id": "SRC-NHS-022",
       "v1_domain": "nhs",
-      "v1_tier": 6
+      "v1_tier": 6,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-TAX-006",
-    "url": null,
+    "url": "https://yougov.co.uk/topics/politics/survey-results/daily/2025/",
     "title": "YouGov, Public Support for Tax Reforms",
     "author": "YouGov",
     "published_date": "2025-10",
@@ -2432,12 +2595,13 @@
     "metadata": {
       "v1_id": "SRC-TAX-006",
       "v1_domain": "taxation",
-      "v1_tier": 6
+      "v1_tier": 6,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-TAX-008",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -2447,12 +2611,13 @@
     "metadata": {
       "v1_id": "SRC-TAX-008",
       "v1_domain": "taxation",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-TAX-009",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -2462,12 +2627,13 @@
     "metadata": {
       "v1_id": "SRC-TAX-009",
       "v1_domain": "taxation",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-TAX-010",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -2477,12 +2643,13 @@
     "metadata": {
       "v1_id": "SRC-TAX-010",
       "v1_domain": "taxation",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-TAX-011",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -2492,12 +2659,13 @@
     "metadata": {
       "v1_id": "SRC-TAX-011",
       "v1_domain": "taxation",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-TAX-012",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -2507,12 +2675,13 @@
     "metadata": {
       "v1_id": "SRC-TAX-012",
       "v1_domain": "taxation",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-012",
-    "url": null,
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
     "title": "Conservative Party 2024 General Election Manifesto",
     "author": "Conservative Party",
     "published_date": "2024-06",
@@ -2522,12 +2691,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-012",
       "v1_domain": "welfare",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-013",
-    "url": null,
+    "url": "https://labour.org.uk/change/my-plan-for-change/",
     "title": "Labour Party 2024 General Election Manifesto",
     "author": "Labour Party",
     "published_date": "2024-06",
@@ -2537,12 +2707,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-013",
       "v1_domain": "welfare",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-014",
-    "url": null,
+    "url": "https://www.libdems.org.uk/manifesto",
     "title": "Liberal Democrats 2024 General Election Manifesto",
     "author": "Liberal Democrats",
     "published_date": "2024-06",
@@ -2552,12 +2723,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-014",
       "v1_domain": "welfare",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-015",
-    "url": null,
+    "url": "https://www.greenparty.org.uk/about/our-manifesto/",
     "title": "Green Party 2024 General Election Manifesto",
     "author": "Green Party",
     "published_date": "2024-06",
@@ -2567,12 +2739,13 @@
     "metadata": {
       "v1_id": "SRC-WEL-015",
       "v1_domain": "welfare",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   },
   {
     "source_id": "SRC-WEL-016",
-    "url": null,
+    "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf",
     "title": "Reform UK 2024 General Election Manifesto",
     "author": "Reform UK",
     "published_date": "2024-06",
@@ -2582,7 +2755,8 @@
     "metadata": {
       "v1_id": "SRC-WEL-016",
       "v1_domain": "welfare",
-      "v1_tier": 5
+      "v1_tier": 5,
+      "url_source": "v1_map"
     }
   }
 ]

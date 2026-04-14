@@ -35,6 +35,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 GRAPH = REPO / "archive" / "v1" / "data" / "basis-kg-full.json"
+URLS = REPO / "archive" / "v1" / "data" / "basis_source_urls.json"
 BACKLOG = REPO / "data" / "v1_ingestion_backlog.json"
 
 V1_TO_V2_DOMAIN = {
@@ -66,31 +67,42 @@ def main() -> None:
     graph = json.loads(GRAPH.read_text())
     sources = graph["sources"]
 
+    # v1 sources catalogue has no URLs inline; URLs live in a separate
+    # hand-curated map at archive/v1/data/basis_source_urls.json.
+    url_map: dict[str, str] = {}
+    if URLS.exists():
+        url_map = json.loads(URLS.read_text())
+
     # Sentinel header as first entry — documents the backlog's origin
-    # and the url-recovery strategy for v1 sources that were never URL-captured.
+    # and the url-recovery path for entries not in the URL map.
     backlog: list[dict] = [{
         "_meta": True,
-        "generated_from": "data/basis-kg-full.json (v1 archive)",
+        "generated_from": "archive/v1/data/basis-kg-full.json (v1)",
+        "url_source": "archive/v1/data/basis_source_urls.json (v1)",
         "v1_source_count": len(sources),
+        "v1_urls_mapped": len(url_map),
         "note": (
-            "v1 sources have no URLs — only (title, author, tier, date). "
-            "The v2 ingestion pipeline must resolve URLs before fetching. "
-            "Resolution order: DOI (if any) via CrossRef / Semantic Scholar; "
-            "publisher website search (e.g. ifs.org.uk/search) by title; "
-            "gov.uk content API by title; fallback to Google Custom Search "
-            "with publisher-domain filter. Entries that do not yield a URL "
-            "go to the manual curator backlog."
+            "URLs resolved from the v1 URL map for entries present there. "
+            "Entries without a mapped URL must be resolved by the ingestion "
+            "pipeline: DOI via CrossRef / Semantic Scholar; publisher site "
+            "search by title; gov.uk Content API by title; fallback to manual "
+            "curator entry."
         ),
     }]
+    missing_urls: list[str] = []
     for s in sources:
         raw_tier = s.get("tier")
         tier_str = f"T{raw_tier}" if isinstance(raw_tier, int) else None
         v1_domain = s.get("domain") or ""
         v2_domain = V1_TO_V2_DOMAIN.get(v1_domain, v1_domain)
+        sid = s.get("id")
+        url = url_map.get(sid) or s.get("url")
+        if not url:
+            missing_urls.append(sid)
 
         backlog.append({
-            "source_id": s.get("id"),
-            "url": s.get("url"),
+            "source_id": sid,
+            "url": url,
             "title": s.get("title"),
             "author": s.get("author"),
             "published_date": s.get("date"),
@@ -98,9 +110,10 @@ def main() -> None:
             "default_tier_hint": tier_str,
             "priority": priority_for_tier(raw_tier),
             "metadata": {
-                "v1_id": s.get("id"),
+                "v1_id": sid,
                 "v1_domain": v1_domain,
                 "v1_tier": raw_tier,
+                "url_source": "v1_map" if url_map.get(sid) else None,
             },
         })
 
@@ -120,6 +133,10 @@ def main() -> None:
     print(f"  Low priority:    {sum(1 for e in entries if e['priority'] == 'low')}")
     print(f"  With URLs:       {sum(1 for e in entries if e['url'])}")
     print(f"  Without URLs:    {sum(1 for e in entries if not e['url'])}")
+    if missing_urls:
+        print(f"  Unmapped source_ids ({len(missing_urls)}): "
+              f"{', '.join(missing_urls[:10])}" +
+              (f" ... +{len(missing_urls)-10} more" if len(missing_urls) > 10 else ""))
 
 
 if __name__ == "__main__":
