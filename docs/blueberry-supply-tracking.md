@@ -242,10 +242,13 @@ Step 4 — Settlement:
 
 ---
 
-## 4. What "should" be happening — minimum viable fix, still in Excel
+## 4. Tactical fix — harden the current Excel (stepping stone)
 
-Not proposing a system change. Proposing the smallest discipline shift that
-closes the biggest holes while leaving the workflow familiar.
+Before proposing a system change. If a subscription tool is off the table
+or the business wants to close gaps before switching, this is the minimum
+discipline shift that closes the biggest holes while leaving the workflow
+familiar. **This is not the ideal end-state (see §5) — it's the fallback
+and the stepping stone.**
 
 ### 4.1 Flatten the data: rows, not tabs
 
@@ -347,14 +350,184 @@ Every wally/early payment:
 
 ---
 
-## 5. When to leave Excel
+## 5. The ideal system — simple, staff-editable, not Excel and not ERP
 
-Excel + QuickBooks is genuinely fine up to roughly: <50 consignments/week,
-<5 retailer customers on EDI, one-season programmes. Past that, the
-industry moves to dedicated fresh-produce ERPs (Prophet, Linkfresh on D365,
-Produce Pro, Silver Bullet, Aptean Produce). The trigger is usually the
-first season where a retailer deduction gets missed and costs more than a
-year of licence.
+The honest answer to "what should it be" is: a **no-code relational
+database with a spreadsheet-style UI**. Category examples: **Airtable,
+SeaTable, Smartsheet, Stackby, NocoDB**. The specific tool matters less
+than the category — pick one the business is comfortable paying for and
+stick with it.
+
+- **Recommended default: Airtable.** Strongest views, interfaces, and
+  automations for this scale. Paid per user, reasonable at <20 seats.
+- **If subscription is a hard no:** SeaTable or NocoDB, self-hosted.
+  Same shape, more ops overhead.
+- **Not recommended:** Notion databases (too weak on numeric rollups
+  and relational enforcement), Google Sheets alone (the problem you
+  already have), full fresh-produce ERP (too heavy — see §6).
+
+### 5.1 Why this category
+
+| Capability | Current Excel | No-code relational | Fresh-produce ERP |
+|---|---|---|---|
+| Staff edit by typing | ✅ | ✅ | ⚠ forms only |
+| Real foreign keys / no stale copies | ❌ | ✅ | ✅ |
+| Concurrent multi-user edit | ❌ | ✅ | ✅ |
+| Audit trail / revision history | ❌ | ✅ | ✅ |
+| One dataset, many views | ⚠ by tab | ✅ | ✅ |
+| Automations (alerts, status flow) | ⚠ macros | ✅ | ✅ |
+| Integrations (EDI, QB, FX) | ⚠ manual | ✅ via API | ✅ built-in |
+| Time to first value | n/a | 4–8 weeks | 3–9 months |
+| Annual cost (10 users) | "free" | £2–5k | £30k+ plus implementation |
+| Staff training | familiar | hours | weeks |
+
+### 5.2 The base — 12 tables, each with one job
+
+Same structure as §4.1, now as a real relational base. Stable auto-IDs
+behind the scenes; human-readable numbers (consignment_no, PO_no,
+invoice_no) as regular fields.
+
+| # | Table | Grain |
+|---|---|---|
+| 1 | `growers` | one grower; country, currency, incoterm, payment terms, cert status |
+| 2 | `customers` | one customer; type, EDI scheme, GLN, depot codes, pack-code map |
+| 3 | `programmes` | grower × variety × season; weekly target, price basis, pack spec |
+| 4 | `consignments` | one shipment; B/L, ETD, ETA, status, port |
+| 5 | `consignment_lines` | one grower line within consignment; variety, class, pack, net kg |
+| 6 | `customer_pos` | one PO line; channel (EDI / email), delivery date, status |
+| 7 | `allocations` | link consignment_line → customer_po; qty, agreed price |
+| 8 | `costs` | one cost line; type, amount, currency, **timing = pre- or post-negotiation (hold-up)** |
+| 9 | `grower_advances` | one wally payment; currency, FX rate at date, status open/settled |
+| 10 | `grower_settlements` | final price agreed; approver, linked advances, top-up/clawback, FX |
+| 11 | `deductions` | one retailer deduction; reason code, status, age |
+| 12 | `intercompany` | repacker / pack-house movement; transfer-price basis, reconciled |
+
+"Simple" doesn't mean "few tables" — it means each table has one clear
+job. Twelve flat tables is much simpler than one workbook with 40 tabs.
+
+### 5.3 Views — what each role opens in the morning
+
+Same base, different lenses. No copy-paste between them.
+
+- **Buyer** — programmes with net-missing by week × variety, flagged
+  as supply (grower can't gather) or demand (retailer flexed).
+- **Ops / shipping** — consignments in transit with ETA, doc status,
+  hold-ups, customs.
+- **Sales** — open customer POs, allocation coverage, shortfalls.
+- **Finance (daily)** — open grower advances aged by currency;
+  landed-cost-to-date per consignment; provisional margin per PO.
+- **Finance (monthly)** — deductions pipeline, intercompany
+  reconciliation, FX P&L, month-end journal draft.
+- **Director dashboard** — programme vs. actual, advance exposure,
+  margin by customer, deductions, FX position — one screen.
+
+### 5.4 Interfaces — the actions that replace copy-paste
+
+These are the **only** data-entry routes. No raw typing into base tables.
+
+1. **New consignment** — picks grower + programme; auto-fills defaults.
+2. **Load packing list** — paste or upload CSV from pack house;
+   validates against the programme; creates consignment_lines rows.
+3. **Log grower advance** — currency, amount, date; today's FX stamped.
+4. **Add landed-cost line** — required fields include the
+   pre-/post-negotiation flag.
+5. **Renegotiate & settle grower** — screen shows landed cost, hold-up
+   adjustments, advance balance; you set the final price; system posts
+   top-up/clawback and FX gain/loss.
+6. **Log retailer deduction** — invoice, reason, amount, status; stays
+   open until recovered or written off.
+7. **Intercompany movement** — to/from sister repacker with basis.
+8. **Close month** — generates the QuickBooks journal CSV from costs,
+   settlements, invoices, deductions, FX. Finance reviews before import.
+
+### 5.5 Automations — the alerts that stop things slipping
+
+- Advance open > 60 days → alert commercial lead.
+- Hold-up cost added after grower price agreed → flag for price review.
+- Customer PO on EDI-enabled customer entered via email route → warn.
+- Landed cost updated → provisional margin recomputes automatically.
+- Consignment status → `landed` → creates landed-cost review task.
+- Deduction open > 30 days → escalate to finance.
+- Programme week closes → auto-generate grower self-bill draft.
+
+### 5.6 Integrations — deliberately thin
+
+- **Email ingestion** for bulk-sell-off orders: inbox rule → parsed
+  into a pre-filled customer-PO form for confirmation (don't auto-post).
+- **Lidl EDI** — per §4.5, decide switch-on or decommission. If
+  switch-on: ORDERS-in creates customer_pos rows; INVOIC-out fires
+  from sales invoices.
+- **QuickBooks Online** — one direction, not live. Monthly CSV journal
+  reviewed then imported. Live sync with QBO almost always backfires
+  for fruit businesses because of the post-shipment renegotiation loop.
+- **FX rates** — daily pull from a public feed, stamped automatically
+  on advance/settlement entries.
+- **Explicitly out of scope**: payroll, HR, CRM/marketing, procurement
+  catalogues, WMS. Keep the system small.
+
+### 5.7 What the ideal system deliberately does NOT do
+
+To stay simple:
+
+- No forecasting beyond current programme + 4 weeks.
+- No lot-level traceability below consignment (GGN recorded, not
+  enforced per carton).
+- No live accounting sync.
+- No automated grower pricing — renegotiation is always human-approved.
+- No customer portal, no grower portal — email is fine at this scale.
+- No mobile app — spreadsheet-style UI is desktop-first.
+
+### 5.8 Rollout — 6–8 weeks, parallel-run, not big-bang
+
+1. **Week 1** — stand up the base with current growers, customers,
+   programmes migrated by hand. Excel continues in parallel.
+2. **Weeks 2–3** — all *new* consignments enter the system; old ones
+   close out in Excel.
+3. **Week 4** — advance ledger goes live; first post-shipment
+   renegotiation runs through the system.
+4. **Week 5** — deductions log replaces email threads and memory.
+5. **Week 6** — first monthly close journal to QuickBooks generated
+   from the system.
+6. **Weeks 7–8** — retire the Excel big-sheet. Keep one read-only
+   archive copy; don't keep editing it.
+
+If any week the system isn't ready for a decision, fall back to Excel
+for that decision only. Don't let partial parallel-run block the
+switchover.
+
+### 5.9 The ease-of-use test
+
+If a new member of ops or sales cannot fill in "new consignment" and
+read the net-missing view within 30 minutes of sitting down with no
+training, the forms are too complex and need simplifying. The audience
+is the person currently doing the copy-paste — if it's harder for them
+than Excel, they will revert.
+
+### 5.10 What this will cost roughly
+
+- Airtable Team plan: ~£20/user/month × 10 users ≈ £2.5k/year.
+- One-off build: 6–8 weeks of part-time attention from someone who
+  knows the business, or 3–4 weeks of an external consultant day-rate.
+  Deliberately avoid a heavy implementation project.
+- Ongoing: finance or ops lead owns the base; small tweaks in-house,
+  not via consultant.
+
+Compare: ERP licence £15–30k/year + implementation £50–150k + 6 months
+where nobody trusts the numbers. That's why the no-code step exists.
+
+---
+
+## 6. When even this isn't enough
+
+Excel + QuickBooks is fine up to roughly <10 consignments/week and no
+EDI. The no-code relational system in §5 comfortably handles roughly
+50 consignments/week, 5–10 retailer customers, one or two seasons'
+programmes, <20 users. Past that, the industry moves to dedicated
+fresh-produce ERPs (Prophet, Linkfresh on D365, Produce Pro, Silver
+Bullet, Aptean Produce). The usual trigger is the first season where a
+retailer deduction gets missed and the cost exceeds a year of licence
+— or when a new retailer requires full EDI + traceability that
+Airtable-style tools can't deliver without duct tape.
 
 ---
 
