@@ -21,6 +21,10 @@ when re-orienting after a break.
 | Adapter routing | `DocumentaryAdapter.can_handle` correctly declines ONS API URLs and Lex URLs | `src/ingest/cli.py:ADAPTERS` |
 | Scheduled evidence agent | `python src/scripts/run_agent.py evidence --dry-run --max 2` → drains backlog, returns `{ok: 1, fetch_failed: 1}` | `src/scripts/run_agent.py:run_evidence` |
 | All 5 agents wired into GitHub Actions cron | `agents.yml` triggers `local_data` 02:00, `structural_signals` 03:00, `legal_extraction` 04:00, `parliamentary` 06:00, `evidence` Mon 05:00 | `src/.github/workflows/agents.yml` |
+| SCHEMA-024 three-tier routing module | `src/curator/` — escalations, checks, always_tier3, routing, context. 21 unit tests covering every routing path, all green. | `src/curator/`, `tests/test_curator_routing.py` |
+| SCHEMA-024 pipeline integration | `ingest/cli.py:_apply_curator_routing` annotates every candidate node with a RoutingDecision; `ingest_backlog` reports tier counts + escalation reasons; `run_agent.py:run_evidence` writes tier counts to agent_log notes | `src/ingest/cli.py`, `src/scripts/run_agent.py` |
+| SCHEMA-024 Tier 3 reviewer CLI | `python src/scripts/review_queue.py` with `--count`, `--tier`, `--reason`, `--include-decided` flags. Approve / reject / kickback / skip flow. Atomic per-row jsonl rewrite; flips `curator_approved`, `verification_level=human_curated`, `last_audited_*` on approval. Tested with synthetic seed data (3 nodes, 2 decided correctly, persistence verified). | `src/scripts/review_queue.py` |
+| SCHEMA-024 Tier 2 operator playbook | Decision rubric, what-not-to-do, cache hits, session logging | `docs/runbooks/tier2-claude-review.md` |
 | Shared v1→v2 migration adapters | Single `src/migration.py` with `V1_DOMAIN_TO_V2`, `V1_FISCAL_DIRECTION_TO_V2`, `map_v1_domain`, `map_v1_fiscal_direction`, `adapt_node_v1_to_v2_payload`, `adapt_source_v1_to_v2_payload`, `adapt_edge_v1_to_v2_payload`. Imported by `scripts/audit_v1_graph.py`, `scripts/generate_backlog.py`, `src/scripts/validate_against_base.py` | `src/migration.py` |
 | v1 artefact archive | `archive/v1/data/*` + `archive/v1/site/index.html` preserved with README | `archive/v1/` |
 
@@ -38,8 +42,8 @@ when re-orienting after a break.
 | Derived adapter | Constructs `DerivedSource` from passed `input_node_ids` | Caller-populated; no stub code to fix |
 | Parliamentary + local_data agents in `run_agent.py` | Print TODO messages | Connect to parliament-mcp (Phase 4 dep) and ONS release calendar |
 | v2 frontend | Only v1 static `archive/v1/site/index.html` exists | New Next.js build per `docs/roadmap/04b-v2-phase-2-reingest-deploy.md` |
-| Curator queue UI | `src/sql/curator_queue.sql` defines schema, no review UI | Next.js admin page in v2 build (Tier 3 review per SCHEMA-024) |
-| Three-tier curator routing (SCHEMA-024) | Decision doc landed; SQL fields + `src/curator/routing.py` not yet implemented | Phase 1 deliverable: SCHEMA-024 fields on `curator_queue` + `evidence_nodes`; Tier 1 logic in `src/curator/routing.py` |
+| Curator queue UI | `src/scripts/review_queue.py` is the terminal-based interim Tier 3 reviewer (works against local jsonl); Next.js admin page is the Phase 2 frontend deliverable | Next.js admin page in v2 frontend |
+| ~~Three-tier curator routing (SCHEMA-024)~~ | ~~Decision doc landed; SQL fields + routing module not yet implemented~~ | **Done in `e0736dd`/`<this commit>`** — `src/curator/` (5 files, 21 tests passing); SQL fields on `curator_queue` + `evidence_nodes`; Pydantic enums + validator; pipeline integration; `src/scripts/review_queue.py` Tier 3 CLI; `docs/runbooks/tier2-claude-review.md` Tier 2 operator playbook |
 | Verification badge (SCHEMA-024) | Frontend only; no v2 frontend exists yet | Phase 2 deliverable: badge component + routing-chain drawer |
 | Calibration study (SCHEMA-024) | Methodology specced; can't run until ≥100 Tier-2 approved nodes exist | Phase 2 gate before any `verification_level=ai_reviewed` enters public API |
 
