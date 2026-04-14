@@ -22,7 +22,3 @@ any explanation that merely restates the target node statement.
    Phase 1 data. Extend as new patterns are discovered.
 
 **Status:** SETTLED on principle. PROVISIONAL on specific thresholds.
-
----
-
-## Part 5: Confidence Engine (MC)

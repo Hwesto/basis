@@ -2,7 +2,6 @@
 id: SCHEMA-022
 title: Corpus scoping via ego network queries
 status: PROVISIONAL
-related: [OQ-001, OQ-002, OQ-003, OQ-004, OQ-005, OQ-006, OQ-007, OQ-008, OQ-009, OQ-010]
 source: schema_decisions.md
 ---
 
@@ -29,22 +28,6 @@ provisions to see if the 2-hop boundary is losing material content.
 
 **Status:** PROVISIONAL — requires pilot before Phase 4.
 
----
-
-## Part 7: Open Questions
-
-These are unresolved design decisions that will need to be addressed before the
-phases indicated.
-
-| ID | Question | Blocking | Phase |
-|---|---|---|---|
-| OQ-001 | Should claim_confidence and instantiation_confidence be separate fields? | No | 3 |
-| OQ-002 | ~~What format for conditional commencement notes?~~ **RESOLVED** by SCHEMA-011 revision — six-value enum + commencement_notes free text. | — | — |
-| OQ-003 | How should PRINCIPLE nodes interact with MC propagation? Weight ≠ probability. (Deferred with SCHEMA-012 — not blocking Phase 4.) | No | 4b |
-| OQ-004 | Should `evidence_independent` default to True or False? Current default (True) is overconfident. | No | 2b |
-| OQ-005 | ~~How do we handle provisions that apply to England and Wales jointly?~~ **RESOLVED** by SCHEMA-003 revision — `england_and_wales` added to `JurisdictionEnum` in `base_schema.py`. | — | — |
-| OQ-006 | What is the correct alpha for INFERRED sources (ML classifier outputs)? | No | 5 |
-| OQ-007 | How does `curator_approved` work for DERIVED nodes computed automatically? | No | 3 |
-| OQ-008 | Inter-rater agreement study: are HIGH/MEDIUM/LOW consistently assigned across extractors? | No | 3 |
-| OQ-009 | GDP constant for pct_gdp unit conversion — should this be a dynamic source? | No | 2b |
-| OQ-010 | What happens when Lex Graph provision IDs change? Recovery procedure needed. | Yes | 4 |
+The open-questions table that belongs after this section now lives in
+`docs/schema/open_questions/` (one file per OQ). See `docs/schema/README.md`
+for the status index.

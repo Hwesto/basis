@@ -27,7 +27,3 @@ alpha multiplier only when `verified=True`. `curator_approved` controls display 
    choice, not by empirical calibration. See SCHEMA-019.
 
 **Status:** SETTLED
-
----
-
-## Part 2: Source Models

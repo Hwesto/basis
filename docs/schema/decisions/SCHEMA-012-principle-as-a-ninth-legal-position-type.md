@@ -31,7 +31,3 @@ classified as any of the eight Hohfeldian types and the `deontic_strength` field
 doesn't resolve the gap, revisit PRINCIPLE as a node type.
 
 **Status:** DEFERRED to Phase 4b. Not rejected — distinction is real, timing is wrong.
-
----
-
-## Part 3: Evidence Layer Nodes

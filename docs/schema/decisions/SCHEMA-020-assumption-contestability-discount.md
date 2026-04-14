@@ -41,7 +41,3 @@ exceed 0.85 × (near-1.0 noisy-OR) ≈ 0.85.
    Same status as alpha values above — provisional.
 
 **Status:** PROVISIONAL — values need calibration.
-
----
-
-## Part 6: External Dependencies

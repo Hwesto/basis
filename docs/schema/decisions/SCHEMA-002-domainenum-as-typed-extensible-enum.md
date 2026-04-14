@@ -15,6 +15,20 @@ frontend organises content.
 `domain` fields are rejected at validation time. New domains require an explicit PR
 adding them to the enum — they cannot be added by the extraction pipeline.
 
+**Current members (18):**
+`housing`, `health`, `education`, `benefits`, `economy`, `taxation`,
+`environment`, `immigration`, `policing`, `defence`, `transport`,
+`social_care`, `employment`, `consumer`, `justice`, `energy`, `eu_trade`,
+`electoral_reform`.
+
+**v2 revision (2026-04):** added `energy`, `eu_trade`, `electoral_reform`.
+The v1 audit (`docs/migration/AUDIT-V1-CONFORMANCE.md`) showed 86 nodes
+(22% of the v1 corpus) were in these three domains and were blocked
+from v2 conformance. These are legitimate, non-overlapping UK policy
+domains — their absence was an oversight. Naming normalised to snake
+case (`eu_trade`, `electoral_reform`) to match the Python convention
+already in use across the enum.
+
 **Alternatives:**
 - Free-text string. Rejected: 'housing' vs 'Housing' vs 'housing_disrepair' in the
   current data/ directory. Already observed in Phase 1. CI check caught some but not all.

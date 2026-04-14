@@ -44,7 +44,9 @@ def split_schema_decisions() -> list[dict]:
         end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
         body = text[start:end].rstrip()
 
-        # Strip trailing horizontal rules that separated entries in the monolith.
+        # Strip trailing horizontal rules and any `## Part N:` section header
+        # (plus its body) that leaked from the monolith's part-break structure.
+        body = re.sub(r"\n+---\s*\n+## Part \d+:.*$", "", body, flags=re.DOTALL)
         body = re.sub(r"\n+---\s*$", "", body)
 
         sid = f"SCHEMA-{m.group(1)}"
