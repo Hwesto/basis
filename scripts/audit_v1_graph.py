@@ -32,7 +32,7 @@ import base_schema as bs  # noqa: E402
 import source_models as sm  # noqa: E402
 
 
-GRAPH_PATH = REPO / "data" / "basis-kg-full.json"
+GRAPH_PATH = REPO / "archive" / "v1" / "data" / "basis-kg-full.json"
 REPORT_MD = REPO / "docs" / "migration" / "AUDIT-V1-CONFORMANCE.md"
 REPORT_JSON = REPO / "docs" / "migration" / "audit-v1-conformance.json"
 
