@@ -52,6 +52,14 @@ only at the accounting end.
   that currently has to be reconciled by hand.
 - **Lidl EDI** — the connection exists but isn't used; staff work from
   Excel orders received by email. See §3.
+- **"PO" terminology** — internally called a PO, but functionally it's an
+  **RFQ**: a provisional commitment to a grower whose price only firms up
+  at post-shipment settlement (§2.5). Grower-side "POs" therefore carry a
+  `pricing_status` of `provisional` until renegotiation closes it to
+  `agreed`. Customer-side POs are firm. The doc uses "PO/RFQ" where the
+  distinction matters.
+- **Scale** — around 10–15 active growers. Small enough that every
+  grower's data format can be solved individually rather than generally.
 
 ---
 
@@ -392,18 +400,20 @@ invoice_no) as regular fields.
 | 1 | `growers` | one grower; country, currency, incoterm, payment terms, cert status |
 | 2 | `customers` | one customer; type, EDI scheme, GLN, depot codes, pack-code map |
 | 3 | `programmes` | grower × variety × season; weekly target, price basis, pack spec |
-| 4 | `consignments` | one shipment; B/L, ETD, ETA, status, port |
-| 5 | `consignment_lines` | one grower line within consignment; variety, class, pack, net kg |
-| 6 | `customer_pos` | one PO line; channel (EDI / email), delivery date, status |
-| 7 | `allocations` | link consignment_line → customer_po; qty, agreed price |
-| 8 | `costs` | one cost line; type, amount, currency, **timing = pre- or post-negotiation (hold-up)** |
-| 9 | `grower_advances` | one wally payment; currency, FX rate at date, status open/settled |
-| 10 | `grower_settlements` | final price agreed; approver, linked advances, top-up/clawback, FX |
-| 11 | `deductions` | one retailer deduction; reason code, status, age |
-| 12 | `intercompany` | repacker / pack-house movement; transfer-price basis, reconciled |
+| 4 | `purchase_orders` | grower-side PO/RFQ; programme link, expected qty, `pricing_status = provisional / agreed`, provisional price |
+| 5 | `consignments` | one shipment; B/L, ETD, ETA, status, port (a PO can ship on 1–N consignments) |
+| 6 | `consignment_lines` | one grower line within consignment; PO link, variety, class, pack, net kg |
+| 7 | `customer_pos` | one customer PO line; channel (EDI / email), delivery date, status |
+| 8 | `allocations` | link consignment_line → customer_po; qty, agreed price |
+| 9 | `costs` | one cost line; type, amount, currency, **timing = pre- or post-negotiation (hold-up)** |
+| 10 | `grower_advances` | one wally payment; currency, FX rate at date, status open/settled |
+| 11 | `grower_settlements` | final price agreed; approver, linked advances, top-up/clawback, FX |
+| 12 | `deductions` | one retailer deduction; reason code, status, age |
+| 13 | `intercompany` | repacker / pack-house movement; transfer-price basis, reconciled |
+| 14 | `intake_queue` | one pending item from any inbound stream; status open/posted/rejected |
 
 "Simple" doesn't mean "few tables" — it means each table has one clear
-job. Twelve flat tables is much simpler than one workbook with 40 tabs.
+job. Fourteen flat tables is much simpler than one workbook with 40 tabs.
 
 ### 5.3 Views — what each role opens in the morning
 
@@ -514,6 +524,161 @@ than Excel, they will revert.
 
 Compare: ERP licence £15–30k/year + implementation £50–150k + 6 months
 where nobody trusts the numbers. That's why the no-code step exists.
+
+### 5.11 The inbound pipeline — how data actually gets into the base
+
+Four streams arrive; all land in a single **intake queue** first, finance
+reviews, then posts to base tables. Nothing affects landed cost, margin,
+or the QuickBooks journal until it's been posted from the queue.
+
+```
+┌─────────────────────────┐       ┌──────────────┐      ┌─────────────┐
+│ Grower packing list     │──────►│              │      │             │
+│ (CSV / Excel by email)  │       │              │      │             │
+├─────────────────────────┤       │              │      │             │
+│ Grower invoice          │──────►│  INTAKE      │─────►│  BASE       │
+│ (PDF by email)          │       │  QUEUE       │      │  TABLES     │
+├─────────────────────────┤       │  (§5.2 #14)  │      │  (§5.2)     │
+│ Customer order — EDI    │──────►│              │      │             │
+│ (Lidl, if switched on)  │       │              │      │             │
+├─────────────────────────┤       │              │      │             │
+│ Customer order — CSV    │──────►│              │      │             │
+│ (email from others)     │       │              │      │             │
+└─────────────────────────┘       └──────────────┘      └─────────────┘
+                                        ▲
+                                        │
+                                  Finance review:
+                                  match to PO/RFQ,
+                                  confirm, post
+```
+
+### 5.12 Stream by stream — 15 growers makes this tractable
+
+With ~15 growers the effort of wiring each stream is bounded. You're not
+solving a general problem, you're solving fifteen specific ones.
+
+**Stream 1 — Grower packing list (easy, do this first)**
+
+- Arrives as CSV or XLSX attached to an email, one per consignment.
+- Most growers settle into one format once asked; ask them.
+- Intake: Airtable email-to-record, or Make / Zapier / n8n watching a
+  shared inbox, parsing the attachment into `intake_queue` rows.
+- Match key: PO/RFQ number printed by the grower, or B/L / consignment
+  reference. If no reference, match by grower + week + variety and let
+  finance confirm.
+- Review screen: *"GROW-07 packed 1,240 kg Duke against PO/RFQ
+  RFQ-2024-103 — confirm and post?"* One click creates the
+  `consignment_lines` rows.
+
+**Stream 2 — Grower invoice (hard — de-scope honestly)**
+
+Full invoice automation for 15 suppliers in 15 PDF formats isn't worth
+building. Two honest options:
+
+- **Human-assisted (recommended).** Finance opens the PDF, keys four
+  fields into the intake form (grower, invoice_no, amount, currency),
+  attaches the PDF. Airtable stores it, searchable. ~5 minutes per
+  invoice; at 15 growers × a handful of shipments/week, tractable.
+- **Per-grower parser, only where volume justifies it.** If one grower
+  sends dozens of invoices a week, build a parser *just for them* with
+  Parseur / Docparser / Nanonets (~£30–£100/month per grower). Don't
+  try to cover all 15 with one generic parser.
+
+**Critical point that makes invoices less scary here:** because the
+final grower price is renegotiated at settlement (§2.5), the grower's
+invoice is a **reference document, not the source of truth for cost.**
+The source of truth is the final settlement agreed in Airtable. You
+don't need invoice parsing to be perfect — just filed, searchable, and
+matchable to the PO/RFQ.
+
+**Stream 3 — Customer order, EDI (Lidl)**
+
+- If EDI is switched on (§4.5 decision): bureau receives ORDERS, posts
+  to Airtable via webhook, creates `intake_queue` row → one-click
+  creates `customer_pos`.
+- If decommissioned: treat Lidl orders like Stream 4.
+
+**Stream 4 — Customer order, CSV by email (bulk sell-offs, wholesale, FS)**
+
+- Mailbox watcher parses the CSV into `intake_queue`.
+- For repeat customers, build a tiny per-customer column template
+  (customer X's CSV has columns A–G in this order); once set, parsing
+  is automatic.
+- Review screen: *"CUST-W4 ordered 500 kg for Thursday — confirm
+  customer, allocate to consignment, post?"*
+
+### 5.13 The PO/RFQ as the link — packing ↔ PO ↔ customer order
+
+This is the join the user called out: grower packing data links to the
+original PO/RFQ, which then links to customer orders via allocations.
+
+```
+Programme
+    │
+    ▼
+Purchase order / RFQ  (provisional price)  ◄── grower advance paid here
+    │
+    ├──► Consignment ──► Consignment lines  ◄── packing CSV posts here
+    │                         │
+    │                         ▼
+    │                    Allocations ──────► Customer PO  ◄── EDI / CSV posts here
+    │
+    └──► Grower settlement (agreed price)  ──► closes the PO/RFQ
+
+Finance review at every ◄── arrow.
+```
+
+Every row in `consignment_lines`, `customer_pos`, `costs`,
+`grower_advances`, and `grower_settlements` carries the PO/RFQ reference.
+That single field is the human-readable thread through the whole
+record, replacing the shipping-number-in-a-comment approach.
+
+### 5.14 The finance review queue — the single biggest control
+
+One screen, one daily ritual. Probably the most important part of the
+whole system because it's where discipline lives.
+
+```
+Intake queue — today
+────────────────────────────────────────────────────────────────
+ Type           │ From     │ Links to          │ Action
+────────────────────────────────────────────────────────────────
+ Packing list   │ GROW-07  │ PO/RFQ 2024-103   │ [Match & post]
+ Grower invoice │ GROW-02  │ PO/RFQ 2024-098   │ [File]
+ Customer PO    │ CUST-M1  │ EDI 445213        │ [Confirm & post]
+ Customer PO    │ CUST-W4  │ email CSV 18 Apr  │ [Confirm & post]
+ Packing list   │ GROW-11  │ (no match)        │ [Investigate]
+```
+
+Properties:
+
+- Until actioned, items don't update landed cost, margin, or the QB
+  journal. This is what replaces the copy-paste discipline — posting
+  is no more effort than copy-paste was.
+- "No match" cases go in the same queue, flagged — they're the signal
+  that a grower referenced a PO/RFQ that doesn't exist yet (wrong
+  number, or they've shipped off-programme).
+- Audit trail is automatic: Airtable records who posted which row
+  when, and the original intake row is preserved.
+- Finance owns the queue, but the UI is simple enough that ops can
+  pre-match ("this packing list is for PO RFQ-2024-103"), leaving
+  finance to just confirm and post.
+
+### 5.15 What to build in week 1
+
+Given the small supplier base, the fastest useful version is:
+
+1. `growers`, `customers`, `programmes`, `purchase_orders` — manual
+   entry, one-time, ~half a day.
+2. **Stream 1 pipeline** (packing lists) + intake queue + "match & post"
+   interface. This alone replaces most of the copy-paste.
+3. A `landed_cost` view per PO/RFQ computed from `costs` (manual entry
+   at first) + a provisional margin field.
+4. `grower_advances` + "renegotiate & settle" interface — so the true-up
+   loop closes inside the system from day one.
+
+Streams 2–4 (invoice filing, EDI, customer CSV parsing) can follow in
+weeks 2–4. Don't block the week-1 launch on them.
 
 ---
 
